@@ -119,6 +119,13 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
-		'member_password_salt' => 'SDIuhfw985h13*^%6123lknasdf78Ksdf0='
+		'member_password_salt' => 'SDIuhfw985h13*^%6123lknasdf78Ksdf0=',
+		/*
+		 * Temporary here
+		 * LR - Liberty Reserve
+		 * PM - Perfect Money
+		 * AP - Alert Pay
+		 */
+		'ecurrencies' => array('LR', 'PM', 'AP'),
 	),
 );

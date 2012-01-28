@@ -26,36 +26,47 @@ $this->breadcrumbs = array(
 					<div class="row">
 						<?php echo $form->labelEx($model, 'login'); ?>
 						<?php echo $form->textField($model, 'login'); ?>
+						<div class="hint">Minimum 3 symbols of digits and letters.</div>
 						<?php echo $form->error($model, 'login'); ?>
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'password'); ?>
-						<?php echo $form->textField($model, 'password'); ?>
+						<?php echo $form->passwordField($model, 'password'); ?>
+						<div class="hint">Minimum 6 symbols.</div>
 						<?php echo $form->error($model, 'password'); ?>
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'password_repeat'); ?>
-						<?php echo $form->textField($model, 'password_repeat'); ?>
+						<?php echo $form->passwordField($model, 'password_repeat'); ?>
 						<?php echo $form->error($model, 'password_repeat'); ?>
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'email'); ?>
 						<?php echo $form->textField($model, 'email'); ?>
+						<div class="hint">Valid e-mail address.</div>
 						<?php echo $form->error($model, 'email'); ?>
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'login_pin'); ?>
 						<?php echo $form->textField($model, 'login_pin'); ?>
+						<div class="hint">5 digits.</div>
 						<?php echo $form->error($model, 'login_pin'); ?>
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'master_pin'); ?>
 						<?php echo $form->textField($model, 'master_pin'); ?>
+						<div class="hint">3 digits.</div>
 						<?php echo $form->error($model, 'master_pin'); ?>
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'security_question'); ?>
-						<?php echo $form->textField($model, 'security_question'); ?>
+						<?php
+						$security_questions = SecurityQuestion::model()->findAll();
+						$data = array();
+						foreach($security_questions as $security_question)
+							$data[$security_question->id] = $security_question->text;
+						echo $form->dropDownList($model, 'security_question', $data);
+						?>
 						<?php echo $form->error($model, 'security_question'); ?>
 					</div>
 					<div class="row">
@@ -65,7 +76,8 @@ $this->breadcrumbs = array(
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'security_question2'); ?>
-						<?php echo $form->textField($model, 'security_question2'); ?>
+						<?php echo $form->dropDownList($model, 'security_question2', $data); ?>
+						<div class="hint">Must differ to "Security question".</div>
 						<?php echo $form->error($model, 'security_question2'); ?>
 					</div>
 					<div class="row">
@@ -98,11 +110,18 @@ $this->breadcrumbs = array(
 							'mask' => '99/99/9999',
 						));
 						?>
+						<div class="hint">Format: MM/DD/YYYY (01/01/2012)</div>
 						<?php echo $form->error($model, 'birthdate'); ?>
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'country'); ?>
-						<?php echo $form->textField($model, 'country'); ?>
+						<?php
+							$countries = Country::model()->findAll();
+							$data = array();
+							foreach($countries as $country)
+								$data[$country->id] = $country->name;
+							echo $form->dropDownList($model, 'country', $data);
+						?>
 						<?php echo $form->error($model, 'country'); ?>
 					</div>
 					<div class="row">
@@ -133,6 +152,7 @@ $this->breadcrumbs = array(
 					<div class="row">
 						<?php echo $form->labelEx($model, 'ecurrency_purse'); ?>
 						<?php echo $form->textField($model, 'ecurrency_purse'); ?>
+						<div class="hint">USD purse.</div>
 						<?php echo $form->error($model, 'ecurrency_purse'); ?>
 					</div>
 				</fieldset>
