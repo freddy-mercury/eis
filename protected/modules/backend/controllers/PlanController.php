@@ -1,6 +1,6 @@
 <?php
 
-class PlanController extends Controller
+class PlanController extends BackendController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning

@@ -1232,3 +1232,147 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/favicon.ico
 ---
+2012/01/28 12:34:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "register".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('register')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('register')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/register')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\eis\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/eis/site/register
+HTTP_REFERER=http://localhost/eis/
+---
+2012/01/28 12:48:38 [error] [php] Undefined variable: model (C:\wamp\www\eis\themes\eis\views\site\register.php:20)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\eis\protected\controllers\SiteController.php(116): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionRegister()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\eis\index.php(13): CWebApplication->run()
+REQUEST_URI=/eis/site/register
+in C:\wamp\www\eis\themes\eis\views\site\register.php (20)
+in C:\wamp\www\eis\protected\controllers\SiteController.php (116)
+in C:\wamp\www\eis\index.php (13)
+2012/01/28 12:49:04 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Member.name".' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('name')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('name')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(Member), 'name')
+#3 C:\wamp\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(Member), 'name', Array)
+#4 C:\wamp\www\framework\web\widgets\CActiveForm.php(568): CHtml::activeTextField(Object(Member), 'name', Array)
+#5 C:\wamp\www\eis\themes\eis\views\site\register.php(24): CActiveForm->textField(Object(Member), 'name')
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\eis...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\eis...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\eis...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 C:\wamp\www\eis\protected\controllers\SiteController.php(117): CController->render('register', Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionRegister()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('register')
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/register')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\eis\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/eis/site/register
+HTTP_REFERER=http://localhost/eis/site/register
+---
+2012/01/28 12:49:37 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Member.verifyCode".' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('verifyCode')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('verifyCode')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(Member), 'verifyCode')
+#3 C:\wamp\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(Member), 'verifyCode', Array)
+#4 C:\wamp\www\framework\web\widgets\CActiveForm.php(568): CHtml::activeTextField(Object(Member), 'verifyCode', Array)
+#5 C:\wamp\www\eis\themes\eis\views\site\register.php(32): CActiveForm->textField(Object(Member), 'verifyCode')
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\eis...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\eis...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\eis...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 C:\wamp\www\eis\protected\controllers\SiteController.php(117): CController->render('register', Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionRegister()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('register')
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/register')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\eis\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/eis/site/register
+HTTP_REFERER=http://localhost/eis/site/register
+---
+2012/01/28 12:57:22 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Member.password_repeat".' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('password_repeat')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('password_repeat')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(Member), 'password_repeat')
+#3 C:\wamp\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(Member), 'password_repeat', Array)
+#4 C:\wamp\www\framework\web\widgets\CActiveForm.php(568): CHtml::activeTextField(Object(Member), 'password_repeat', Array)
+#5 C:\wamp\www\eis\themes\eis\views\site\register.php(35): CActiveForm->textField(Object(Member), 'password_repeat')
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\eis...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\eis...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\eis...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('register', Array, true)
+#10 C:\wamp\www\eis\protected\controllers\SiteController.php(117): CController->render('register', Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionRegister()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('register')
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/register')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\eis\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/eis/site/register
+HTTP_REFERER=http://localhost/eis/site/register
+---
+2012/01/28 13:04:36 [warning] [application] Не удалось присвоить небезопасный атрибут "password_repeat" класса "Member".
+in C:\wamp\www\eis\protected\controllers\SiteController.php (118)
+in C:\wamp\www\eis\index.php (13)
+2012/01/28 13:09:26 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Member.birthday".' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('birthday')
+#1 C:\wamp\www\framework\validators\CRequiredValidator.php(52): CActiveRecord->__get('birthday')
+#2 C:\wamp\www\framework\validators\CValidator.php(197): CRequiredValidator->validateAttribute(Object(Member), 'birthday')
+#3 C:\wamp\www\framework\base\CModel.php(158): CValidator->validate(Object(Member), NULL)
+#4 C:\wamp\www\eis\protected\controllers\SiteController.php(119): CModel->validate()
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionRegister()
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('register')
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/register')
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\eis\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/eis/site/register
+HTTP_REFERER=http://localhost/eis/site/register
+---
+2012/01/28 13:09:39 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Member.birthday".' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('birthday')
+#1 C:\wamp\www\framework\validators\CRequiredValidator.php(52): CActiveRecord->__get('birthday')
+#2 C:\wamp\www\framework\validators\CValidator.php(197): CRequiredValidator->validateAttribute(Object(Member), 'birthday')
+#3 C:\wamp\www\framework\base\CModel.php(158): CValidator->validate(Object(Member), NULL)
+#4 C:\wamp\www\eis\protected\controllers\SiteController.php(119): CModel->validate()
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionRegister()
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('register')
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/register')
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\eis\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/eis/site/register
+HTTP_REFERER=http://localhost/eis/site/register
+---

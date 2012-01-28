@@ -50,7 +50,7 @@ return array(
 			),
 		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=total-invest-old',
+			'connectionString' => 'mysql:host=localhost;dbname=eis',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
@@ -59,9 +59,9 @@ return array(
 			'queryCacheID'=>'cache',
 			'enableProfiling'=>true,
 		),
-		'db2'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),
+//		'db2'=>array(
+//			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+//		),
 		'cache'=>array(
 			'class'=>'CFileCache',
 		),

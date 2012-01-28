@@ -1,9 +1,10 @@
 <?php
 
-class SiteController extends Controller
+class SiteController extends SController
 {
 	/**
 	 * Declares class-based actions.
+	 * @return array
 	 */
 	public function actions()
 	{
@@ -108,5 +109,15 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+
+	public function actionRegister()
+	{
+		$model = new Member('register');
+		if(isset($_POST['Member'])) {
+			$model->attributes=$_POST['Member'];
+			$model->validate();
+		}
+		$this->render('register', array('model' => $model));
 	}
 }

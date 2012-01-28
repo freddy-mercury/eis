@@ -13,10 +13,10 @@
  * @property string $percent_per
  * @property integer $periodicity
  * @property integer $term
- * @property integer $compounding
+ * @property boolean $compounding
  * @property integer $type
- * @property integer $monfri
- * @property integer $principal_back
+ * @property boolean $monfri
+ * @property boolean $principal_back
  */
 class Plan extends CActiveRecord
 {

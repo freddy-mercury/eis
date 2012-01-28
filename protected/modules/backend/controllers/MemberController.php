@@ -1,6 +1,6 @@
 <?php
 
-class MemberController extends Controller
+class MemberController extends BackendController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning

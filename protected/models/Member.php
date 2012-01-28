@@ -5,7 +5,6 @@
  *
  * The followings are the available columns in table 'members':
  * @property integer $id
- * @property integer $access
  * @property string $login
  * @property string $password
  * @property string $login_pin
@@ -24,15 +23,22 @@
  * @property string $address
  * @property string $ecurrency
  * @property string $ecurrency_purse
- * @property string $referral
- * @property integer $alert_profile
- * @property integer $alert_login
- * @property integer $alert_withdrawal
+ * @property integer $login_notify
+ * @property integer $profile_notify
+ * @property integer $withdrawal_notify
+ * @property double $transaction_limit
+ * @property double $daily_limit
+ * @property double $total_limit
+ * @property string $lang
+ * @property integer $status
  * @property integer $date_registered
  * @property string $hash
+ * @property integer $monitor
  */
 class Member extends CActiveRecord
 {
+	public $password_repeat, $verifyCode;
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -59,15 +65,32 @@ class Member extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('access, country, alert_profile, alert_login, alert_withdrawal, date_registered', 'numerical', 'integerOnly'=>true),
-			array('login, password, email, security_question, security_answer, security_question2, security_answer2, firstname, lastname, city, zip, ecurrency_purse, referral', 'length', 'max'=>255),
+			array('country, login_notify, profile_notify, withdrawal_notify, status, date_registered, monitor',
+				'numerical', 'integerOnly'=>true),
+			array('transaction_limit, daily_limit, total_limit', 'numerical'),
+			array('login', 'length', 'max'=>50),
+			array('password, security_question, security_answer, security_question2, security_answer2, firstname, '
+				.'lastname, city, zip, ecurrency_purse', 'length', 'max'=>255),
 			array('login_pin, master_pin', 'length', 'max'=>10),
-			array('ecurrency', 'length', 'max'=>2),
+			array('email', 'length', 'max'=>150),
+			array('ecurrency, lang', 'length', 'max'=>2),
 			array('hash', 'length', 'max'=>32),
 			array('birthdate, address', 'safe'),
+			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+			//Register scenario
+			array('login, password, password_repeat, login_pin, master_pin, email, security_question, '
+				.'security_answer, security_question2, security_answer2, firstname, lastname, birthdate, '
+				.'country, city, zip, address, ecurrency, ecurrency_purse, lang', 'safe', 'on'=>'register'),
+			array('login, password, password_repeat, login_pin, master_pin, email, security_question, '
+				.'security_answer, security_question2, security_answer2, firstname, lastname, birthdate, '
+				.'country, city, zip, address, ecurrency, ecurrency_purse, lang', 'required', 'on'=>'register'),
+			array('password', 'compare'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, access, login, password, login_pin, master_pin, email, security_question, security_answer, security_question2, security_answer2, firstname, lastname, birthdate, country, city, zip, address, ecurrency, ecurrency_purse, referral, alert_profile, alert_login, alert_withdrawal, date_registered, hash', 'safe', 'on'=>'search'),
+			array('id, login, password, login_pin, master_pin, email, security_question, security_answer, '
+				.'security_question2, security_answer2, firstname, lastname, birthdate, country, city, zip, address,'
+				.'ecurrency, ecurrency_purse, login_notify, profile_notify, withdrawal_notify, transaction_limit,'
+				.'daily_limit, total_limit, lang, status, date_registered, hash, monitor', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -88,52 +111,57 @@ class Member extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'access' => 'Access',
-			'login' => 'Login',
-			'password' => 'Password',
-			'login_pin' => 'Login Pin',
-			'master_pin' => 'Master Pin',
-			'email' => 'Email',
-			'security_question' => 'Security Question',
-			'security_answer' => 'Security Answer',
-			'security_question2' => 'Security Question2',
-			'security_answer2' => 'Security Answer2',
-			'firstname' => 'Firstname',
-			'lastname' => 'Lastname',
-			'birthdate' => 'Birthdate',
-			'country' => 'Country',
-			'city' => 'City',
-			'zip' => 'Zip',
-			'address' => 'Address',
-			'ecurrency' => 'Ecurrency',
-			'ecurrency_purse' => 'Ecurrency Purse',
-			'referral' => 'Referral',
-			'alert_profile' => 'Alert Profile',
-			'alert_login' => 'Alert Login',
-			'alert_withdrawal' => 'Alert Withdrawal',
-			'date_registered' => 'Date Registered',
-			'hash' => 'Hash',
+			'id' => Yii::t('global', 'ID'),
+			'login' => Yii::t('global', 'Login'),
+			'password' => Yii::t('global', 'Password'),
+			'password_repeat' => Yii::t('global', 'Repeat password'),
+			'login_pin' => Yii::t('global', 'Login Pin'),
+			'master_pin' => Yii::t('global', 'Master Pin'),
+			'email' => Yii::t('global', 'E-mail address'),
+			'security_question' => Yii::t('global', 'Security question'),
+			'security_answer' => Yii::t('global', 'Answer'),
+			'security_question2' => Yii::t('global', 'Alternative security question'),
+			'security_answer2' => Yii::t('global', 'Alternative question answer'),
+			'firstname' => Yii::t('global', 'Firstname'),
+			'lastname' => Yii::t('global', 'Lastname'),
+			'birthdate' => Yii::t('global', 'Birthdate'),
+			'country' => Yii::t('global', 'Country'),
+			'city' => Yii::t('global', 'City'),
+			'zip' => Yii::t('global', 'Zip'),
+			'address' => Yii::t('global', 'Address'),
+			'ecurrency' => Yii::t('global', 'E-currency'),
+			'ecurrency_purse' => Yii::t('global', 'E-currency purse'),
+			'login_notify' => Yii::t('global', 'Login Notify'),
+			'profile_notify' => Yii::t('global', 'Profile Notify'),
+			'withdrawal_notify' => Yii::t('global', 'Withdrawal Notify'),
+			'transaction_limit' => Yii::t('global', 'Transaction Limit'),
+			'daily_limit' => Yii::t('global', 'Daily Limit'),
+			'total_limit' => Yii::t('global', 'Total Limit'),
+			'lang' => Yii::t('global', 'Lang'),
+			'status' => Yii::t('global', 'Status'),
+			'date_registered' => Yii::t('global', 'Date Registered'),
+			'hash' => Yii::t('global', 'Hash'),
+			'monitor' => Yii::t('global', 'Monitor'),
 		);
 	}
-	
+
 	public function getIsAdmin()
 	{
 		return true;
 	}
-	
-		
+
+
 	public function verifyPassword($password)
 	{
-		return ($this->hashPassword($password)===$this->password);
+		return ($this->hashPassword($password) === $this->password);
 	}
-	
+
 	private function hashPassword($password)
 	{
 		return $password;
-//		return md5($password.$password.Yii::app()->params['member_password_salt']);
+		//		return md5($password.$password.Yii::app()->params['member_password_salt']);
 	}
-	
+
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -146,7 +174,6 @@ class Member extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('access',$this->access);
 		$criteria->compare('login',$this->login,true);
 		$criteria->compare('password',$this->password,true);
 		$criteria->compare('login_pin',$this->login_pin,true);
@@ -165,12 +192,17 @@ class Member extends CActiveRecord
 		$criteria->compare('address',$this->address,true);
 		$criteria->compare('ecurrency',$this->ecurrency,true);
 		$criteria->compare('ecurrency_purse',$this->ecurrency_purse,true);
-		$criteria->compare('referral',$this->referral,true);
-		$criteria->compare('alert_profile',$this->alert_profile);
-		$criteria->compare('alert_login',$this->alert_login);
-		$criteria->compare('alert_withdrawal',$this->alert_withdrawal);
+		$criteria->compare('login_notify',$this->login_notify);
+		$criteria->compare('profile_notify',$this->profile_notify);
+		$criteria->compare('withdrawal_notify',$this->withdrawal_notify);
+		$criteria->compare('transaction_limit',$this->transaction_limit);
+		$criteria->compare('daily_limit',$this->daily_limit);
+		$criteria->compare('total_limit',$this->total_limit);
+		$criteria->compare('lang',$this->lang,true);
+		$criteria->compare('status',$this->status);
 		$criteria->compare('date_registered',$this->date_registered);
 		$criteria->compare('hash',$this->hash,true);
+		$criteria->compare('monitor',$this->monitor);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
