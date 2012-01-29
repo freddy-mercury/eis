@@ -14,3 +14,10 @@
 the <a href="http://www.yiiframework.com/doc/">documentation</a>.
 Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
 should you have any questions.</p>
+
+<p>
+	Please, select your payment service type:
+	<?php echo CHtml::dropDownList('payment_system', 'lr', Yii::app()->payment->getComponentsNames()) ?>
+	<br/>
+	Working example: <?php echo Yii::app()->payment->getComponent('pp')->withdraw(); ?>
+</p>

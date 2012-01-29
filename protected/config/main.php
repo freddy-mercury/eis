@@ -115,6 +115,36 @@ return array(
 			'dump_mode'=>false,
 			'dump_file'=>Yii::getPathOfAlias('runtime').'/templatemailer.log',
 		),
+		/**
+		 * Payment component
+		 */
+		'payment'=>array(
+			'class'=>'ext.components.payment.Payment',
+			'components'=>array(
+				'pp'=>array(
+					'class'=>'ext.components.payment.components.PayPalPaymentService',
+					'name'=>'PayPal',
+					'secret_key'=>'Some mega secret key!', 
+				),
+				'lr'=>array(
+					'class'=>'ext.components.payment.components.LiberyReservePaymentService',
+					'name'=>'Liberty Reserve',
+				),
+				'pm'=>array(
+					'class'=>'ext.components.payment.components.PerfectMoneyPaymentService',
+					'name'=>'Perfect Money',
+				),
+				'ap'=>array(
+					'class'=>'ext.components.payment.components.AlertPayPaymentService',
+					'name'=>'Alert Pay',
+				),
+				'wm'=>array(
+					'enabled'=>false,
+					'class'=>'ext.components.payment.components.AlertPayPaymentService',
+					'name'=>'WebMoney'
+				)
+			),
+		),
 	),
 	'params'=>array(
 		// this is used in contact page
