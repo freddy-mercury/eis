@@ -32,7 +32,7 @@ class ExtendedApplicationComponent extends CApplicationComponent
 			$config=$this->_componentConfig[$id];
 			if(!isset($config['enabled']) || $config['enabled'])
 			{
-				Yii::trace("Loading \"$id\" component",'payment.Payment');
+				Yii::trace("Loading \"$id\" component");
 				unset($config['enabled']);
 				$component=Yii::createComponent($config);
 				$component->init();

@@ -116,33 +116,23 @@ return array(
 			'dump_file'=>Yii::getPathOfAlias('runtime').'/templatemailer.log',
 		),
 		/**
-		 * Payment component
+		 * E-currency component
 		 */
-		'payment'=>array(
-			'class'=>'ext.components.payment.Payment',
+		'ecurrency'=>array(
+			'class'=>'ext.components.ecurrency.Ecurrency',
 			'components'=>array(
-				'pp'=>array(
-					'class'=>'ext.components.payment.components.PayPalPaymentService',
-					'name'=>'PayPal',
-					'secret_key'=>'Some mega secret key!', 
+				'LR'=>array(
+					'class'=>'ext.components.ecurrency.components.LiberyReserveApi',
+					'name'=>Yii::t('global', 'Liberty Reserve'),
 				),
-				'lr'=>array(
-					'class'=>'ext.components.payment.components.LiberyReservePaymentService',
-					'name'=>'Liberty Reserve',
+				'PM'=>array(
+					'class'=>'ext.components.ecurrency.components.PerfectMoneyApi',
+					'name'=>Yii::t('global', 'Perfect Money'),
 				),
-				'pm'=>array(
-					'class'=>'ext.components.payment.components.PerfectMoneyPaymentService',
-					'name'=>'Perfect Money',
+				'AP'=>array(
+					'class'=>'ext.components.ecurrency.components.AlertPayApi',
+					'name'=>Yii::t('global', 'Alert Pay'),
 				),
-				'ap'=>array(
-					'class'=>'ext.components.payment.components.AlertPayPaymentService',
-					'name'=>'Alert Pay',
-				),
-				'wm'=>array(
-					'enabled'=>false,
-					'class'=>'ext.components.payment.components.AlertPayPaymentService',
-					'name'=>'WebMoney'
-				)
 			),
 		),
 	),
