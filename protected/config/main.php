@@ -21,7 +21,8 @@ return array(
 	),
 
 	'modules' => array(
-		'backend',
+		'admin',
+		'member',
 		// uncomment the following to enable the Gii tool
 		//*
 		'gii' => array(

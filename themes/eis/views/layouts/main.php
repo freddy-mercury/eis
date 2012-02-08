@@ -17,7 +17,7 @@
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Backend', 'url'=>array('/backend'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Admin panel', 'url'=>array('/admin'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>Yii::t('global', 'Register'), 'url'=>array('site/register'),
 					'visible'=>Yii::app()->user->isGuest),

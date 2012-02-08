@@ -1,6 +1,6 @@
 <?php
 
-class BackendModule extends CWebModule
+class MemberModule extends CWebModule
 {
 	public function init()
 	{
@@ -9,8 +9,8 @@ class BackendModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
-			'backend.models.*',
-			'backend.components.*',
+			'member.models.*',
+			'member.components.*',
 		));
 	}
 
