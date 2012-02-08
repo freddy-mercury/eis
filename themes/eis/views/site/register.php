@@ -5,6 +5,14 @@ $this->breadcrumbs = array(
 );?>
 <h1><?php echo Yii::t('global', 'Registration') ?></h1>
 
+<?php if(Yii::app()->user->hasFlash('register')): ?>
+
+<div class="flash-success">
+	<?php echo Yii::app()->user->getFlash('register'); ?>
+</div>
+
+<?php endif; ?>
+
 <div class="form">
 
 	<?php
@@ -15,7 +23,8 @@ $this->breadcrumbs = array(
 		'clientOptions' => array(
 			'validateOnSubmit' => true,
 		),
-	)); ?>
+	));
+	?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 	<table>
@@ -48,13 +57,25 @@ $this->breadcrumbs = array(
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'login_pin'); ?>
-						<?php echo $form->textField($model, 'login_pin'); ?>
+						<?php
+						$this->widget('CMaskedTextField', array(
+							'model' => $model,
+							'attribute' => 'login_pin',
+							'mask' => '99999',
+						));
+						?>
 						<div class="hint">5 digits.</div>
 						<?php echo $form->error($model, 'login_pin'); ?>
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'master_pin'); ?>
-						<?php echo $form->textField($model, 'master_pin'); ?>
+						<?php
+						$this->widget('CMaskedTextField', array(
+							'model' => $model,
+							'attribute' => 'master_pin',
+							'mask' => '999',
+						));
+						?>
 						<div class="hint">3 digits.</div>
 						<?php echo $form->error($model, 'master_pin'); ?>
 					</div>
@@ -107,10 +128,10 @@ $this->breadcrumbs = array(
 						$this->widget('CMaskedTextField', array(
 							'model' => $model,
 							'attribute' => 'birthdate',
-							'mask' => '99/99/9999',
+							'mask' => '9999-99-99',
 						));
 						?>
-						<div class="hint">Format: MM/DD/YYYY (01/01/2012)</div>
+						<div class="hint">Format: YYYY-MM-DD (Ex: <?php echo date('Y-m-d'); ?>)</div>
 						<?php echo $form->error($model, 'birthdate'); ?>
 					</div>
 					<div class="row">
@@ -154,6 +175,17 @@ $this->breadcrumbs = array(
 						<?php echo $form->textField($model, 'ecurrency_purse'); ?>
 						<div class="hint">USD purse.</div>
 						<?php echo $form->error($model, 'ecurrency_purse'); ?>
+					</div>
+					<div class="row">
+						<?php echo $form->labelEx($model, 'lang'); ?>
+						<?php
+
+							$messages_config = include(Yii::app()->basePath . DIRECTORY_SEPARATOR . 'messages'
+								. DIRECTORY_SEPARATOR . 'config.php');
+							$languages = array_combine($messages_config['languages'], $messages_config['languages']);
+							echo $form->dropDownList($model, 'lang', $languages);
+						?>
+						<?php echo $form->error($model, 'lang'); ?>
 					</div>
 				</fieldset>
 			</td>

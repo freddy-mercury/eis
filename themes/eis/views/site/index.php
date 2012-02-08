@@ -17,7 +17,6 @@ should you have any questions.</p>
 
 <p>
 	Please, select your payment service type:
-	<?php echo CHtml::dropDownList('payment_system', 'lr', Yii::app()->payment->getComponentsNames()) ?>
+	<?php echo CHtml::dropDownList('payment_system', 'lr', Yii::app()->ecurrency->getComponentsNames()) ?>
 	<br/>
-	Working example: <?php echo Yii::app()->payment->getComponent('pp')->withdraw(); ?>
 </p>

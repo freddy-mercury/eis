@@ -26,9 +26,9 @@
  * @property integer $login_notify
  * @property integer $profile_notify
  * @property integer $withdrawal_notify
- * @property double $transaction_limit
- * @property double $daily_limit
- * @property double $total_limit
+ * @property float $transaction_limit
+ * @property float $daily_limit
+ * @property float $total_limit
  * @property string $lang
  * @property integer $status
  * @property integer $date_registered
@@ -61,70 +61,132 @@ class Member extends CActiveRecord
 	 */
 	public function rules()
 	{
-		$security_question_ids = array_map(function($security_question)
-		{
-			return $security_question->id;
-		}, SecurityQuestion::model()->findAll());
-		$country_ids = array_map(function($country)
-		{
-			return $country->id;
-		}, Country::model()->findAll());
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
+		$security_question_ids = array_map(
+			function($security_question)
+			{
+				return $security_question->id;
+			},
+			SecurityQuestion::model()->findAll());
+		$country_ids = array_map(
+			function($country)
+			{
+				return $country->id;
+			},
+			Country::model()->findAll());
+		$messages_config = include(Yii::app()->basePath . DIRECTORY_SEPARATOR . 'messages'
+			. DIRECTORY_SEPARATOR . 'config.php');
 		return array(
-			array('security_question, security_question2, country, login_notify, profile_notify, withdrawal_notify,'
-				. ' status, date_registered, monitor', 'numerical', 'integerOnly' => true),
-			array('transaction_limit, daily_limit, total_limit', 'numerical'),
-			array('login', 'length', 'max' => 50),
-			array('password,  security_answer, security_answer2, firstname, lastname, city, zip, ecurrency_purse',
-				'length', 'max' => 255),
-			array('login_pin, master_pin', 'length', 'max' => 10),
-			array('email', 'length', 'max' => 150),
-			array('ecurrency, lang', 'length', 'max' => 2),
-			array('verifyCode', 'captcha', 'allowEmpty' => !CCaptcha::checkRequirements()),
+			array(
+				'security_question, security_question2, country, login_notify, profile_notify, withdrawal_notify,'
+					. ' status, date_registered, monitor',
+				'numerical',
+				'integerOnly' => true),
+			array(
+				'transaction_limit, daily_limit, total_limit',
+				'numerical'
+			),
+			array(
+				'login, password, email, security_answer, security_answer2, firstname, lastname, city, zip, ecurrency_purse',
+				'length',
+				'max' => 255
+			),
+			array(
+				'login_pin, master_pin',
+				'length',
+				'max' => 10
+			),
+			array(
+				'lang',
+				'in',
+				'range' => $messages_config['languages'],
+			),
+			array('verifyCode', 'captcha', 'allowEmpty' => true || !CCaptcha::checkRequirements()),
 			//General
-			array('login', 'match',
+			array(
+				'login',
+				'match',
 				'pattern' => '/\w{3,}/',
-				'message' => Yii::t('global', 'Login must be at least 3 symbols!')),
-			array('password', 'match',
+				'message' => Yii::t('global', 'Login must be at least 3 symbols!')
+			),
+			array(
+				'password',
+				'match',
 				'pattern' => '/\w{6,}/',
-				'message' => Yii::t('global', 'Password must be at least 3 symbols!')),
-			array('email', 'email'),
-			array('login, email', 'unique'),
-			array('login_pin', 'match',
+				'message' => Yii::t('global', 'Password must be at least 3 symbols!')
+			),
+			array(
+				'email',
+				'email'
+			),
+			array(
+				'login, email',
+				'unique'
+			),
+			array(
+				'login_pin',
+				'match',
 				'pattern' => '/\d{5}/',
-				'message' => Yii::t('global', 'Login Pin must be of 5 digits.')),
-			array('master_pin', 'match',
+				'message' => Yii::t('global', 'Login Pin must be of 5 digits.')
+			),
+			array(
+				'master_pin',
+				'match',
 				'pattern' => '/\d{3}/',
-				'message' => Yii::t('global', 'Login Pin must be of 3 digits.')),
+				'message' => Yii::t('global', 'Login Pin must be of 3 digits.')
+			),
 			//Edit profile scenario
 			//Register scenario
-			array('login, password, password_repeat, login_pin, master_pin, email, security_question, '
-				. 'security_answer, security_question2, security_answer2, firstname, lastname, birthdate, '
-				. 'country, city, zip, address, ecurrency, ecurrency_purse, lang', 'safe',
-				'on' => 'register'),
-			array('login, password, password_repeat, login_pin, master_pin, email, security_question, '
-				. 'security_answer, security_question2, security_answer2, firstname, lastname, birthdate, '
-				. 'country, city, zip, address, ecurrency, ecurrency_purse, lang', 'required',
-				'on' => 'register'),
-			array('password', 'compare',
-				'on' => 'register'),
-			array('security_question, security_question2', 'in',
+			array(
+				'login, password, password_repeat, login_pin, master_pin, email, security_question, '
+					. 'security_answer, security_question2, security_answer2, firstname, lastname, birthdate, '
+					. 'country, city, zip, address, ecurrency, ecurrency_purse, lang',
+				'safe',
+				'on' => 'register'
+			),
+			array(
+				'login, password, password_repeat, login_pin, master_pin, email, security_question, '
+					. 'security_answer, security_question2, security_answer2, firstname, lastname, birthdate, '
+					. 'country, city, zip, address, ecurrency, ecurrency_purse, lang', 'required',
+				'on' => 'register'
+			),
+			array(
+				'password',
+				'compare',
+				'on' => 'register'
+			),
+			array(
+				'security_question, security_question2',
+				'in',
 				'range' => $security_question_ids,
 				'message' => Yii::t('global', 'Invalid security question!'),
-				'on' => 'register'),
-			array('security_question2', 'compare',
+				'on' => 'register'
+			),
+			array(
+				'security_question2', 'compare',
 				'compareAttribute' => 'security_question',
 				'operator' => '!=',
 				'message' => Yii::t('global', 'Must differ to "Security question"!'),
-				'on' => 'register'),
-			array('birthdate', 'match',
-				'pattern' => '/\d{2},\d{2},\d{4}/',
+				'on' => 'register'
+			),
+			array(
+				'birthdate',
+				'match',
+				'pattern' => '/\d{2}\/\d{2}\/\d{4}/',
 				'message' => Yii::t('global', 'Invalid date format!'),
-				'on' => 'register'),
-			array('country', 'in',
+				'on' => 'register'
+			),
+			array(
+				'country',
+				'in',
 				'range' => $country_ids,
-				'on' => 'register'),
+				'on' => 'register'
+			),
+			array(
+				'ecurrency',
+				'in',
+				'range' => array_keys(Yii::app()->ecurrency->getComponentsNames()),
+				'on' => 'register'
+			),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, login, password, login_pin, master_pin, email, security_question, security_answer, '
@@ -177,7 +239,7 @@ class Member extends CActiveRecord
 			'transaction_limit' => Yii::t('global', 'Transaction Limit'),
 			'daily_limit' => Yii::t('global', 'Daily Limit'),
 			'total_limit' => Yii::t('global', 'Total Limit'),
-			'lang' => Yii::t('global', 'Lang'),
+			'lang' => Yii::t('global', 'Your language'),
 			'status' => Yii::t('global', 'Status'),
 			'date_registered' => Yii::t('global', 'Date Registered'),
 			'hash' => Yii::t('global', 'Hash'),
