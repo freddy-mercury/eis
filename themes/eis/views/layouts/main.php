@@ -17,10 +17,12 @@
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Admin panel', 'url'=>array('/admin'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>Yii::t('global', 'Register'), 'url'=>array('site/register'),
+				array('label'=>Yii::t('global', 'Register'), 'url'=>array('/site/register'),
 					'visible'=>Yii::app()->user->isGuest),
+				array('label'=>Yii::t('global', 'Member'), 'url'=>array('/member'),
+					'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Admin panel', 'url'=>array('/admin'), 'visible'=>Yii::app()->user->isAdmin),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'),
 					'visible'=>!Yii::app()->user->isGuest)
