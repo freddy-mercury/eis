@@ -9,6 +9,7 @@ class LoginForm extends CFormModel
 {
 	public $username;
 	public $password;
+	public $login_pin;
 	public $rememberMe;
 
 	private $_identity;
@@ -22,7 +23,9 @@ class LoginForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('username, password', 'required'),
+			array('username, password, login_pin', 'required'),
+			array('login_pin', 'length', 'max'=>5),
+			array('login_pin', 'numerical', 'integerOnly'=>true),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
 			// password needs to be authenticated
@@ -36,7 +39,10 @@ class LoginForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'rememberMe'=>'Remember me next time',
+			'rememberMe'=>Yii::t('global', 'Remember me next time'),
+			'Username'=>Yii::t('global', 'Username'),
+			'Password'=>Yii::t('global', 'Password'),
+			'login_pin'=>Yii::t('global', 'Login pin'),
 		);
 	}
 
@@ -48,9 +54,9 @@ class LoginForm extends CFormModel
 	{
 		if(!$this->hasErrors())
 		{
-			$this->_identity=new SUserIdentity($this->username,$this->password);
+			$this->_identity=new SUserIdentity($this->username,$this->password,$this->login_pin);
 			if(!$this->_identity->authenticate())
-				$this->addError('password','Incorrect username or password.');
+				$this->addError('login_pin','Incorrect username, password or login pin.');
 		}
 	}
 
@@ -62,7 +68,7 @@ class LoginForm extends CFormModel
 	{
 		if($this->_identity===null)
 		{
-			$this->_identity=new SUserIdentity($this->username,$this->password);
+			$this->_identity=new SUserIdentity($this->username,$this->password,$this->login_pin);
 			$this->_identity->authenticate();
 		}
 		if($this->_identity->errorCode===SUserIdentity::ERROR_NONE)
