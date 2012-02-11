@@ -7,24 +7,27 @@
 <body>
 
 <div class="container" id="page">
-
+	
 	<div id="header">
 		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		<div  id="language-selector" style="float:right; margin:5px;">
+		<?php $this->widget('application.components.widgets.LanguageSelector');	?>
+	</div>
 	</div><!-- header -->
 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>Yii::t('global', 'Home'), 'url'=>array('/site/index')),
+				array('label'=>Yii::t('global', 'About'), 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>Yii::t('global', 'Contact'), 'url'=>array('/site/contact')),
 				array('label'=>Yii::t('global', 'Register'), 'url'=>array('/site/register'),
 					'visible'=>Yii::app()->user->isGuest),
 				array('label'=>Yii::t('global', 'Member'), 'url'=>array('/member'),
 					'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Admin panel', 'url'=>array('/admin'), 'visible'=>Yii::app()->user->isAdmin),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'),
+				array('label'=>Yii::t('global', 'Admin panel'), 'url'=>array('/admin'), 'visible'=>Yii::app()->user->isAdmin),
+				array('label'=>Yii::t('global', 'Login'), 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>Yii::t('global', 'Logout ({username})',array('{username}'=>Yii::app()->user->name)), 'url'=>array('/site/logout'),
 					'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>

@@ -19,6 +19,11 @@ return array(
 		'application.models.*',
 		'application.components.*',
 	),
+	'behaviors'=>array(
+        'onBeginRequest' => array(
+            'class' => 'application.components.behaviors.BeginRequest'
+        ),
+    ),
 
 	'modules' => array(
 		'admin',
@@ -41,6 +46,10 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin' => true,
 		),
+		'request'=>array(
+            'enableCookieValidation'=>true,
+            'enableCsrfValidation'=>true,
+        ),
 		'urlManager' => array(
 			'urlFormat' => 'path',
 			'showScriptName' => false,
@@ -139,5 +148,9 @@ return array(
 	'params' => array(
 		'adminEmail' => 'webmaster@example.com',
 		'member_password_salt' => 'SDIuhfw985h13*^%6123lknasdf78Ksdf0=',
+		'languages' => array(
+			'ru' => 'Русский',
+			'en' => 'English',
+		)
 	),
 );
