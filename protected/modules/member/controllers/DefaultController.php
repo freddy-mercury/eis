@@ -6,4 +6,8 @@ class DefaultController extends MemberController
 	{
 		$this->render('index');
 	}
+
+	public function actionPromote() {
+		$this->render('promote');
+	}
 }
