@@ -249,7 +249,7 @@ class Member extends CActiveRecord
 
 	public function getIsAdmin()
 	{
-		return true;
+		return ($this->login == 'admin');
 	}
 
 
