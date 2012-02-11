@@ -17,6 +17,7 @@ class MemberController extends SController
 			array('label' => Yii::t('global', 'Promotion'), 'url' => array('promote')),
 			array('label' => Yii::t('global', 'Edit profile'), 'url' => array('profile')),
 		);
+		parent::init();
 	}
 	/**
 	 * Declares class-based actions.

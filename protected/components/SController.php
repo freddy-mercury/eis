@@ -25,12 +25,15 @@ class SController extends CController
 	public function init()
 	{
 		$visit = new Visit();
-		$visit->setAttributes(array('user_id' => Yii::app()->user->id,
-			'url' => $_SERVER['REQUEST_URI'],
-			'agent' => $_SERVER['HTTP_USER_AGENT'],
-			'ip' => ip2long($_SERVER['REMOTE_ADDR']),
-			'stamp' => time(),
-		));
+		$visit->setAttributes(
+			array(
+				'member_id' => Yii::app()->user->id,
+				'url' => $_SERVER['REQUEST_URI'],
+				'agent' => $_SERVER['HTTP_USER_AGENT'],
+				'ip' => ip2long($_SERVER['REMOTE_ADDR']),
+				'stamp' => time(),
+			)
+		);
 		$visit->save();
 	}
 }

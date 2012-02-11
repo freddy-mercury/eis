@@ -91,11 +91,6 @@ class Member extends CActiveRecord
 				'max' => 255
 			),
 			array(
-				'login_pin, master_pin',
-				'length',
-				'max' => 10
-			),
-			array(
 				'lang',
 				'in',
 				'range' => $messages_config['languages'],
@@ -112,7 +107,7 @@ class Member extends CActiveRecord
 				'password',
 				'match',
 				'pattern' => '/\w{6,}/',
-				'message' => Yii::t('global', 'Password must be at least 3 symbols!')
+				'message' => Yii::t('global', 'Password must be at least 6 symbols!')
 			),
 			array(
 				'email',
@@ -140,6 +135,17 @@ class Member extends CActiveRecord
 					. 'withdrawal_notify',
 				'safe',
 				'on' => 'profile'
+			),
+			array(
+				'ecurrency_purse, lang',
+				'required',
+				'on' => 'profile'
+			),
+			array(
+				'password',
+				'compare',
+				'allowEmpty' => true,
+				'on' => 'profile',
 			),
 			//Register scenario
 			array(
@@ -210,6 +216,8 @@ class Member extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'messages' => array(self::HAS_MANY, 'Message', 'member_id'),
+			'visits' => array(self::HAS_MANY, 'Visit', 'member_id'),
 		);
 	}
 

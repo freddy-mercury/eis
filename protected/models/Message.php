@@ -1,22 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "visits".
+ * This is the model class for table "messages".
  *
- * The followings are the available columns in table 'visits':
+ * The followings are the available columns in table 'messages':
  * @property integer $id
  * @property integer $member_id
- * @property string $url
- * @property string $agent
- * @property string $ip
+ * @property string $subject
+ * @property string $text
  * @property integer $stamp
  */
-class Visit extends CActiveRecord
+class Message extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Visit the static model class
+	 * @return Message the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -28,7 +27,7 @@ class Visit extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'visits';
+		return 'messages';
 	}
 
 	/**
@@ -39,14 +38,12 @@ class Visit extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('stamp', 'required'),
 			array('member_id, stamp', 'numerical', 'integerOnly'=>true),
-			array('agent', 'length', 'max'=>255),
-			array('ip', 'length', 'max'=>11),
-			array('url', 'safe'),
+			array('subject', 'length', 'max'=>255),
+			array('text', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, member_id, url, agent, ip, stamp', 'safe', 'on'=>'search'),
+			array('id, member_id, subject, text, stamp', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,9 +66,8 @@ class Visit extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'member_id' => 'Member',
-			'url' => 'Url',
-			'agent' => 'Agent',
-			'ip' => 'Ip',
+			'subject' => 'Subject',
+			'text' => 'Text',
 			'stamp' => 'Stamp',
 		);
 	}
@@ -89,9 +85,8 @@ class Visit extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('member_id',$this->member_id);
-		$criteria->compare('url',$this->url,true);
-		$criteria->compare('agent',$this->agent,true);
-		$criteria->compare('ip',$this->ip,true);
+		$criteria->compare('subject',$this->subject,true);
+		$criteria->compare('text',$this->text,true);
 		$criteria->compare('stamp',$this->stamp);
 
 		return new CActiveDataProvider($this, array(

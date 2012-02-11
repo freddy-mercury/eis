@@ -108,7 +108,7 @@ class SiteController extends SController
 	{
 		$model = new Member('register');
 		if (isset($_POST['Member'])) {
-			$model->attributes = $_POST['Member'];
+			$model->setAttributes($_POST['Member']);
 			if ($model->save()) {
 				Yii::app()->user->setFlash('register', Yii::t('global', 'You have successfully create an account! '
 					. 'You can use your credentials to log in.'));
