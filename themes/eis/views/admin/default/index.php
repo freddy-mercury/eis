@@ -2,6 +2,10 @@
 $this->breadcrumbs=array(
 	$this->module->id,
 );
+$this->menu=array(
+	array('label'=>'Members', 'url'=>array('member/index')),
+	array('label'=>'Plans', 'url'=>array('plan/index')),
+);
 ?>
 <h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
 
