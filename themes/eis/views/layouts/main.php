@@ -19,7 +19,7 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>Yii::t('global', 'Home'), 'url'=>array('/site/index')),
-				array('label'=>Yii::t('global', 'About'), 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>Yii::t('global', 'About'), 'url'=>array(Yii::app()->cms->createUrl('about'))),
 				array('label'=>Yii::t('global', 'Contact'), 'url'=>array('/site/contact')),
 				array('label'=>Yii::t('global', 'Register'), 'url'=>array('/site/register'),
 					'visible'=>Yii::app()->user->isGuest),

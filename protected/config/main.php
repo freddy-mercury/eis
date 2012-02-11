@@ -18,6 +18,7 @@ return array(
 	'import' => array(
 		'application.models.*',
 		'application.components.*',
+		'application.modules.cms.CmsModule',
 	),
 	'behaviors'=>array(
         'onBeginRequest' => array(
@@ -26,6 +27,7 @@ return array(
     ),
 
 	'modules' => array(
+		'cms',
 		'admin',
 		'member',
 		// uncomment the following to enable the Gii tool
@@ -41,6 +43,18 @@ return array(
 
 	// application components
 	'components' => array(
+		'cms'=>array(
+			'class'=>'cms.components.Cms',
+			'users'=>array('admin'),
+			'attachmentPath'=>'/files/',
+			'allowedFileSize'=>1024,
+			'defaultLanguage'=>'en',
+			'appLayout'=>'//layouts/column1',
+			'languages' => array(
+				'ru' => 'Русский',
+				'en' => 'English',
+			),
+		),
 		'user' => array(
 			'class' => 'application.components.SWebUser',
 			// enable cookie-based authentication
@@ -54,6 +68,7 @@ return array(
 			'urlFormat' => 'path',
 			'showScriptName' => false,
 			'rules' => array(
+				'page/<name>-<id:\d+>.html'=>'cms/node/page', // clean URLs for pages
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
