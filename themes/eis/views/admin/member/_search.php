@@ -11,13 +11,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'access'); ?>
-		<?php echo $form->textField($model,'access'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'login'); ?>
-		<?php echo $form->textField($model,'login',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'login',array('size'=>50,'maxlength'=>50)); ?>
 	</div>
 
 	<div class="row">
@@ -32,12 +27,12 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>150)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'security_question'); ?>
-		<?php echo $form->textField($model,'security_question',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'security_question'); ?>
 	</div>
 
 	<div class="row">
@@ -47,7 +42,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'security_question2'); ?>
-		<?php echo $form->textField($model,'security_question2',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'security_question2'); ?>
 	</div>
 
 	<div class="row">
@@ -101,23 +96,43 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'referral'); ?>
-		<?php echo $form->textField($model,'referral',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'login_notify'); ?>
+		<?php echo $form->textField($model,'login_notify'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'alert_profile'); ?>
-		<?php echo $form->textField($model,'alert_profile'); ?>
+		<?php echo $form->label($model,'profile_notify'); ?>
+		<?php echo $form->textField($model,'profile_notify'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'alert_login'); ?>
-		<?php echo $form->textField($model,'alert_login'); ?>
+		<?php echo $form->label($model,'withdrawal_notify'); ?>
+		<?php echo $form->textField($model,'withdrawal_notify'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'alert_withdrawal'); ?>
-		<?php echo $form->textField($model,'alert_withdrawal'); ?>
+		<?php echo $form->label($model,'transaction_limit'); ?>
+		<?php echo $form->textField($model,'transaction_limit'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'daily_limit'); ?>
+		<?php echo $form->textField($model,'daily_limit'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'total_limit'); ?>
+		<?php echo $form->textField($model,'total_limit'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'lang'); ?>
+		<?php echo $form->textField($model,'lang',array('size'=>2,'maxlength'=>2)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'status'); ?>
+		<?php echo $form->textField($model,'status'); ?>
 	</div>
 
 	<div class="row">
@@ -126,8 +141,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'hash'); ?>
-		<?php echo $form->textField($model,'hash',array('size'=>32,'maxlength'=>32)); ?>
+		<?php echo $form->label($model,'monitor'); ?>
+		<?php echo $form->textField($model,'monitor'); ?>
 	</div>
 
 	<div class="row buttons">

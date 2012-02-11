@@ -4,10 +4,6 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('access')); ?>:</b>
-	<?php echo CHtml::encode($data->access); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('login')); ?>:</b>
 	<?php echo CHtml::encode($data->login); ?>
 	<br />
@@ -28,11 +24,11 @@
 	<?php echo CHtml::encode($data->email); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('security_question')); ?>:</b>
 	<?php echo CHtml::encode($data->security_question); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('security_answer')); ?>:</b>
 	<?php echo CHtml::encode($data->security_answer); ?>
 	<br />
@@ -81,28 +77,44 @@
 	<?php echo CHtml::encode($data->ecurrency_purse); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('referral')); ?>:</b>
-	<?php echo CHtml::encode($data->referral); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('login_notify')); ?>:</b>
+	<?php echo CHtml::encode($data->login_notify); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('alert_profile')); ?>:</b>
-	<?php echo CHtml::encode($data->alert_profile); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('profile_notify')); ?>:</b>
+	<?php echo CHtml::encode($data->profile_notify); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('alert_login')); ?>:</b>
-	<?php echo CHtml::encode($data->alert_login); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('withdrawal_notify')); ?>:</b>
+	<?php echo CHtml::encode($data->withdrawal_notify); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('alert_withdrawal')); ?>:</b>
-	<?php echo CHtml::encode($data->alert_withdrawal); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('transaction_limit')); ?>:</b>
+	<?php echo CHtml::encode($data->transaction_limit); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('daily_limit')); ?>:</b>
+	<?php echo CHtml::encode($data->daily_limit); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('total_limit')); ?>:</b>
+	<?php echo CHtml::encode($data->total_limit); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('lang')); ?>:</b>
+	<?php echo CHtml::encode($data->lang); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
+	<?php echo CHtml::encode($data->status); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_registered')); ?>:</b>
 	<?php echo CHtml::encode($data->date_registered); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('hash')); ?>:</b>
-	<?php echo CHtml::encode($data->hash); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('monitor')); ?>:</b>
+	<?php echo CHtml::encode($data->monitor); ?>
 	<br />
 
 	*/ ?>

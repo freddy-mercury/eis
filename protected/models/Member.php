@@ -303,7 +303,6 @@ class Member extends CActiveRecord
 		$criteria->compare('lang', $this->lang, true);
 		$criteria->compare('status', $this->status);
 		$criteria->compare('date_registered', $this->date_registered);
-		$criteria->compare('hash', $this->hash, true);
 		$criteria->compare('monitor', $this->monitor);
 
 		return new CActiveDataProvider($this, array(

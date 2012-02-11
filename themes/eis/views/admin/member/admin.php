@@ -43,13 +43,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'access',
 		'login',
 		'password',
 		'login_pin',
 		'master_pin',
-		/*
 		'email',
+		/*
 		'security_question',
 		'security_answer',
 		'security_question2',
@@ -63,12 +62,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'address',
 		'ecurrency',
 		'ecurrency_purse',
-		'referral',
-		'alert_profile',
-		'alert_login',
-		'alert_withdrawal',
+		'login_notify',
+		'profile_notify',
+		'withdrawal_notify',
+		'transaction_limit',
+		'daily_limit',
+		'total_limit',
+		'lang',
+		'status',
 		'date_registered',
-		'hash',
+		'monitor',
 		*/
 		array(
 			'class'=>'CButtonColumn',

@@ -10,14 +10,8 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'access'); ?>
-		<?php echo $form->textField($model,'access'); ?>
-		<?php echo $form->error($model,'access'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'login'); ?>
-		<?php echo $form->textField($model,'login',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'login',array('size'=>50,'maxlength'=>50)); ?>
 		<?php echo $form->error($model,'login'); ?>
 	</div>
 
@@ -41,13 +35,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>150)); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'security_question'); ?>
-		<?php echo $form->textField($model,'security_question',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'security_question'); ?>
 		<?php echo $form->error($model,'security_question'); ?>
 	</div>
 
@@ -59,7 +53,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'security_question2'); ?>
-		<?php echo $form->textField($model,'security_question2',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'security_question2'); ?>
 		<?php echo $form->error($model,'security_question2'); ?>
 	</div>
 
@@ -124,27 +118,51 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'referral'); ?>
-		<?php echo $form->textField($model,'referral',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'referral'); ?>
+		<?php echo $form->labelEx($model,'login_notify'); ?>
+		<?php echo $form->textField($model,'login_notify'); ?>
+		<?php echo $form->error($model,'login_notify'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'alert_profile'); ?>
-		<?php echo $form->textField($model,'alert_profile'); ?>
-		<?php echo $form->error($model,'alert_profile'); ?>
+		<?php echo $form->labelEx($model,'profile_notify'); ?>
+		<?php echo $form->textField($model,'profile_notify'); ?>
+		<?php echo $form->error($model,'profile_notify'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'alert_login'); ?>
-		<?php echo $form->textField($model,'alert_login'); ?>
-		<?php echo $form->error($model,'alert_login'); ?>
+		<?php echo $form->labelEx($model,'withdrawal_notify'); ?>
+		<?php echo $form->textField($model,'withdrawal_notify'); ?>
+		<?php echo $form->error($model,'withdrawal_notify'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'alert_withdrawal'); ?>
-		<?php echo $form->textField($model,'alert_withdrawal'); ?>
-		<?php echo $form->error($model,'alert_withdrawal'); ?>
+		<?php echo $form->labelEx($model,'transaction_limit'); ?>
+		<?php echo $form->textField($model,'transaction_limit'); ?>
+		<?php echo $form->error($model,'transaction_limit'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'daily_limit'); ?>
+		<?php echo $form->textField($model,'daily_limit'); ?>
+		<?php echo $form->error($model,'daily_limit'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'total_limit'); ?>
+		<?php echo $form->textField($model,'total_limit'); ?>
+		<?php echo $form->error($model,'total_limit'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'lang'); ?>
+		<?php echo $form->textField($model,'lang',array('size'=>2,'maxlength'=>2)); ?>
+		<?php echo $form->error($model,'lang'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'status'); ?>
+		<?php echo $form->textField($model,'status'); ?>
+		<?php echo $form->error($model,'status'); ?>
 	</div>
 
 	<div class="row">
@@ -154,9 +172,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'hash'); ?>
-		<?php echo $form->textField($model,'hash',array('size'=>32,'maxlength'=>32)); ?>
-		<?php echo $form->error($model,'hash'); ?>
+		<?php echo $form->labelEx($model,'monitor'); ?>
+		<?php echo $form->textField($model,'monitor'); ?>
+		<?php echo $form->error($model,'monitor'); ?>
 	</div>
 
 	<div class="row buttons">
