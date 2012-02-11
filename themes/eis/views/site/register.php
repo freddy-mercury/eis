@@ -24,6 +24,7 @@ $this->breadcrumbs = array(
 			'validateOnSubmit' => true,
 		),
 	));
+	/* @var $model Member */
 	?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>

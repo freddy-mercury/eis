@@ -18,4 +18,18 @@ class MemberController extends SController
 			array('label' => Yii::t('global', 'Edit profile'), 'url' => array('profile')),
 		);
 	}
+	/**
+	 * Declares class-based actions.
+	 * @return array
+	 */
+	public function actions()
+	{
+		return array(
+			// captcha action renders the CAPTCHA image displayed on the contact page
+			'captcha' => array(
+				'class' => 'CCaptchaAction',
+				'backColor' => 0xFFFFFF,
+			),
+		);
+	}
 }

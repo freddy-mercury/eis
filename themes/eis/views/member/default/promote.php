@@ -3,12 +3,12 @@ $referral_link = Yii::app()->getBaseUrl(true)
 	. Yii::app()->urlManager->createUrl('site/register', array('referral' => Yii::app()->user->model->login));
 $banners_path = Yii::app()->getBaseUrl(true) . Yii::app()->theme->baseUrl . '/banners/';
 ?>
-<h1>Promote yourself</h1>
+<h1><?php echo Yii::t('global', 'Promote yourself') ?></h1>
 <p>
-	Invite your friends and get referral commission to your account!
+	<?php echo Yii::t('global', 'Invite your friends and get referral commission to your account!'); ?>
 </p>
 <p>
-	You referral link:
+	<?php echo Yii::t('global', 'You referral link'); ?>:
 
 	<a href="<?php echo $referral_link ?>">
 		<?php echo $referral_link ?>
@@ -29,4 +29,3 @@ $banners_path = Yii::app()->getBaseUrl(true) . Yii::app()->theme->baseUrl . '/ba
 <p><b>BB Code:</b></p>
 <p><?php echo CHtml::textArea('bb728x90', '[url=' . $referral_link . '][img]'
 	. $banners_path . '728x90.gif[/img][/url]', array('rows' => 3, 'cols' => 70)) ?></p>
-
