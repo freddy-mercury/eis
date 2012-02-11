@@ -1,0 +1,12 @@
+div.pi_container {
+}
+div.pi_container input {
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+}
+
+input.pi_reset {
+	display: inline-block;
+	width: 45px;
+}

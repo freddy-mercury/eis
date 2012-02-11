@@ -31,6 +31,18 @@ $this->breadcrumbs=array(
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'login_pin'); ?>
+		<?php $this->widget('ext.widgets.PinInput.PinInput', array(
+			'model'=>$model,
+			'attribute'=>'login_pin',
+			'htmlOptions'=>array(
+				'style'=>'width: 82px;'
+			)
+		)); ?>
+		<?php echo $form->error($model,'login_pin'); ?>
+	</div>
 
 	<div class="row rememberMe">
 		<?php echo $form->checkBox($model,'rememberMe'); ?>

@@ -257,6 +257,11 @@ class Member extends CActiveRecord
 	{
 		return ($this->hashPassword($password) === $this->password);
 	}
+	
+	public function verifyLoginPin($login_pin)
+	{
+		return ($this->login_pin == $login_pin);
+	}
 
 	private function hashPassword($password)
 	{
