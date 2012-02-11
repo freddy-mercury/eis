@@ -45,6 +45,20 @@ div.form select
 	margin: 0.2em 0 0.5em 0;
 }
 
+div.form .checkbox input
+{
+    clear: left;
+    float: left;
+}
+
+div.form .checkbox label
+{
+    clear: right;
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
 div.form fieldset
 {
 	border: 1px solid #DDD;

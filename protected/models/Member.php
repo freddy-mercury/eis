@@ -135,6 +135,12 @@ class Member extends CActiveRecord
 				'message' => Yii::t('global', 'Login Pin must be of 3 digits.')
 			),
 			//Edit profile scenario
+			array(
+				'password, password_repeat, login_pin, master_pin, ecurrency_purse, lang, login_notify, profile_notify, '
+					. 'withdrawal_notify',
+				'safe',
+				'on' => 'profile'
+			),
 			//Register scenario
 			array(
 				'login, password, password_repeat, login_pin, master_pin, email, security_question, '
