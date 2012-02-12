@@ -13,7 +13,7 @@ class MemberController extends SController
 			array('label' => Yii::t('global', 'Make deposit'), 'url' => array('deposit')),
 			array('label' => Yii::t('global', 'Request withdrawal'), 'url' => array('withdraw')),
 			array('label' => Yii::t('global', 'History'), 'url' => array('history')),
-			array('label' => Yii::t('global', 'Messages'), 'url' => array('messages')),
+			array('label' => Yii::t('global', 'Messages'), 'url' => array('messages/index')),
 			array('label' => Yii::t('global', 'Promotion'), 'url' => array('promote')),
 			array('label' => Yii::t('global', 'Edit profile'), 'url' => array('profile')),
 		);

@@ -7,11 +7,6 @@ class DefaultController extends MemberController
 		$this->render('index');
 	}
 
-	public function actionMessages()
-	{
-		$this->render('messages');
-	}
-
 	public function actionPromote()
 	{
 		$this->render('promote');
