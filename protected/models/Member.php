@@ -218,6 +218,36 @@ class Member extends CActiveRecord
 		return array(
 			'messages' => array(self::HAS_MANY, 'Message', 'member_id'),
 			'visits' => array(self::HAS_MANY, 'Visit', 'member_id'),
+			'transactions' => array(self::HAS_MANY, 'Transaction', 'member_id', 'condition' => 'status > 0'),
+
+			'balance' => array(self::STAT, 'Transaction', 'member_id',
+				'select' => 'SUM(amount)',
+				'condition' => 't.status > 0'
+			),
+			'invested' => array(self::STAT, 'Transaction', 'member_id',
+				'select' => 'ABS(SUM(amount))',
+				'condition' => 't.type = "i" AND t.status > 0'
+			),
+			'withdrawn' => array(self::STAT, 'Transaction', 'member_id',
+				'select' => 'ABS(SUM(amount))',
+				'condition' => 't.type = "w" AND t.status > 0'
+			),
+			'earned' => array(self::STAT, 'Transaction', 'member_id',
+				'select' => 'SUM(amount)',
+				'condition' => 't.type = "e" AND t.status > 0'
+			),
+			'deposited' => array(self::STAT, 'Transaction', 'member_id',
+				'select' => 'SUM(amount)',
+				'condition' => 't.type = "d" AND t.status > 0'
+			),
+			'bonus' => array(self::STAT, 'Transaction', 'member_id',
+				'select' => 'SUM(amount)',
+				'condition' => 't.type = "b" AND t.status > 0'
+			),
+			'penalty' => array(self::STAT, 'Transaction', 'member_id',
+				'select' => 'ABS(SUM(amount))',
+				'condition' => 't.type = "p" AND t.status > 0'
+			),
 		);
 	}
 
@@ -327,5 +357,13 @@ class Member extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,
 		));
+	}
+
+	public function stats() {
+		$criteria = new CDbCriteria();
+		$criteria->compare('member_id', $this->id);
+		$criteria->addCondition('status > 0');
+		$criteria->order = 'time DESC';
+		return new CActiveDataProvider('Transaction', array('criteria' => $criteria));
 	}
 }

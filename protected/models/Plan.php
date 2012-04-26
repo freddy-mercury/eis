@@ -30,6 +30,20 @@ class Plan extends CActiveRecord
 		return parent::model($className);
 	}
 
+    public static function getPercentPerOptions() {
+        return array(
+            'term' => Yii::t('global', 'Term'),
+            'periodicity' => Yii::t('global', 'Periodicity'),
+        );
+    }
+
+    public static function getTypesOptions() {
+        return array(
+            'public' => Yii::t('global', 'Public'),
+            'user' => Yii::t('global', 'User'),
+            'monitor' => Yii::t('global', 'Monitor'),
+        );
+    }
 	/**
 	 * @return string the associated database table name
 	 */
@@ -47,7 +61,7 @@ class Plan extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, description, min, max, percent', 'required'),
-			array('periodicity, term, compounding, type, monfri, principal_back', 'numerical', 'integerOnly'=>true),
+			array('periodicity, term, compounding, monfri, principal_back', 'numerical', 'integerOnly'=>true),
 			array('min, max, percent', 'numerical'),
 			array('name', 'length', 'max'=>255),
 			array('percent_per', 'length', 'max'=>11),
@@ -74,19 +88,19 @@ class Plan extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'name' => 'Name',
-			'description' => 'Description',
-			'min' => 'Min',
-			'max' => 'Max',
-			'percent' => 'Percent',
-			'percent_per' => 'Percent Per',
-			'periodicity' => 'Periodicity',
-			'term' => 'Term',
-			'compounding' => 'Compounding',
-			'type' => 'Type',
-			'monfri' => 'Monfri',
-			'principal_back' => 'Principal Back',
+			'id' => Yii::t('global', 'ID'),
+			'name' => Yii::t('global', 'Name'),
+			'description' => Yii::t('global', 'Description'),
+			'min' => Yii::t('global', 'Min'),
+			'max' => Yii::t('global', 'Max'),
+			'percent' => Yii::t('global', 'Percent'),
+			'percent_per' => Yii::t('global', 'Percent Per'),
+			'periodicity' => Yii::t('global', 'Periodicity'),
+			'term' => Yii::t('global', 'Term'),
+			'compounding' => Yii::t('global', 'Compounding'),
+			'type' => Yii::t('global', 'Type'),
+			'monfri' => Yii::t('global', 'Monfri'),
+			'principal_back' => Yii::t('global', 'Principal Back'),
 		);
 	}
 

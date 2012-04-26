@@ -1,6 +1,8 @@
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php
+    /* @var $form CActiveForm */
+    $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'plan-form',
 	'enableAjaxValidation'=>false,
 )); ?>
@@ -41,7 +43,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'percent_per'); ?>
-		<?php echo $form->textField($model,'percent_per',array('size'=>11,'maxlength'=>11)); ?>
+		<?php
+            echo $form->dropDownList($model, 'percent_per', Plan::getPercentPerOptions());
+        ?>
 		<?php echo $form->error($model,'percent_per'); ?>
 	</div>
 
@@ -57,31 +61,31 @@
 		<?php echo $form->error($model,'term'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'compounding'); ?>
-		<?php echo $form->textField($model,'compounding'); ?>
-		<?php echo $form->error($model,'compounding'); ?>
+	<div class="row checkbox">
+		<?php echo $form->checkBox($model,'compounding'); ?>
+        <?php echo $form->labelEx($model,'compounding'); ?>
+        <?php echo $form->error($model,'compounding'); ?>
 	</div>
 
-	<div class="row">
+	<div class="row clear">
 		<?php echo $form->labelEx($model,'type'); ?>
-		<?php echo $form->textField($model,'type'); ?>
+		<?php echo $form->dropDownList($model, 'type', Plan::getTypesOptions()) ?>
 		<?php echo $form->error($model,'type'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'monfri'); ?>
-		<?php echo $form->textField($model,'monfri'); ?>
-		<?php echo $form->error($model,'monfri'); ?>
+	<div class="row checkbox">
+		<?php echo $form->checkBox($model,'monfri'); ?>
+        <?php echo $form->labelEx($model,'monfri'); ?>
+        <?php echo $form->error($model,'monfri'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'principal_back'); ?>
-		<?php echo $form->textField($model,'principal_back'); ?>
-		<?php echo $form->error($model,'principal_back'); ?>
+	<div class="row checkbox">
+		<?php echo $form->checkBox($model,'principal_back'); ?>
+        <?php echo $form->labelEx($model,'principal_back'); ?>
+        <?php echo $form->error($model,'principal_back'); ?>
 	</div>
 
-	<div class="row buttons">
+	<div class="row clear buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 

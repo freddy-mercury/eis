@@ -1,8 +1,4 @@
 <?php
-$this->breadcrumbs=array(
-	'Members'=>array('index'),
-	'Create',
-);
 
 $this->menu=array(
 	array('label'=>'List Member', 'url'=>array('index')),

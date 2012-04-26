@@ -1,6 +1,8 @@
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php
+    /* @var $form CActiveForm */
+    $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'member-form',
 	'enableAjaxValidation'=>false,
 )); ?>
@@ -17,19 +19,31 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->textField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'login_pin'); ?>
-		<?php echo $form->textField($model,'login_pin',array('size'=>10,'maxlength'=>10)); ?>
+        <?php
+        $this->widget('CMaskedTextField', array(
+            'model' => $model,
+            'attribute' => 'login_pin',
+            'mask' => '99999',
+        ));
+        ?>
 		<?php echo $form->error($model,'login_pin'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'master_pin'); ?>
-		<?php echo $form->textField($model,'master_pin',array('size'=>10,'maxlength'=>10)); ?>
+        <?php
+        $this->widget('CMaskedTextField', array(
+            'model' => $model,
+            'attribute' => 'master_pin',
+            'mask' => '999',
+        ));
+        ?>
 		<?php echo $form->error($model,'master_pin'); ?>
 	</div>
 
@@ -41,7 +55,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'security_question'); ?>
-		<?php echo $form->textField($model,'security_question'); ?>
+        <?php
+        $security_questions = SecurityQuestion::model()->findAll();
+        $data = array();
+        foreach($security_questions as $security_question)
+            $data[$security_question->id] = $security_question->text;
+        echo $form->dropDownList($model, 'security_question', $data);
+        ?>
 		<?php echo $form->error($model,'security_question'); ?>
 	</div>
 
@@ -53,7 +73,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'security_question2'); ?>
-		<?php echo $form->textField($model,'security_question2'); ?>
+        <?php echo $form->dropDownList($model, 'security_question2', $data); ?>
 		<?php echo $form->error($model,'security_question2'); ?>
 	</div>
 
@@ -77,13 +97,25 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'birthdate'); ?>
-		<?php echo $form->textField($model,'birthdate'); ?>
+        <?php
+        $this->widget('CMaskedTextField', array(
+            'model' => $model,
+            'attribute' => 'birthdate',
+            'mask' => '9999-99-99',
+        ));
+        ?>
 		<?php echo $form->error($model,'birthdate'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'country'); ?>
-		<?php echo $form->textField($model,'country'); ?>
+        <?php
+        $countries = Country::model()->findAll();
+        $data = array();
+        foreach($countries as $country)
+            $data[$country->id] = $country->name;
+        echo $form->dropDownList($model, 'country', $data);
+        ?>
 		<?php echo $form->error($model,'country'); ?>
 	</div>
 
@@ -107,7 +139,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ecurrency'); ?>
-		<?php echo $form->textField($model,'ecurrency',array('size'=>2,'maxlength'=>2)); ?>
+        <?php echo $form->dropDownList($model, 'ecurrency', Yii::app()->ecurrency->getComponentsNames()); ?>
 		<?php echo $form->error($model,'ecurrency'); ?>
 	</div>
 
@@ -117,25 +149,25 @@
 		<?php echo $form->error($model,'ecurrency_purse'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'login_notify'); ?>
-		<?php echo $form->textField($model,'login_notify'); ?>
-		<?php echo $form->error($model,'login_notify'); ?>
-	</div>
+    <div class="row checkbox">
+        <?php echo $form->checkBox($model, 'login_notify') ?>
+        <?php echo $form->labelEx($model, 'login_notify'); ?>
+        <?php echo $form->error($model, 'login_notify'); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'profile_notify'); ?>
-		<?php echo $form->textField($model,'profile_notify'); ?>
-		<?php echo $form->error($model,'profile_notify'); ?>
-	</div>
+    <div class="row checkbox">
+        <?php echo $form->checkBox($model, 'profile_notify') ?>
+        <?php echo $form->labelEx($model, 'profile_notify'); ?>
+        <?php echo $form->error($model, 'profile_notify'); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'withdrawal_notify'); ?>
-		<?php echo $form->textField($model,'withdrawal_notify'); ?>
-		<?php echo $form->error($model,'withdrawal_notify'); ?>
-	</div>
+    <div class="row checkbox">
+        <?php echo $form->checkBox($model, 'withdrawal_notify') ?>
+        <?php echo $form->labelEx($model, 'withdrawal_notify'); ?>
+        <?php echo $form->error($model, 'withdrawal_notify'); ?>
+    </div>
 
-	<div class="row">
+	<div class="row clear">
 		<?php echo $form->labelEx($model,'transaction_limit'); ?>
 		<?php echo $form->textField($model,'transaction_limit'); ?>
 		<?php echo $form->error($model,'transaction_limit'); ?>
@@ -155,29 +187,29 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'lang'); ?>
-		<?php echo $form->textField($model,'lang',array('size'=>2,'maxlength'=>2)); ?>
+        <?php
+
+        $messages_config = include(Yii::app()->basePath . DIRECTORY_SEPARATOR . 'messages'
+            . DIRECTORY_SEPARATOR . 'config.php');
+        $languages = array_combine($messages_config['languages'], $messages_config['languages']);
+        echo $form->dropDownList($model, 'lang', $languages);
+        ?>
 		<?php echo $form->error($model,'lang'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
+    <div class="row checkbox">
+        <?php echo $form->checkBox($model,'monitor'); ?>
+        <?php echo $form->labelEx($model,'monitor'); ?>
+        <?php echo $form->error($model,'monitor'); ?>
+    </div>
+
+	<div class="row checkbox">
+        <?php echo $form->checkBox($model,'status'); ?>
+        <?php echo $form->labelEx($model,'status'); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'date_registered'); ?>
-		<?php echo $form->textField($model,'date_registered'); ?>
-		<?php echo $form->error($model,'date_registered'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'monitor'); ?>
-		<?php echo $form->textField($model,'monitor'); ?>
-		<?php echo $form->error($model,'monitor'); ?>
-	</div>
-
-	<div class="row buttons">
+	<div class="row buttons clear">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 

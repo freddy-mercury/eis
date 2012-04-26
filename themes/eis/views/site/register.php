@@ -168,7 +168,7 @@ $this->breadcrumbs = array(
 					<legend>E-currency and other</legend>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'ecurrency'); ?>
-						<?php echo $form->dropDownList($model, 'ecurrency', Yii::app()->ecurrency->getComponentsNames());						?>
+						<?php echo $form->dropDownList($model, 'ecurrency', Yii::app()->ecurrency->getComponentsNames()); ?>
 						<?php echo $form->error($model, 'ecurrency'); ?>
 					</div>
 					<div class="row">

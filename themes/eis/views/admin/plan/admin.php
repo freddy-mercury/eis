@@ -1,12 +1,6 @@
 <?php
-$this->breadcrumbs=array(
-	'Plans'=>array('index'),
-	'Manage',
-);
-
-$this->menu=array(
-	array('label'=>'List Plan', 'url'=>array('index')),
-	array('label'=>'Create Plan', 'url'=>array('create')),
+$this->breadcrumbs+=array(
+	Yii::t('admin', 'Plans')
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -25,12 +19,10 @@ $('.search-form form').submit(function(){
 
 <h1>Manage Plans</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
+<?php echo CHtml::link('Create plan', array('create')); ?> |
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+
+
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -40,23 +32,34 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'plan-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
 	'columns'=>array(
 		'id',
 		'name',
 		'description',
-		'min',
-		'max',
-		'percent',
-		/*
-		'percent_per',
+        array(
+            'header' => Yii::t('admin', 'Min &mdash; Max'),
+	        'type' => 'html',
+            'value' => function($data) {
+				return $data->min . ' &mdash; ' . $data->max;
+            }
+        ),
+		array(
+			'header' => Yii::t('admin', 'Percents'),
+			'value' => function($data) {
+				return $data->percent . '% / ' . $data->percent_per;
+			}
+		),
 		'periodicity',
 		'term',
-		'compounding',
+		//'compounding',
 		'type',
-		'monfri',
-		'principal_back',
-		*/
+		array(
+			'header' => Yii::t('admin', 'Working days'),
+			'value' => function($data) {
+				return $data->monfri ? Yii::t('admin', 'yes') : Yii::t('admin', 'no');
+			}
+		),
+		//'principal_back',
 		array(
 			'class'=>'CButtonColumn',
 		),
