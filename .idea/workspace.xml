@@ -5,59 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43696a92-f87b-451d-ae66-369e9a775c7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/en/admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/en/core.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/en/countries.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/en/security_questions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/ru/admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/ru/core.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/ru/countries.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/ru/security_questions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120426_170850_createTableTransaction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120516_152902_dropCountriesTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120516_153005_alterMembersCountryTypeChar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120516_153148_dropSecurityQuestionsTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/models/Countries.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/models/SecurityQuestions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/models/Transaction.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/MessageController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/_form.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/_search.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/admin.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/create.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/eis/views/member/default/deposit.php" />
-      <change type="DELETED" beforePath="C:\WebServers\home\eis\www\protected\models\Country.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\eis\www\protected\models\SecurityQuestion.php" afterPath="" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\default\index.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/default/index.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/_form.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\_search.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/_search.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\_view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/_view.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/admin.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\create.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/create.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\stats.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/stats.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/update.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/view.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/_form.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\_search.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/_search.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\_view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/_view.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/admin.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\create.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/create.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/update.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/messages/en/global.php" afterPath="$PROJECT_DIR$/protected/messages/en/global.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/messages/ru/global.php" afterPath="$PROJECT_DIR$/protected/messages/ru/global.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Member.php" afterPath="$PROJECT_DIR$/protected/models/Member.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Message.php" afterPath="$PROJECT_DIR$/protected/models/Message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/components/AdminController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/components/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/member/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/protected/modules/member/controllers/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/site/register.php" afterPath="$PROJECT_DIR$/themes/eis/views/site/register.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Countries.php" afterPath="$PROJECT_DIR$/protected/models/Countries.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/SecurityQuestions.php" afterPath="$PROJECT_DIR$/protected/models/SecurityQuestions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/default/index.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/default/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/member/_search.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/_search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/member/_view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/member/create.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/member/stats.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/stats.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/member/update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/member/view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/plan/_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/_form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/plan/_search.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/_search.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/plan/_view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/plan/admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/plan/create.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/plan/update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/plan/view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/view.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -170,7 +134,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+    <option name="LINE_SEPARATORS_CONVERSION" value="NONE" />
     <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -692,12 +656,18 @@
       <created>1333559338480</created>
       <updated>1333559338480</updated>
     </task>
+    <task id="LOCAL-00001" summary="Some modifications 16.05.2012">
+      <created>1337185845269</created>
+      <updated>1337185845269</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -712,7 +682,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -723,8 +692,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <value>
         <are-packages-shown value="false" />
@@ -755,7 +724,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 16.05.2012" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -768,6 +737,7 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Some modifications 16.05.2012" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
