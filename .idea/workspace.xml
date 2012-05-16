@@ -1,45 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/themes/eis/views/admin/plan/admin.php" />
+    <bookmark url="file://$PROJECT_DIR$/protected/modules/admin/views/plan/admin.php" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43696a92-f87b-451d-ae66-369e9a775c7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/www.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120416_183904_alterPlansType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/eis/views/admin/member/stats.php" />
-      <change type="DELETED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\index.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\index.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/en/admin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/en/core.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/en/countries.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/en/security_questions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/ru/admin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/ru/core.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/ru/countries.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/messages/ru/security_questions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120426_170850_createTableTransaction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120516_152902_dropCountriesTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120516_153005_alterMembersCountryTypeChar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120516_153148_dropSecurityQuestionsTable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/models/Countries.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/models/SecurityQuestions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/models/Transaction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/MessageController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/update.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/_form.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/_search.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/admin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/create.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/eis/views/member/default/deposit.php" />
+      <change type="DELETED" beforePath="C:\WebServers\home\eis\www\protected\models\Country.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\WebServers\home\eis\www\protected\models\SecurityQuestion.php" afterPath="" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\default\index.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/default/index.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/_form.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\_search.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/_search.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\_view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/_view.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/admin.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\create.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/create.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\stats.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/stats.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/update.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\member\view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/member/view.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/_form.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\_search.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/_search.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\_view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/_view.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/admin.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\create.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/create.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\update.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/update.php" />
+      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\themes\eis\views\admin\plan\view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/messages/en/global.php" afterPath="$PROJECT_DIR$/protected/messages/en/global.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/messages/ru/global.php" afterPath="$PROJECT_DIR$/protected/messages/ru/global.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Member.php" afterPath="$PROJECT_DIR$/protected/models/Member.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Plan.php" afterPath="$PROJECT_DIR$/protected/models/Plan.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Message.php" afterPath="$PROJECT_DIR$/protected/models/Message.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/components/AdminController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/components/AdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/MemberController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/MemberController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/PlanController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/PlanController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/yiic.bat" afterPath="$PROJECT_DIR$/protected/yiic.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/css/screen.css" afterPath="$PROJECT_DIR$/themes/eis/css/screen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/default/index.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/default/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/member/_form.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/member/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/member/admin.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/member/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/member/create.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/member/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/member/update.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/member/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/member/view.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/member/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/plan/_form.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/plan/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/plan/admin.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/plan/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/plan/create.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/plan/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/plan/update.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/plan/update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/admin/plan/view.php" afterPath="$PROJECT_DIR$/themes/eis/views/admin/plan/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/layouts/column2.php" afterPath="$PROJECT_DIR$/themes/eis/views/layouts/column2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/member/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/protected/modules/member/controllers/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/site/register.php" afterPath="$PROJECT_DIR$/themes/eis/views/site/register.php" />
     </list>
     <ignored path="www.iws" />
@@ -62,62 +79,84 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Member.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/Member.php">
+      <file leaf-file-name="register.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/eis/views/site/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="365" column="32" selection-start="11821" selection-end="11821" vertical-scroll-proportion="0.0">
+            <state line="97" column="104" selection-start="3171" selection-end="3171" vertical-scroll-proportion="-13.076923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="m120416_183904_alterPlansType.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/migrations/m120416_183904_alterPlansType.php">
+      <file leaf-file-name="_form.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/member/_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="7" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+            <state line="59" column="81" selection-start="1793" selection-end="1793" vertical-scroll-proportion="-3.8846154">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="m120426_170850_createTableTransaction.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/migrations/m120426_170850_createTableTransaction.php">
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/member/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="1" selection-start="755" selection-end="755" vertical-scroll-proportion="0.9252747">
+            <state line="39" column="33" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deposit.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/eis/views/member/default/deposit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="58" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/eis/views/admin/member/admin.php">
+        <entry file="file://$PROJECT_DIR$/protected/messages/en/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="13" selection-start="609" selection-end="755" vertical-scroll-proportion="10.461538">
+            <state line="28" column="19" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1335462248593" expanded="true" signature="2205:2595" placeholder="..." />
-                <marker date="1335462248593" expanded="true" signature="2205:2244" placeholder="..." />
-                <marker date="1335462248593" expanded="true" signature="2215:2333" placeholder="..." />
-                <marker date="1335462248593" expanded="true" signature="2215:2222" placeholder="..." />
-                <marker date="1335462248593" expanded="true" signature="2343:2459" placeholder="..." />
-                <marker date="1335462248593" expanded="true" signature="2469:2582" placeholder="..." />
+                <element signature="e#6#693#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stats.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themes/eis/views/admin/member/stats.php">
+      <file leaf-file-name="core.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/messages/en/core.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="43" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Transaction.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/models/Transaction.php">
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/config/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="44" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0">
+            <state line="170" column="14" selection-start="4471" selection-end="4471" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="promote.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/eis/views/member/default/promote.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="252" selection-end="311" vertical-scroll-proportion="-3.2692308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/member/update.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -131,27 +170,29 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+    <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/themes/eis/views/admin/plan/view.php" />
-        <option value="$PROJECT_DIR$/themes/eis/views/admin/plan/update.php" />
-        <option value="$PROJECT_DIR$/themes/eis/views/admin/plan/create.php" />
-        <option value="$PROJECT_DIR$/themes/eis/views/layouts/column2.php" />
-        <option value="$PROJECT_DIR$/themes/eis/css/screen.css" />
-        <option value="$PROJECT_DIR$/themes/eis/views/admin/plan/_form.php" />
-        <option value="$PROJECT_DIR$/protected/models/Plan.php" />
-        <option value="$PROJECT_DIR$/themes/eis/views/admin/plan/admin.php" />
-        <option value="$PROJECT_DIR$/themes/eis/views/admin/member/admin.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/MemberController.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/components/AdminController.php" />
-        <option value="$PROJECT_DIR$/protected/models/Transaction.php" />
-        <option value="$PROJECT_DIR$/themes/eis/views/admin/member/stats.php" />
+        <option value="$PROJECT_DIR$/themes/eis/views/admin/message/index.php" />
+        <option value="$PROJECT_DIR$/themes/eis/views/admin/message/create.php" />
+        <option value="$PROJECT_DIR$/protected/extensions/components/ecurrency/components/RobokassaApi.php" />
+        <option value="$PROJECT_DIR$/protected/migrations/m120516_153005_alterMembersCountryTypeChar.php" />
+        <option value="$PROJECT_DIR$/protected/migrations/m120516_152902_dropCountriesTable.php" />
+        <option value="$PROJECT_DIR$/protected/models/SecurityQuestion.php" />
+        <option value="$PROJECT_DIR$/protected/models/Country.php" />
         <option value="$PROJECT_DIR$/protected/models/Member.php" />
-        <option value="$PROJECT_DIR$/protected/migrations/m120416_183904_alterPlansType.php" />
-        <option value="$PROJECT_DIR$/protected/migrations/m120426_170850_createTableTransaction.php" />
+        <option value="$PROJECT_DIR$/protected/messages/ru/security_questions.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/member/admin.php" />
+        <option value="$PROJECT_DIR$/themes/eis/views/site/register.php" />
+        <option value="$PROJECT_DIR$/protected/modules/admin/views/member/_form.php" />
+        <option value="$PROJECT_DIR$/protected/modules/member/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/themes/eis/views/member/default/deposit.php" />
+        <option value="$PROJECT_DIR$/protected/messages/en/admin.php" />
       </list>
     </option>
   </component>
@@ -173,12 +214,13 @@
           <State>
             <id />
           </State>
-        </expanded-state>
-        <selected-state>
           <State>
-            <id>Spelling</id>
+            <id>Code style issuesJavaScript</id>
           </State>
-        </selected-state>
+          <State>
+            <id>JavaScript</id>
+          </State>
+        </expanded-state>
       </profile-state>
     </entry>
   </component>
@@ -208,16 +250,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -326,7 +358,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="member" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -356,11 +388,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="member" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="member" />
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -425,30 +487,8 @@
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="member" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -474,7 +514,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="member" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -503,8 +543,44 @@
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -530,29 +606,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="widgets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -568,18 +626,30 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="Errors" />
+    <property name="options.lastSelected" value="project.propVCSSupport.VCSs.Git" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\WebServers\home\eis\www\protected\modules\admin\views" />
+      <recent name="C:\WebServers\home\eis\www\protected\views" />
       <recent name="C:\WebServers\home\eis\www\themes\eis\views\admin" />
     </key>
   </component>
@@ -626,22 +696,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33481294" sideWeight="0.4944134" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28737113" sideWeight="0.6703911" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33505154" sideWeight="0.6703911" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -703,119 +773,116 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/eis/views/admin/plan/_form.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/member/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="26" selection-start="2680" selection-end="2680" vertical-scroll-proportion="0.6932331" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="6.4615383">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/eis/views/admin/plan/admin.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/member/stats.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="8" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.9488722">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/member/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/member/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="101" selection-start="1765" selection-end="1765" vertical-scroll-proportion="22.153847">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/eis/views/site/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="119" selection-start="5782" selection-end="5825" vertical-scroll-proportion="0.5112782">
+        <state line="97" column="104" selection-start="3171" selection-end="3171" vertical-scroll-proportion="-13.076923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/SecurityQuestion.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/member/update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="209" selection-end="209" vertical-scroll-proportion="0.22141823">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/eis/views/admin/member/view.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/admin/views/member/_form.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="15" selection-start="0" selection-end="79" vertical-scroll-proportion="0.12781955">
+        <state line="59" column="81" selection-start="1793" selection-end="1793" vertical-scroll-proportion="-3.8846154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/eis/views/admin/member/update.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/member/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="62" selection-end="116" vertical-scroll-proportion="0.10225564">
+        <state line="39" column="33" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/DefaultController.php">
+    <entry file="file://$PROJECT_DIR$/themes/eis/views/member/default/promote.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="45" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+        <state line="5" column="0" selection-start="252" selection-end="311" vertical-scroll-proportion="-3.2692308">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/components/AdminController.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/widgets/LanguageSelector.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/admin/controllers/MemberController.php">
+    <entry file="file://$PROJECT_DIR$/themes/eis/views/layouts/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="39" selection-start="130" selection-end="130" vertical-scroll-proportion="0.14761215">
+        <state line="13" column="39" selection-start="487" selection-end="487" vertical-scroll-proportion="-0.21044303">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/eis/views/admin/member/admin.php">
+    <entry file="file://$PROJECT_DIR$/themes/eis/views/layouts/head.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="13" selection-start="609" selection-end="755" vertical-scroll-proportion="10.461538">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="14" selection-start="4471" selection-end="4471" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/eis/views/member/default/deposit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="58" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/messages/en/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="19" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1335462248593" expanded="true" signature="2205:2595" placeholder="..." />
-            <marker date="1335462248593" expanded="true" signature="2205:2244" placeholder="..." />
-            <marker date="1335462248593" expanded="true" signature="2215:2333" placeholder="..." />
-            <marker date="1335462248593" expanded="true" signature="2215:2222" placeholder="..." />
-            <marker date="1335462248593" expanded="true" signature="2343:2459" placeholder="..." />
-            <marker date="1335462248593" expanded="true" signature="2469:2582" placeholder="..." />
+            <element signature="e#6#693#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Plan.php">
+    <entry file="file://$PROJECT_DIR$/protected/messages/en/core.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="32" selection-start="1482" selection-end="1482" vertical-scroll-proportion="1.0280236">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Transaction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="44" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/eis/views/admin/member/stats.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="43" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/Member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="365" column="32" selection-start="11821" selection-end="11821" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/migrations/m120416_183904_alterPlansType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="7" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/migrations/m120426_170850_createTableTransaction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="1" selection-start="755" selection-end="755" vertical-scroll-proportion="0.9252747">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

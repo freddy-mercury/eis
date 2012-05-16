@@ -61,23 +61,13 @@ class Member extends CActiveRecord
 	 */
 	public function rules()
 	{
-		$security_question_ids = array_map(
-			function($security_question)
-			{
-				return $security_question->id;
-			},
-			SecurityQuestion::model()->findAll());
-		$country_ids = array_map(
-			function($country)
-			{
-				return $country->id;
-			},
-			Country::model()->findAll());
+		$security_question_ids = SecurityQuestions::get();
+		$country_ids = Countries::get();
 		$messages_config = include(Yii::app()->basePath . DIRECTORY_SEPARATOR . 'messages'
 			. DIRECTORY_SEPARATOR . 'config.php');
 		return array(
 			array(
-				'security_question, security_question2, country, login_notify, profile_notify, withdrawal_notify,'
+				'security_question, security_question2, login_notify, profile_notify, withdrawal_notify,'
 					. ' status, date_registered, monitor',
 				'numerical',
 				'integerOnly' => true),

@@ -9,7 +9,7 @@ return array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'name' => 'Investment System',
 	'theme' => 'eis',
-	'language' => 'en',
+	'language' => 'ru',
 
 	// preloading 'log' component
 	'preload' => array('log'),
@@ -137,7 +137,7 @@ return array(
 
 			// Test mode
 			'dump_mode' => false,
-			'dump_file' => Yii::getPathOfAlias('runtime') . '/templatemailer.log',
+			'dump_file' => Yii::getPathOfAlias('runtime') . DIRECTORY_SEPARATOR . 'templatemailer.log',
 		),
 		/**
 		 * E-currency component
@@ -146,14 +146,17 @@ return array(
 			'class' => 'ext.components.ecurrency.Ecurrency',
 			'components' => array(
 				'LR' => array(
+					'enabled' => true,
 					'class' => 'ext.components.ecurrency.components.LiberyReserveApi',
 					'name' => Yii::t('global', 'Liberty Reserve'),
 				),
 				'PM' => array(
+					'enabled' => true,
 					'class' => 'ext.components.ecurrency.components.PerfectMoneyApi',
 					'name' => Yii::t('global', 'Perfect Money'),
 				),
 				'AP' => array(
+					'enabled' => true,
 					'class' => 'ext.components.ecurrency.components.AlertPayApi',
 					'name' => Yii::t('global', 'Alert Pay'),
 				),
@@ -165,7 +168,7 @@ return array(
 		'member_password_salt' => 'SDIuhfw985h13*^%6123lknasdf78Ksdf0=',
 		'languages' => array(
 			'ru' => 'Русский',
-			'en' => 'English',
+			//'en' => 'English',
 		)
 	),
 );

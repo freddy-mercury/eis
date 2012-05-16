@@ -56,6 +56,7 @@ class Message extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'member' => array(self::BELONGS_TO, 'Member', 'member_id')
 		);
 	}
 
@@ -66,7 +67,7 @@ class Message extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'member_id' => 'Member',
+			'member_id' => 'Member ID',
 			'subject' => 'Subject',
 			'text' => 'Text',
 			'stamp' => 'Stamp',

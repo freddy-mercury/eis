@@ -83,11 +83,8 @@ $this->breadcrumbs = array(
 					<div class="row">
 						<?php echo $form->labelEx($model, 'security_question'); ?>
 						<?php
-						$security_questions = SecurityQuestion::model()->findAll();
-						$data = array();
-						foreach($security_questions as $security_question)
-							$data[$security_question->id] = $security_question->text;
-						echo $form->dropDownList($model, 'security_question', $data);
+						$security_questions = SecurityQuestions::get();
+						echo $form->dropDownList($model, 'security_question', $security_questions);
 						?>
 						<?php echo $form->error($model, 'security_question'); ?>
 					</div>
@@ -98,7 +95,7 @@ $this->breadcrumbs = array(
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'security_question2'); ?>
-						<?php echo $form->dropDownList($model, 'security_question2', $data); ?>
+						<?php echo $form->dropDownList($model, 'security_question2', $security_questions); ?>
 						<div class="hint">Must differ to "Security question".</div>
 						<?php echo $form->error($model, 'security_question2'); ?>
 					</div>
@@ -138,11 +135,7 @@ $this->breadcrumbs = array(
 					<div class="row">
 						<?php echo $form->labelEx($model, 'country'); ?>
 						<?php
-							$countries = Country::model()->findAll();
-							$data = array();
-							foreach($countries as $country)
-								$data[$country->id] = $country->name;
-							echo $form->dropDownList($model, 'country', $data);
+							echo $form->dropDownList($model, 'country', Countries::get());
 						?>
 						<?php echo $form->error($model, 'country'); ?>
 					</div>

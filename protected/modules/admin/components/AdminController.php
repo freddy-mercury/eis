@@ -18,6 +18,7 @@ class AdminController extends SController
         $this->menu=array(
             array('label'=>Yii::t('admin', 'Members'), 'url'=>array('member/index')),
             array('label'=>Yii::t('admin', 'Plans'), 'url'=>array('plan/index')),
+            array('label'=>Yii::t('admin', 'Messages'), 'url'=>array('message/index')),
         );
     }
 

@@ -35,4 +35,8 @@ class DefaultController extends MemberController
 		$model->master_pin = '';
 		$this->render('profile', array('model' => $model));
 	}
+
+	public function actionDeposit() {
+		$this->render('deposit');
+	}
 }
