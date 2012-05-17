@@ -13,7 +13,7 @@
 		<?php echo $form->labelEx($model, 'member_id'); ?>
 		<?php echo $form->textField($model, 'member_id'); ?>
 		<?php
-		$member_options = array();
+		/*$member_options = array();
 		foreach (Member::model()->findAll() as $member) {
 			$member_options[$member->id] = $member->login;
 		}
@@ -28,7 +28,7 @@
 			'htmlOptions' => array(
 				'style' => 'height:20px;'
 			),
-		));
+		));*/
 		?>
 		<?php echo $form->error($model, 'member_id'); ?>
 	</div>
@@ -43,18 +43,6 @@
 		<?php echo $form->labelEx($model, 'text'); ?>
 		<?php echo $form->textArea($model, 'text', array('rows' => 6, 'cols' => 50)); ?>
 		<?php echo $form->error($model, 'text'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model, 'stamp'); ?>
-		<?php echo $form->textField($model, 'stamp'); ?>
-		<?php echo $form->error($model, 'stamp'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model, 'is_read'); ?>
-		<?php echo $form->textField($model, 'is_read'); ?>
-		<?php echo $form->error($model, 'is_read'); ?>
 	</div>
 
 	<div class="row buttons">

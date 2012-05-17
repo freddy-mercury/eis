@@ -4,6 +4,7 @@ class m120516_153148_dropSecurityQuestionsTable extends CDbMigration
 {
 	public function up()
 	{
+        $this->execute('DROP TABLE  `security_questions`');
 	}
 
 	public function down()

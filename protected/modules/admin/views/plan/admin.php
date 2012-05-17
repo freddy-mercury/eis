@@ -34,6 +34,7 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'columns'=>array(
 		'id',
+        'type',
 		'name',
 		'description',
         array(
@@ -46,13 +47,38 @@ $('.search-form form').submit(function(){
 		array(
 			'header' => Yii::t('admin', 'Percents'),
 			'value' => function($data) {
-				return $data->percent . '% / ' . $data->percent_per;
+                $period_values = Plan::getPeriodValues();
+                switch ($data->percent_per) {
+                    case 'periodicity':
+                        $percent_per = $data->periodicity . ' ' . $period_values[$data->periodicity_value];
+                        break;
+                    case 'term':
+                        $percent_per = $data->term . ' ' . $period_values[$data->term_value];
+                        break;
+                }
+				return $data->percent . '% / ' . $percent_per;
 			}
 		),
-		'periodicity',
-		'term',
-		//'compounding',
-		'type',
+        array(
+            'header' => Yii::t('admin', 'Periodicity'),
+            'value' => function($data) {
+                $period_values = Plan::getPeriodValues();
+                return $data->periodicity . ' ' . $period_values[$data->periodicity_value];
+            }
+        ),
+        array(
+            'header' => Yii::t('admin', 'Term'),
+            'value' => function($data) {
+                $period_values = Plan::getPeriodValues();
+                return $data->term . ' ' . $period_values[$data->term_value];
+            }
+        ),
+        array(
+            'header' => Yii::t('admin', 'Compounding'),
+            'value' => function($data) {
+                return $data->compounding ? Yii::t('admin', 'yes') : Yii::t('admin', 'no');
+            }
+        ),
 		array(
 			'header' => Yii::t('admin', 'Working days'),
 			'value' => function($data) {

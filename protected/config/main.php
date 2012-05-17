@@ -9,7 +9,7 @@ return array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
 	'name' => 'Investment System',
 	'theme' => 'eis',
-	'language' => 'ru',
+	'language' => 'en',
 
 	// preloading 'log' component
 	'preload' => array('log'),
@@ -30,6 +30,7 @@ return array(
 		'cms',
 		'admin',
 		'member',
+        'mavro',
 		// uncomment the following to enable the Gii tool
 		//*
 		'gii' => array(
@@ -43,6 +44,9 @@ return array(
 
 	// application components
 	'components' => array(
+        'mavro' => array(
+            'class'=>'mavro.components.Mavro',
+        ),
 		'cms'=>array(
 			'class'=>'cms.components.Cms',
 			'users'=>array('admin'),
@@ -168,7 +172,7 @@ return array(
 		'member_password_salt' => 'SDIuhfw985h13*^%6123lknasdf78Ksdf0=',
 		'languages' => array(
 			'ru' => 'Русский',
-			//'en' => 'English',
+			'en' => 'English',
 		)
 	),
 );

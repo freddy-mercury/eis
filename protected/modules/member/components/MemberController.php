@@ -8,15 +8,27 @@ class MemberController extends SController
 
 	public function init()
 	{
-		$this->menu = array(
-			array('label' => Yii::t('global', 'Account summary'), 'url' => array('index')),
-			array('label' => Yii::t('global', 'Make deposit'), 'url' => array('deposit')),
-			array('label' => Yii::t('global', 'Request withdrawal'), 'url' => array('withdraw')),
-			array('label' => Yii::t('global', 'History'), 'url' => array('history')),
-			array('label' => Yii::t('global', 'Messages'), 'url' => array('messages/index')),
-			array('label' => Yii::t('global', 'Promotion'), 'url' => array('promote')),
-			array('label' => Yii::t('global', 'Edit profile'), 'url' => array('profile')),
-		);
+        $this->breadcrumbs = array(
+            Yii::t('global', 'Member area') => array('/member/default/index')
+        );
+
+		$this->menu[] = array('label' => Yii::t('global', 'Account summary'), 'url' => array('/member/default/index'));
+
+        /* If MAVRO module enabled, add link */
+        if (Yii::app()->mavro->enabled) {
+            $this->menu[] = array('label' => Yii::t('mavro', 'Buy MAVRO'), 'url' => array('/mavro/default/index'));
+            $this->menu[] = array('label' => Yii::t('mavro', 'Sell MAVRO'), 'url' => array('/mavro/default/sell'));
+        }
+
+        if (Plan::model()->count()) {
+            $this->menu[] = array('label' => Yii::t('global', 'Make deposit'), 'url' => array('/member/default/deposit'));
+            $this->menu[] = array('label' => Yii::t('global', 'Request withdrawal'), 'url' => array('/member/default/withdraw'));
+        }
+		$this->menu[] = array('label' => Yii::t('global', 'History'), 'url' => array('/member/default/history'));
+		$this->menu[] = array('label' => Yii::t('global', 'Messages'), 'url' => array('member/messages/index'));
+		$this->menu[] = array('label' => Yii::t('global', 'Promotion'), 'url' => array('/member/default/promote'));
+		$this->menu[] = array('label' => Yii::t('global', 'Edit profile'), 'url' => array('/member/default/profile'));
+
 		parent::init();
 	}
 	/**

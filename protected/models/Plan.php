@@ -12,7 +12,9 @@
  * @property double $percent
  * @property string $percent_per
  * @property integer $periodicity
+ * @property integer $periodicity_value
  * @property integer $term
+ * @property integer $term_value
  * @property boolean $compounding
  * @property integer $type
  * @property boolean $monfri
@@ -44,6 +46,16 @@ class Plan extends CActiveRecord
             'monitor' => Yii::t('global', 'Monitor'),
         );
     }
+
+    public static function getPeriodValues() {
+        return array(
+            'h' => Yii::t('global', 'hour(s)'),
+            'd' => Yii::t('global', 'day(s)'),
+            'w' => Yii::t('global', 'week(s)'),
+            'm' => Yii::t('global', 'month(s)'),
+            'y' => Yii::t('global', 'year(s)'),
+        );
+    }
 	/**
 	 * @return string the associated database table name
 	 */
@@ -62,6 +74,7 @@ class Plan extends CActiveRecord
 		return array(
 			array('name, description, min, max, percent', 'required'),
 			array('periodicity, term, compounding, monfri, principal_back', 'numerical', 'integerOnly'=>true),
+            array('periodicity_value, term_value', 'in', 'range' => array_keys(self::getPeriodValues())),
 			array('min, max, percent', 'numerical'),
 			array('name', 'length', 'max'=>255),
 			array('percent_per', 'length', 'max'=>11),
@@ -96,7 +109,9 @@ class Plan extends CActiveRecord
 			'percent' => Yii::t('global', 'Percent'),
 			'percent_per' => Yii::t('global', 'Percent Per'),
 			'periodicity' => Yii::t('global', 'Periodicity'),
+			'periodicity_value' => Yii::t('global', 'Periodicity value'),
 			'term' => Yii::t('global', 'Term'),
+			'term_value' => Yii::t('global', 'Term value'),
 			'compounding' => Yii::t('global', 'Compounding'),
 			'type' => Yii::t('global', 'Type'),
 			'monfri' => Yii::t('global', 'Monfri'),
@@ -123,7 +138,9 @@ class Plan extends CActiveRecord
 		$criteria->compare('percent',$this->percent);
 		$criteria->compare('percent_per',$this->percent_per,true);
 		$criteria->compare('periodicity',$this->periodicity);
+		$criteria->compare('periodicity_value',$this->periodicity_value);
 		$criteria->compare('term',$this->term);
+		$criteria->compare('term_value',$this->term_value);
 		$criteria->compare('compounding',$this->compounding);
 		$criteria->compare('type',$this->type);
 		$criteria->compare('monfri',$this->monfri);

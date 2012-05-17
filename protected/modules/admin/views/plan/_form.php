@@ -37,27 +37,19 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'percent'); ?>
-		<?php echo $form->textField($model,'percent'); ?>
+		<?php echo $form->textField($model,'percent') . $form->dropDownList($model, 'percent_per', Plan::getPercentPerOptions()); ?>
 		<?php echo $form->error($model,'percent'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'percent_per'); ?>
-		<?php
-            echo $form->dropDownList($model, 'percent_per', Plan::getPercentPerOptions());
-        ?>
-		<?php echo $form->error($model,'percent_per'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'periodicity'); ?>
-		<?php echo $form->textField($model,'periodicity'); ?>
+		<?php echo $form->textField($model,'periodicity') . $form->dropDownList($model, 'periodicity_value', Plan::getPeriodValues()); ?>
 		<?php echo $form->error($model,'periodicity'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'term'); ?>
-		<?php echo $form->textField($model,'term'); ?>
+		<?php echo $form->textField($model,'term') . $form->dropDownList($model, 'term_value', Plan::getPeriodValues()); ?>
 		<?php echo $form->error($model,'term'); ?>
 	</div>
 

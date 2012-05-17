@@ -42,8 +42,8 @@ class m120128_113447_createTableMembers extends CDbMigration {
 `security_question`, `security_answer`, `security_question2`, `security_answer2`, `firstname`, `lastname`, `birthdate`,
 `country`, `city`, `zip`, `address`, `ecurrency`, `ecurrency_purse`, `login_notify`, `profile_notify`,
 `withdrawal_notify`, `transaction_limit`, `daily_limit`, `total_limit`, `lang`, `status`, `date_registered`, `hash`,
-`monitor`) VALUES (1,	'admin',	'admin',	'11111',	'111',	'admin@admin.local',	'question1',	'answer1',
-'question2',	'answer2',	'firstname',	'lastname',	'2012-01-28',	NULL,	NULL,	NULL,	NULL,	'LR',
+`monitor`) VALUES (1,	'admin',	'admin',	'11111',	'111',	'admin@admin.local',	'1',	'answer1',
+'2',	'answer2',	'firstname',	'lastname',	'2012-01-28',	NULL,	NULL,	NULL,	NULL,	'LR',
 'U1234567',	1,	1,	1,	0,	0,	0,	'en',	1,	NULL,	NULL,	0);");
 
 	}

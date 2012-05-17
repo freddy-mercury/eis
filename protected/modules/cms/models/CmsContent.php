@@ -54,12 +54,13 @@ class CmsContent extends CmsActiveRecord
 	public function rules()
 	{
 		return array(
+            array('body', 'safe'),
 			array('nodeId, locale', 'required'),
 			array('nodeId', 'length', 'max'=>10),
 			array('locale', 'length', 'max'=>50),
 			array('heading, url, pageTitle, breadcrumb, metaTitle, metaDescription, metaKeywords', 'length', 'max'=>255),
             array('attachment', 'file', 'types'=>Yii::app()->cms->allowedFileTypes, 'maxSize'=>Yii::app()->cms->allowedFileSize, 'allowEmpty'=>true),
-			array('body, css', 'filter', 'filter'=>array($obj = new CHtmlPurifier(), 'purify')),
+			array('css', 'filter', 'filter'=>array($obj = new CHtmlPurifier(), 'purify')),
 			array('id, nodeId, locale, heading, url, pageTitle, breadcrumb, metaTitle, metaDescription, metaKeywords', 'safe', 'on'=>'search'),
 		);
 	}

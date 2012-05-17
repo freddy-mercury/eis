@@ -37,6 +37,30 @@ class DefaultController extends MemberController
 	}
 
 	public function actionDeposit() {
-		$this->render('deposit');
+        $model=new DepositForm;
+
+        // uncomment the following code to enable ajax-based validation
+        /*
+        if(isset($_POST['ajax']) && $_POST['ajax']==='deposit-form-deposit-form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+        */
+
+        if(isset($_POST['DepositForm']))
+        {
+            $model->attributes=$_POST['DepositForm'];
+            if($model->validate())
+            {
+                // form inputs are valid, do something here
+                return;
+            }
+        }
+        $this->render('deposit',array('model'=>$model));
 	}
+
+    public function actionHistory() {
+        $this->render('history', array('model' => Yii::app()->user->model));
+    }
 }
