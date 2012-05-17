@@ -5,34 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43696a92-f87b-451d-ae66-369e9a775c7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess_local" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120517_061619_alterPlansTable1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/models/DepositForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/mavro/MavroModule.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/mavro/components/Mavro.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/mavro/controllers/DefaultController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/mavro/models/MavroDepositForm.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/mavro/views/default/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/mavro/views/default/robokassa.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/mavro/views/default/sell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/eis/views/member/default/history.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/www.iml" afterPath="$PROJECT_DIR$/.idea/www.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/migrations/m120128_113447_createTableMembers.php" afterPath="$PROJECT_DIR$/protected/migrations/m120128_113447_createTableMembers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/migrations/m120516_153148_dropSecurityQuestionsTable.php" afterPath="$PROJECT_DIR$/protected/migrations/m120516_153148_dropSecurityQuestionsTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Plan.php" afterPath="$PROJECT_DIR$/protected/models/Plan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/controllers/MessageController.php" afterPath="$PROJECT_DIR$/protected/modules/admin/controllers/MessageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/message/_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/message/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/plan/_form.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/plan/admin.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/admin/views/plan/view.php" afterPath="$PROJECT_DIR$/protected/modules/admin/views/plan/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/cms/models/CmsContent.php" afterPath="$PROJECT_DIR$/protected/modules/cms/models/CmsContent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/member/components/MemberController.php" afterPath="$PROJECT_DIR$/protected/modules/member/components/MemberController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/member/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/protected/modules/member/controllers/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/eis/views/layouts/main.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/member/default/deposit.php" afterPath="$PROJECT_DIR$/themes/eis/views/member/default/deposit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/site/login.php" afterPath="$PROJECT_DIR$/themes/eis/views/site/login.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -654,7 +627,11 @@
       <created>1337185845269</created>
       <updated>1337185845269</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Some modifications 17.05.2012">
+      <created>1337256696585</created>
+      <updated>1337256696585</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -738,7 +715,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 16.05.2012" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 17.05.2012" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -752,6 +729,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Some modifications 16.05.2012" />
+    <MESSAGE value="Some modifications 17.05.2012" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
