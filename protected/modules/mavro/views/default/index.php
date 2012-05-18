@@ -13,14 +13,24 @@ $this->breadcrumbs+=array(
         'id'=>'deposit-form',
         'enableAjaxValidation'=>false,
     )); ?>
-
-    <div class="row">
-        <?php echo $form->labelEx($model,'amount'); ?>
-        <?php echo $form->textField($model,'amount'); ?>
-        <?php echo $form->error($model,'amount'); ?>
-    </div>
-
-
+    <table>
+        <tr>
+            <th><?php echo Yii::t('mavro', 'Buy rate'); ?></th>
+            <td>
+                <?php
+                    $rates = Yii::app()->mavro->getTodayRates();
+                    echo $rates[0];
+                ?>
+            </td>
+        </tr>
+        <tr>
+            <th><?php echo Yii::t('mavro', 'Buy at'); ?></th>
+            <td class="row">
+                <?php echo $form->textField($model,'amount'); ?>
+                <?php echo $form->error($model,'amount'); ?>
+            </td>
+        </tr>
+    </table>
     <div class="row buttons">
         <?php echo CHtml::submitButton('Submit'); ?>
     </div>

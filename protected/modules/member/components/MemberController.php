@@ -25,7 +25,7 @@ class MemberController extends SController
             $this->menu[] = array('label' => Yii::t('global', 'Request withdrawal'), 'url' => array('/member/default/withdraw'));
         }
 		$this->menu[] = array('label' => Yii::t('global', 'History'), 'url' => array('/member/default/history'));
-		$this->menu[] = array('label' => Yii::t('global', 'Messages'), 'url' => array('member/messages/index'));
+		$this->menu[] = array('label' => Yii::t('global', 'Messages'), 'url' => array('/member/messages/index'));
 		$this->menu[] = array('label' => Yii::t('global', 'Promotion'), 'url' => array('/member/default/promote'));
 		$this->menu[] = array('label' => Yii::t('global', 'Edit profile'), 'url' => array('/member/default/profile'));
 

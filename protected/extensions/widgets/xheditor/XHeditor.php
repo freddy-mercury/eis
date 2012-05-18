@@ -181,8 +181,10 @@ class XHeditor extends CWidget
 		// self::$model and self::$modelAttribute are specified
 		if(isset($model, $modelAttribute))
 		{
-			if(empty($config['id']))
-				$config['id'] = $this->htmlOptions['id'] = CHtml::activeId($model, $modelAttribute);
+			if(empty($config['id'])) {
+                $this->htmlOptions['id'] = CHtml::activeId($model, $modelAttribute);
+                $config['id'] = $this->htmlOptions['id'];
+            }
 			if(empty($config['name']))
 				$config['name'] = CHtml::activeName($model, $modelAttribute);
 			if($this->showModelAttributeValue===true)
