@@ -18,13 +18,15 @@ class MemberController extends SController
         if (Yii::app()->mavro->enabled) {
             $this->menu[] = array('label' => Yii::t('mavro', 'Buy MAVRO'), 'url' => array('/mavro/default/index'));
             $this->menu[] = array('label' => Yii::t('mavro', 'Sell MAVRO'), 'url' => array('/mavro/default/sell'));
+	        $this->menu[] = array('label' => Yii::t('mavro', 'Operation\'s history'), 'url' => array('/mavro/default/history'));
         }
 
         if (Plan::model()->count()) {
             $this->menu[] = array('label' => Yii::t('global', 'Make deposit'), 'url' => array('/member/default/deposit'));
             $this->menu[] = array('label' => Yii::t('global', 'Request withdrawal'), 'url' => array('/member/default/withdraw'));
+	        $this->menu[] = array('label' => Yii::t('global', 'History'), 'url' => array('/member/default/history'));
         }
-		$this->menu[] = array('label' => Yii::t('global', 'History'), 'url' => array('/member/default/history'));
+
 		$this->menu[] = array('label' => Yii::t('global', 'Messages'), 'url' => array('/member/messages/index'));
 		$this->menu[] = array('label' => Yii::t('global', 'Promotion'), 'url' => array('/member/default/promote'));
 		$this->menu[] = array('label' => Yii::t('global', 'Edit profile'), 'url' => array('/member/default/profile'));

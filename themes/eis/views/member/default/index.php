@@ -1,15 +1,14 @@
 <?php
-$this->breadcrumbs=array(
-	$this->module->id,
+$this->breadcrumbs+=array(
+	Yii::t('member', 'Account summary'),
 );
 ?>
-<h1>Member module</h1>
+<h1><?php echo Yii::t('member', 'Account summary'); ?></h1>
 
-<p>
-This is the view content for action "<?php echo $this->action->id; ?>".
-The action belongs to the controller "<?php echo get_class($this); ?>"
-in the "<?php echo $this->module->id; ?>" module.
-</p>
-<p>
-You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
-</p>
+<?php
+if (Yii::app()->mavro->enabled) {
+	?>
+	<?php echo Yii::t('mavro', 'You have {mavro} MAVRO', array('{mavro}' => Yii::app()->user->model->mavro)) ?>
+	<?php
+}
+?>

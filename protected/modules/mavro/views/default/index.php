@@ -10,7 +10,7 @@ $this->breadcrumbs+=array(
     <?php
     /* @var $form  CActiveForm */
     $form=$this->beginWidget('CActiveForm', array(
-        'id'=>'deposit-form',
+        'id'=>'mavro-buy-form',
         'enableAjaxValidation'=>false,
     )); ?>
     <table>
@@ -24,15 +24,28 @@ $this->breadcrumbs+=array(
             </td>
         </tr>
         <tr>
-            <th><?php echo Yii::t('mavro', 'Buy at'); ?></th>
+            <th><?php echo $form->label($model,'amount'); ?></th>
             <td class="row">
-                <?php echo $form->textField($model,'amount'); ?>
+                <?php echo $form->textField($model,'amount', array(
+	            'id' => 'amount',
+	            'onkeyup' => '$("#sum").val('.$rates[0].'*this.value);'
+            )); ?>
                 <?php echo $form->error($model,'amount'); ?>
             </td>
         </tr>
+	    <tr>
+		    <th><?php echo $form->label($model,'sum'); ?></th>
+		    <td class="row">
+			    <?php echo $form->textField($model,'sum', array(
+			    'id' => 'sum',
+			    'onkeyup' => '$("#amount").val(parseFloat(this.value/'.$rates[0].', 3).toFixed(2));'
+		    )); ?>
+			    <?php echo $form->error($model,'amount'); ?>
+		    </td>
+	    </tr>
     </table>
     <div class="row buttons">
-        <?php echo CHtml::submitButton('Submit'); ?>
+        <?php echo CHtml::submitButton('Buy'); ?>
     </div>
 
     <?php $this->endWidget(); ?>
