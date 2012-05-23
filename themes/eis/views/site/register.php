@@ -154,35 +154,41 @@ $this->breadcrumbs = array(
 						<?php echo $form->textArea($model, 'address', array('rows'=>5, 'cols'=>30)) ?>
 						<?php echo $form->error($model, 'address'); ?>
 					</div>
+                    <div class="row">
+                        <?php echo $form->labelEx($model, 'lang'); ?>
+                        <?php
+
+                        $messages_config = include(Yii::app()->basePath . DIRECTORY_SEPARATOR . 'messages'
+                            . DIRECTORY_SEPARATOR . 'config.php');
+                        $languages = array_combine($messages_config['languages'], $messages_config['languages']);
+                        echo $form->dropDownList($model, 'lang', $languages);
+                        ?>
+                        <?php echo $form->error($model, 'lang'); ?>
+                    </div>
 				</fieldset>
 			</td>
+            <?php
+                $ecurrencies = Yii::app()->ecurrency->getComponentsNames();
+                if ($ecurrencies) {
+            ?>
 			<td>
 				<fieldset>
-					<legend>E-currency and other</legend>
-					<div class="row">
-						<?php echo $form->labelEx($model, 'ecurrency'); ?>
-						<?php echo $form->dropDownList($model, 'ecurrency', Yii::app()->ecurrency->getComponentsNames()); ?>
-						<?php echo $form->error($model, 'ecurrency'); ?>
-					</div>
-					<div class="row">
-						<?php echo $form->labelEx($model, 'ecurrency_purse'); ?>
-						<?php echo $form->textField($model, 'ecurrency_purse'); ?>
-						<div class="hint">USD purse.</div>
-						<?php echo $form->error($model, 'ecurrency_purse'); ?>
-					</div>
-					<div class="row">
-						<?php echo $form->labelEx($model, 'lang'); ?>
-						<?php
+					<legend><?php echo Yii::t('global', 'E-currency'); ?></legend>
 
-							$messages_config = include(Yii::app()->basePath . DIRECTORY_SEPARATOR . 'messages'
-								. DIRECTORY_SEPARATOR . 'config.php');
-							$languages = array_combine($messages_config['languages'], $messages_config['languages']);
-							echo $form->dropDownList($model, 'lang', $languages);
-						?>
-						<?php echo $form->error($model, 'lang'); ?>
-					</div>
+                    <div class="row">
+                        <?php echo $form->labelEx($model, 'ecurrency'); ?>
+                        <?php echo $form->dropDownList($model, 'ecurrency', $ecurrencies); ?>
+                        <?php echo $form->error($model, 'ecurrency'); ?>
+                    </div>
+                    <div class="row">
+                        <?php echo $form->labelEx($model, 'ecurrency_purse'); ?>
+                        <?php echo $form->textField($model, 'ecurrency_purse'); ?>
+                        <div class="hint">USD purse.</div>
+                        <?php echo $form->error($model, 'ecurrency_purse'); ?>
+                    </div>
 				</fieldset>
 			</td>
+            <?php } ?>
 		</tr>
 	</table>
 

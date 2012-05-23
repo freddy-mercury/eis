@@ -150,17 +150,17 @@ return array(
 			'class' => 'ext.components.ecurrency.Ecurrency',
 			'components' => array(
 				'LR' => array(
-					'enabled' => true,
+					'enabled' => false,
 					'class' => 'ext.components.ecurrency.components.LiberyReserveApi',
 					'name' => Yii::t('global', 'Liberty Reserve'),
 				),
 				'PM' => array(
-					'enabled' => true,
+					'enabled' => false,
 					'class' => 'ext.components.ecurrency.components.PerfectMoneyApi',
 					'name' => Yii::t('global', 'Perfect Money'),
 				),
 				'AP' => array(
-					'enabled' => true,
+					'enabled' => false,
 					'class' => 'ext.components.ecurrency.components.AlertPayApi',
 					'name' => Yii::t('global', 'Alert Pay'),
 				),

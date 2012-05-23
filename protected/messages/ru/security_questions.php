@@ -19,14 +19,14 @@
  * @version $Id: $
  */
 return array (
-  'City of Birth' => '',
-  'Favorite Book' => '',
-  'Favorite Color' => '',
-  'Favorite Flower' => '',
-  'Favorite Movie' => '',
-  'Favorite Pet' => '',
-  'Favorite TV Show/Sitcom' => '',
-  'Highschool Name' => '',
+  'City of Birth' => 'Город рождения',
+  'Favorite Book' => 'Любимая книга',
+  'Favorite Color' => 'Любимый цвет',
+  'Favorite Flower' => 'Любимый цветок',
+  'Favorite Movie' => 'Любимое кино',
+  'Favorite Pet' => 'Имя домашнего питомца',
+  'Favorite TV Show/Sitcom' => 'Любимый ТВ сериал/программа',
+  'Highschool Name' => 'Номер школы',
   'Mother\'s Maiden Name' => 'Девичья фамилия матери',
-  'Name of Your First Love' => '',
+  'Name of Your First Love' => 'Имя первой любви',
 );

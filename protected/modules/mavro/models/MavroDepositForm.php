@@ -14,7 +14,7 @@ class MavroDepositForm extends DepositForm {
     public function attributeLabels()
     {
         return array(
-            'amount'=>Yii::t('mavro', 'Buy MAVRO at '),
+            'amount'=>Yii::t('mavro', 'Buy at'),
         );
     }
 

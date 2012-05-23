@@ -6,7 +6,7 @@ $this->breadcrumbs+=array(
 <h1><?php echo Yii::t('mavro', 'Buy MAVRO')?></h1>
 
 <div align="center">
-<div class="form" style="width: 300px; border:1px solid green">
+<div class="form" style="width: 400px; border:1px solid green">
     <?php
     /* @var $form  CActiveForm */
     $form=$this->beginWidget('CActiveForm', array(
