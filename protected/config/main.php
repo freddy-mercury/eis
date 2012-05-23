@@ -20,17 +20,17 @@ return array(
 		'application.components.*',
 		'application.modules.cms.CmsModule',
 	),
-	'behaviors'=>array(
-        'onBeginRequest' => array(
-            'class' => 'application.components.behaviors.BeginRequest'
-        ),
-    ),
+	'behaviors' => array(
+		'onBeginRequest' => array(
+			'class' => 'application.components.behaviors.BeginRequest'
+		),
+	),
 
 	'modules' => array(
 		'cms',
 		'admin',
 		'member',
-        'mavro',
+		'mavro',
 		// uncomment the following to enable the Gii tool
 		//*
 		'gii' => array(
@@ -44,16 +44,16 @@ return array(
 
 	// application components
 	'components' => array(
-        'mavro' => array(
-            'class'=>'mavro.components.Mavro',
-        ),
-		'cms'=>array(
-			'class'=>'cms.components.Cms',
-			'users'=>array('admin'),
-			'attachmentPath'=>'/files/',
-			'allowedFileSize'=>1024,
-			'defaultLanguage'=>'en',
-			'appLayout'=>'//layouts/column1',
+		'mavro' => array(
+			'class' => 'mavro.components.Mavro',
+		),
+		'cms' => array(
+			'class' => 'cms.components.Cms',
+			'users' => array('admin'),
+			'attachmentPath' => '/files/',
+			'allowedFileSize' => 1024,
+			'defaultLanguage' => 'en',
+			'appLayout' => '//layouts/column1',
 			'languages' => array(
 				'ru' => 'Русский',
 				'en' => 'English',
@@ -64,15 +64,15 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin' => true,
 		),
-		'request'=>array(
-            'enableCookieValidation'=>true,
-            'enableCsrfValidation'=>true,
-        ),
+		'request' => array(
+			'enableCookieValidation' => true,
+			'enableCsrfValidation' => true,
+		),
 		'urlManager' => array(
 			'urlFormat' => 'path',
 			'showScriptName' => false,
 			'rules' => array(
-				'page/<name>-<id:\d+>.html'=>'cms/node/page', // clean URLs for pages
+				'page/<name>-<id:\d+>.html' => 'cms/node/page', // clean URLs for pages
 				'<controller:\w+>/<id:\d+>' => '<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
 				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
@@ -142,6 +142,13 @@ return array(
 			// Test mode
 			'dump_mode' => false,
 			'dump_file' => Yii::getPathOfAlias('runtime') . DIRECTORY_SEPARATOR . 'templatemailer.log',
+		),
+		'robokassa' => array(
+			'class' => 'ext.components.robokassa.Robokassa',
+			'test' => true,
+			'merchant_login' => 'mmm2011-auto',
+			'password1' => 'aPo01cMRAHAkA',
+			'password2' => '8eUwYhTrtfiy2',
 		),
 		/**
 		 * E-currency component

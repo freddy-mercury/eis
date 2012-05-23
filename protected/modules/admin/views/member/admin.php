@@ -102,7 +102,17 @@ $('.search-form form').submit(function(){
 			'header' => Yii::t('admin','Balance'),
 			'type' => 'html',
 			'value' => function($data) {
-				return CHtml::link($data->balance, array('member/stats/id/' . $data->id));
+				$value = '<table>
+					<tr>
+						<th>Invest:</th>
+						<td>'.CHtml::link($data->balance, array('member/stats/id/' . $data->id)).'</td>
+					</tr>
+					<tr>
+						<th>Mavro:</th>
+						<td>'.CHtml::link($data->mavro, array('member/mavro_stats/id/' . $data->id)).'</td>
+					</tr>
+				</table>';
+				return $value;
 			}
 		),
 		/*

@@ -117,4 +117,8 @@ class SiteController extends SController
 		}
 		$this->render('register', array('model' => $model));
 	}
+
+	public function actionRobokassa() {
+
+	}
 }

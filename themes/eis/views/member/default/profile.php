@@ -67,10 +67,14 @@
 			<td>
 				<fieldset>
 					<legend>E-currency and other</legend>
+					<?php
+						$ecurrencies = Yii::app()->ecurrency->getComponentsNames();
+						if ($ecurrencies) {
+					?>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'ecurrency'); ?>
 						<?php
-						echo $form->dropDownList($model, 'ecurrency', Yii::app()->ecurrency->getComponentsNames(),
+						echo $form->dropDownList($model, 'ecurrency', $ecurrencies,
 							array('disabled' => 'disabled'));
 						?>
 						<?php echo $form->error($model, 'ecurrency'); ?>
@@ -81,6 +85,7 @@
 						<div class="hint">USD purse.</div>
 						<?php echo $form->error($model, 'ecurrency_purse'); ?>
 					</div>
+					<?php } ?>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'lang'); ?>
 						<?php
