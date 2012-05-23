@@ -175,7 +175,7 @@ class Member extends CActiveRecord
             array(
                 'birthdate',
                 'match',
-                'pattern' => '/\d{2}\/\d{2}\/\d{4}/',
+                'pattern' => '/\d{4}-\d{2}-\d{2}/',
                 'message' => Yii::t('member', 'Invalid date format!'),
                 'on' => 'register'
             ),
