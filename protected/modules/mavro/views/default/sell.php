@@ -50,7 +50,7 @@ $this->breadcrumbs+=array(
 			</tr>
 		</table>
 		<div class="row buttons">
-			<?php echo CHtml::submitButton('Buy'); ?>
+			<?php echo CHtml::submitButton('Sell'); ?>
 		</div>
 
 		<?php $this->endWidget(); ?>

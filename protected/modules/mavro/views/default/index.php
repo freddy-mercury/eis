@@ -2,7 +2,6 @@
 $this->breadcrumbs+=array(
 	Yii::t('mavro', 'Buy MAVRO')
 );
-echo '<pre>'.print_r(Yii::app()->robokassa->getCurrencies(), true).'</pre>';
 ?>
 <h1><?php echo Yii::t('mavro', 'Buy MAVRO')?></h1>
 

@@ -13,7 +13,25 @@ class DefaultController extends MemberController
             $model->attributes=$_POST['MavroBuyForm'];
             if($model->validate())
             {
-                $this->render('robokassa', array('amount' => $model->amount));
+	            $mavro_transaction = new MavroTransaction();
+	            $mavro_transaction->setAttributes(array(
+		            'member_id' => Yii::app()->user->id,
+					'type' => 'buy',
+		            'amount' => $model->amount,
+		            'time' => time(),
+		            'status' => 0,
+	            ));
+	            $mavro_transaction->save();
+	            /* @var $robokassa Robokassa */
+	            $robokassa = Yii::app()->robokassa;
+	            $this->redirect($robokassa->url . '/Index.aspx?'
+		            .'MrchLogin='.$robokassa->merchant_login.'&'
+		            .'OutSum='.$model->amount.'&'
+		            .'InvId='.$mavro_transaction->id.'&'
+		            .'Desc='.urlencode(Yii::t('mavro', 'Buy MAVRO {amount}', array('{amount}' => $model->amount))).'&'
+		            .'SignatureValue='.$robokassa->getSignature1($model->amount, $mavro_transaction->id).'&'
+		            .'IncCurrLabel=&'
+		            .'Culture='.$robokassa->getLanguage());
                 return;
             }
         }

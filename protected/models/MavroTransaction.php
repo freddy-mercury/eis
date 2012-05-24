@@ -8,6 +8,7 @@
  * @property integer $member_id
  * @property string $type
  * @property double $amount
+ * @property integer $time
  * @property integer $status
  */
 class MavroTransaction extends CActiveRecord
@@ -45,13 +46,13 @@ class MavroTransaction extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('member_id, type, amount, status', 'required'),
-			array('member_id, status', 'numerical', 'integerOnly'=>true),
+			array('member_id, type, amount, time, status', 'required'),
+			array('member_id, time, status', 'numerical', 'integerOnly'=>true),
 			array('amount', 'numerical'),
 			array('type', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, member_id, type, amount, status', 'safe', 'on'=>'search'),
+			array('id, member_id, type, amount, time, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -76,6 +77,7 @@ class MavroTransaction extends CActiveRecord
 			'member_id' => Yii::t('mavro', 'Member'),
 			'type' => Yii::t('mavro', 'Type'),
 			'amount' => Yii::t('mavro', 'Amount'),
+			'time' => Yii::t('mavro', 'Time'),
 			'status' => Yii::t('mavro', 'Status'),
 		);
 	}
@@ -95,6 +97,7 @@ class MavroTransaction extends CActiveRecord
 		$criteria->compare('member_id',$this->member_id);
 		$criteria->compare('type',$this->type,true);
 		$criteria->compare('amount',$this->amount);
+		$criteria->compare('time',$this->amount);
 		$criteria->compare('status',$this->status);
 
 		return new CActiveDataProvider($this, array(

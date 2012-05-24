@@ -7,8 +7,8 @@ $this->breadcrumbs+=array(
 
 <h1><?php echo Yii::t('mavro', 'Buy MAVRO') ?></h1>
 <script language='javascript' type='text/javascript'
-        src='https://merchant.roboxchange.com/Handler/MrchSumPreview.ashx?
-MrchLogin=demo&
+        src='http://test.robokassa.ru/Index.aspx?
+MrchLogin=<?php echo Yii::app()->robokassa->merchant_login?>&
 OutSum=<?php echo $amount ?>&
 InvId=0&
 Desc=ROBOKASSA+Advanced+User+Guide&

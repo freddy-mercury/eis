@@ -118,7 +118,23 @@ class SiteController extends SController
 		$this->render('register', array('model' => $model));
 	}
 
-	public function actionRobokassa() {
+	public function actionSuccess() {
+		$this->render('success');
+	}
 
+	public function actionFail() {
+		$this->render('fail');
+	}
+
+	public function actionRobokassa() {
+		$out_summ = $_REQUEST['OutSum'];
+		$inv_id = $_REQUEST['InvId'];
+		$crc = $_REQUEST['SignatureValue'];
+		$my_crc = Yii::app()->robokassa->getSignature2($out_summ, $inv_id);
+		if (strtoupper($crc) == strtoupper($my_crc)) {
+			$mavro_transaction = MavroTransaction::model()->findByPk($inv_id);
+			$mavro_transaction->status = 1;
+			$mavro_transaction->save();
+		}
 	}
 }
