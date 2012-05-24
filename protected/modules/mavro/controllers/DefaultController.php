@@ -26,7 +26,7 @@ class DefaultController extends MemberController
 	            $robokassa = Yii::app()->robokassa;
 	            $this->redirect($robokassa->url . '/Index.aspx?'
 		            .'MrchLogin='.$robokassa->merchant_login.'&'
-		            .'OutSum='.$model->amount.'&'
+		            .'OutSum='.$model->sum.'&'
 		            .'InvId='.$mavro_transaction->id.'&'
 		            .'Desc='.urlencode(Yii::t('mavro', 'Buy MAVRO {amount}', array('{amount}' => $model->amount))).'&'
 		            .'SignatureValue='.$robokassa->getSignature1($model->amount, $mavro_transaction->id).'&'
@@ -48,7 +48,29 @@ class DefaultController extends MemberController
 		    $model->attributes=$_POST['MavroSellForm'];
 		    if($model->validate())
 		    {
-			    return;
+			    $mavro_transaction = new MavroTransaction();
+			    $mavro_transaction->setAttributes(array(
+				    'member_id' => Yii::app()->user->id,
+				    'type' => 'sell',
+				    'amount' => $model->amount,
+				    'time' => time(),
+				    'status' => 0,
+			    ));
+			    $mavro_transaction->save();
+
+			    $rates = Yii::app()->mavro->getTodayRates();
+			    $mavro_sell_request = new MavroSellRequest();
+			    $mavro_sell_request->setAttributes(array(
+				    'member_id' => Yii::app()->user->id,
+				    'transaction_id' => $mavro_transaction->id,
+				    'amount' => $model->amount,
+				    'rate' => $rates[1],
+				    'payment_info' => $model->payment_info,
+				    'time' => time(),
+				    'status' => 0,
+			    ));
+			    Yii::app()->user->setFlash('mavro_sell_request', Yii::t('mavro', 'Your sell request has been accepted. It will be executed in 24 hours.'));
+			    $this->refresh();
 		    }
 	    }
 	    $this->render('sell', array('model'=>$model));

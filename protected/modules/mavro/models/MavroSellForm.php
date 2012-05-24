@@ -1,12 +1,12 @@
 <?php
 class MavroSellForm extends CFormModel
 {
-	public $amount;
+	public $amount, $payment_info;
 
 	public function rules()
 	{
 		return array(
-			array('amount', 'required'),
+			array('amount, payment_info', 'required'),
 			array('amount', 'numerical'),
 		);
 	}
@@ -15,6 +15,7 @@ class MavroSellForm extends CFormModel
 	{
 		return array(
 			'amount'=>Yii::t('mavro', 'Quantity of MAVRO'),
+			'payment_info'=>Yii::t('mavro', 'Payment info'),
 		);
 		}
 

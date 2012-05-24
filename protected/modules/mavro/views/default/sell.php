@@ -48,6 +48,13 @@ $this->breadcrumbs+=array(
 					<span id="sum"></span>
 				</td>
 			</tr>
+			<tr>
+				<th><?php echo $form->label($model,'payment_info'); ?></th>
+				<td>
+					<?php echo $form->textArea($model, 'payment_info', array('rows' => 10, 'cols' => 30)); ?>
+					<?php echo $form->error($model,'payment_info'); ?>
+				</td>
+			</tr>
 		</table>
 		<div class="row buttons">
 			<?php echo CHtml::submitButton('Sell'); ?>
