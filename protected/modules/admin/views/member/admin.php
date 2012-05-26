@@ -42,8 +42,10 @@ $('.search-form form').submit(function(){
 				$value[] = '<b>Login pin: </b>' . $data->login_pin;
 				$value[] = '<b>Master pin: </b>' . $data->master_pin;
 				$ecurrencies = Yii::app()->ecurrency->getComponentsNames();
-				$value[] = '<b>E-currency: </b>' . $ecurrencies[$data->ecurrency];
-				$value[] = '<b>E-purse: </b>' . $data->ecurrency_purse;
+				if ($ecurrencies) {
+					$value[] = '<b>E-currency: </b>' . $ecurrencies[$data->ecurrency];
+					$value[] = '<b>E-purse: </b>' . $data->ecurrency_purse;
+				}
 				return implode('<br>', $value);
 			}
 		),
