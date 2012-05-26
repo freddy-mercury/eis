@@ -14,14 +14,14 @@ class MavroSellForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'amount'=>Yii::t('mavro', 'Quantity of MAVRO'),
+			'amount'=>Yii::t('mavro', 'You sell'),
 			'payment_info'=>Yii::t('mavro', 'Payment info'),
 		);
 		}
 
 	public function validate($attributes=null, $clearErrors=true) {
 		$valid = true;
-		if ($this->amount > Yii::app()->user->model->mavro) {
+		if ($this->amount > Yii::app()->user->model->getMavroBalance()) {
 			$this->addError('amount', Yii::t('mavro', 'Amount is too big!'));
 			$valid = false;
 		}

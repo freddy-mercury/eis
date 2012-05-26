@@ -16,6 +16,7 @@ class MemberController extends SController
 
         /* If MAVRO module enabled, add link */
         if (Yii::app()->mavro->enabled) {
+	        Yii::import('mavro.models.*');
             $this->menu[] = array('label' => Yii::t('mavro', 'Buy MAVRO'), 'url' => array('/mavro/default/index'));
             $this->menu[] = array('label' => Yii::t('mavro', 'Sell MAVRO'), 'url' => array('/mavro/default/sell'));
 	        $this->menu[] = array('label' => Yii::t('mavro', 'Operation\'s history'), 'url' => array('/mavro/default/history'));

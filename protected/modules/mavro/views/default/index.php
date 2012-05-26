@@ -6,7 +6,7 @@ $this->breadcrumbs+=array(
 <h1><?php echo Yii::t('mavro', 'Buy MAVRO')?></h1>
 
 <div align="center">
-<div class="form" style="width: 400px; border:1px solid green">
+<div class="form" style="width: 450px; border:1px solid green">
     <?php
     /* @var $form  CActiveForm */
     $form=$this->beginWidget('CActiveForm', array(
@@ -15,7 +15,7 @@ $this->breadcrumbs+=array(
     )); ?>
     <table>
         <tr>
-            <th><?php echo Yii::t('mavro', 'Buy rate'); ?></th>
+            <th><?php echo Yii::t('mavro', 'Buy rate (roubles)'); ?></th>
             <td>
                 <?php
                     $rates = Yii::app()->mavro->getTodayRates();
@@ -28,7 +28,10 @@ $this->breadcrumbs+=array(
             <td class="row">
                 <?php echo $form->textField($model,'amount', array(
 	            'id' => 'amount',
-	            'onkeyup' => '$("#sum").val('.$rates[0].'*this.value);'
+	            'onkeyup' => '$("#sum").val('.$rates[0].'*this.value);' ,
+	            'onchange' => '$("#sum").val('.$rates[0].'*this.value);',
+	            'onblur' => '$("#sum").val('.$rates[0].'*this.value);',
+	            'autocomplete' => 'off',
             )); ?>
                 <?php echo $form->error($model,'amount'); ?>
             </td>
@@ -38,9 +41,20 @@ $this->breadcrumbs+=array(
 		    <td class="row">
 			    <?php echo $form->textField($model,'sum', array(
 			    'id' => 'sum',
-			    'onkeyup' => '$("#amount").val(parseFloat(this.value/'.$rates[0].', 3).toFixed(2));'
+			    'onkeyup' => '$("#amount").val(parseFloat(this.value/'.$rates[0].', 3).toFixed(2));',
+			    'onchange' => '$("#amount").val(parseFloat(this.value/'.$rates[0].', 3).toFixed(2));',
+			    'onblur' => '$("#amount").val(parseFloat(this.value/'.$rates[0].', 3).toFixed(2));',
+			    'autocomplete' => 'off',
 		    )); ?>
 			    <?php echo $form->error($model,'amount'); ?>
+		    </td>
+	    </tr>
+	    <tr>
+		    <td colspan="2" class="row">
+			    <div class="hint"><?php echo Yii::t('mavro', '<span class="red">Attention!</span> To pay for a purchase you will be redirected to
+			    the processing center <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. The amount specified
+			    in the purchase of Russian rubles. For payment you can use any currency, which will be offered to the
+			    processing center and will be automatically converted into Russian rubles.'); ?></div>
 		    </td>
 	    </tr>
     </table>

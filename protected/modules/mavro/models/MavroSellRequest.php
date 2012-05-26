@@ -40,8 +40,8 @@ class MavroSellRequest extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('member_id, amount, rate, payment_info, time, status', 'required'),
-			array('member_id, status time', 'numerical', 'integerOnly'=>true),
+			array('member_id, transaction_id, amount, rate, payment_info, time, status', 'required'),
+			array('member_id, transaction_id, status time', 'numerical', 'integerOnly'=>true),
 			array('amount, rate', 'numerical'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -67,7 +67,8 @@ class MavroSellRequest extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'member_id' => 'Member',
+			'member_id' => 'Member #',
+			'transaction_id' => 'Transaction #',
 			'amount' => 'Amount',
 			'rate' => 'Rate',
 			'payment_info' => 'Payment Info',

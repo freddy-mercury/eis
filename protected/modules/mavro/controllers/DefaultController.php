@@ -29,7 +29,7 @@ class DefaultController extends MemberController
 		            .'OutSum='.$model->sum.'&'
 		            .'InvId='.$mavro_transaction->id.'&'
 		            .'Desc='.urlencode(Yii::t('mavro', 'Buy MAVRO {amount}', array('{amount}' => $model->amount))).'&'
-		            .'SignatureValue='.$robokassa->getSignature1($model->amount, $mavro_transaction->id).'&'
+		            .'SignatureValue='.$robokassa->getSignature1($model->sum, $mavro_transaction->id).'&'
 		            .'IncCurrLabel=&'
 		            .'Culture='.$robokassa->getLanguage());
                 return;
@@ -69,6 +69,7 @@ class DefaultController extends MemberController
 				    'time' => time(),
 				    'status' => 0,
 			    ));
+			    $mavro_sell_request->save();
 			    Yii::app()->user->setFlash('mavro_sell_request', Yii::t('mavro', 'Your sell request has been accepted. It will be executed in 24 hours.'));
 			    $this->refresh();
 		    }

@@ -55,7 +55,7 @@ class SiteController extends SController
 			if ($model->validate()) {
 				$mailing_list = array(
 					array(
-						'email' => array(Yii::app()->params['admin_email']),
+						'email' => array(Yii::app()->params['adminEmail']),
 						'template' => 'contact', // шаблон из папки protected/views/email/contact.php
 						'subject' => $model->subject,
 						'template_vars' => array(

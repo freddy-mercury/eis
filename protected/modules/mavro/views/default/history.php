@@ -8,11 +8,11 @@ $this->breadcrumbs+=array(
 <?php
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'member-grid',
-	'dataProvider' => $model->mavro_stats(),
+	'dataProvider' => /* @var $model Member */ $model->mavro_stats(),
 	'columns' => array(
 		'id',
 		array(
-			'header' => Yii::t('admin', 'Type'),
+			'header' => Yii::t('mavro', 'Type'),
 			'value' => function($data) {
 				$types = MavroTransaction::getTypes();
 				return $types[$data->type];
@@ -20,9 +20,19 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		),
 		'amount',
 		array(
-			'header' => Yii::t('admin', 'Time'),
+			'header' => Yii::t('mavro', 'Time'),
 			'value' => function($data) {
 				return date('d.m.Y H:i', $data->time);
+			}
+		),
+		array(
+			'header' => Yii::t('mavro', 'Status'),
+			'value' => function($data) {
+				$status = Yii::t('mavro', 'Processed');
+				if ($data->status == 0) {
+					$status = Yii::t('mavro', 'Pending');
+				}
+				return $status;
 			}
 		),
 	)));

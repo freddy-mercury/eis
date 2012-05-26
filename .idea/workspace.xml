@@ -5,13 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43696a92-f87b-451d-ae66-369e9a775c7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/migrations/m120524_204619_createTableMavroSellRequests.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/modules/mavro/models/MavroSellRequest.php" />
-      <change type="MOVED" beforePath="C:\WebServers\home\eis\www\protected\models\MavroTransaction.php" afterPath="$PROJECT_DIR$/protected/modules/mavro/models/MavroTransaction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/banners/468x60.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/banners/728x90.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/banners/bmw.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/banners/logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/banners/logo300.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/banners/logo300bg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/banners/tree.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/css/bg.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/eis/css/custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/css/custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/css/form.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/css/ie.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/css/print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/css/screen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/js/eis.main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/layouts/column1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/layouts/column2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/layouts/footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/layouts/head.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/member/default/deposit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/member/default/history.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/member/default/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/member/default/profile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/member/default/promote.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/member/messages/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/member/messages/view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/site/contact.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/site/error.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/site/fail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/site/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/site/login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/site/pages/about.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/site/register.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/views/site/success.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/SiteController.php" afterPath="$PROJECT_DIR$/protected/controllers/SiteController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/Member.php" afterPath="$PROJECT_DIR$/protected/models/Member.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/mavro/controllers/DefaultController.php" afterPath="$PROJECT_DIR$/protected/modules/mavro/controllers/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/mavro/models/MavroBuyForm.php" afterPath="$PROJECT_DIR$/protected/modules/mavro/models/MavroBuyForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/mavro/models/MavroSellForm.php" afterPath="$PROJECT_DIR$/protected/modules/mavro/models/MavroSellForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/mavro/models/MavroSellRequest.php" afterPath="$PROJECT_DIR$/protected/modules/mavro/models/MavroSellRequest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/mavro/views/default/history.php" afterPath="$PROJECT_DIR$/protected/modules/mavro/views/default/history.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/mavro/views/default/index.php" afterPath="$PROJECT_DIR$/protected/modules/mavro/views/default/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/mavro/views/default/sell.php" afterPath="$PROJECT_DIR$/protected/modules/mavro/views/default/sell.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/modules/member/components/MemberController.php" afterPath="$PROJECT_DIR$/protected/modules/member/components/MemberController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/css/main.css" afterPath="$PROJECT_DIR$/themes/eis/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/css/print.css" afterPath="$PROJECT_DIR$/themes/eis/css/print.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/eis/views/layouts/head.php" afterPath="$PROJECT_DIR$/themes/eis/views/layouts/head.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,46 +78,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Robokassa.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/extensions/components/robokassa/Robokassa.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="65" selection-start="2926" selection-end="2926" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/modules/mavro/controllers/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="32" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.99298245">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="m120524_204619_createTableMavroSellRequests.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/migrations/m120524_204619_createTableMavroSellRequests.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="12" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SiteController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="33" selection-start="1583" selection-end="1719" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MavroSellRequest.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/mavro/models/MavroSellRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="32" selection-start="2632" selection-end="2632" vertical-scroll-proportion="0.0">
+            <state line="69" column="36" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -81,7 +90,16 @@
       <file leaf-file-name="MavroSellForm.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/mavro/models/MavroSellForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="57" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+            <state line="23" column="70" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m120524_204619_createTableMavroSellRequests.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/migrations/m120524_204619_createTableMavroSellRequests.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="36" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,7 +108,7 @@
       <file leaf-file-name="sell.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/mavro/views/default/sell.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="34" selection-start="466" selection-end="530" vertical-scroll-proportion="-7.923077">
+            <state line="58" column="73" selection-start="1603" selection-end="1603" vertical-scroll-proportion="-15.038462">
               <folding />
             </state>
           </provider>
@@ -99,7 +117,43 @@
       <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/config/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="27" selection-start="3773" selection-end="3773" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SiteController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="67" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Member.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/models/Member.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="388" column="50" selection-start="15310" selection-end="15310" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/member/default/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="76" selection-start="255" selection-end="297" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
@@ -120,22 +174,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/modules/admin/controllers/MemberController.php" />
-        <option value="$PROJECT_DIR$/protected/modules/admin/views/member/mavro_stats.php" />
-        <option value="$PROJECT_DIR$/protected/config/main.php" />
-        <option value="$PROJECT_DIR$/protected/extensions/components/robokassa/Curl.php" />
-        <option value="$PROJECT_DIR$/protected/modules/mavro/views/default/index.php" />
-        <option value="$PROJECT_DIR$/protected/modules/mavro/views/default/robokassa.php" />
-        <option value="$PROJECT_DIR$/themes/eis/views/site/success.php" />
-        <option value="$PROJECT_DIR$/themes/eis/views/site/fail.php" />
-        <option value="$PROJECT_DIR$/protected/models/MavroTransaction.php" />
-        <option value="$PROJECT_DIR$/protected/extensions/components/robokassa/Robokassa.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/css/main.css" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/css/screen.css" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/css/custom.css" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/views/member/messages/index.php" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/views/member/messages/view.php" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/views/member/default/promote.php" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/views/member/default/profile.php" />
+        <option value="$PROJECT_DIR$/protected/modules/mavro/views/default/history.php" />
+        <option value="$PROJECT_DIR$/protected/modules/mavro/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/protected/modules/mavro/models/MavroSellRequest.php" />
+        <option value="$PROJECT_DIR$/protected/models/Member.php" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/views/member/default/index.php" />
         <option value="$PROJECT_DIR$/protected/modules/mavro/models/MavroSellForm.php" />
         <option value="$PROJECT_DIR$/protected/modules/mavro/views/default/sell.php" />
-        <option value="$PROJECT_DIR$/protected/modules/mavro/models/MavroSellRequest.php" />
-        <option value="$PROJECT_DIR$/protected/migrations/m120524_204619_createTableMavroSellRequests.php" />
-        <option value="$PROJECT_DIR$/protected/modules/mavro/controllers/DefaultController.php" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
       </list>
     </option>
   </component>
@@ -238,7 +292,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="eis" />
+              <option name="myItemId" value="mmm2011" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -264,37 +318,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="eis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="site" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eis" />
+              <option name="myItemId" value="mmm2011" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -305,6 +329,10 @@
               <option name="myItemId" value="member" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="messages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -324,7 +352,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="eis" />
+              <option name="myItemId" value="mmm2011" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -358,7 +386,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="eis" />
+              <option name="myItemId" value="mmm2011" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,11 +416,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="eis" />
+              <option name="myItemId" value="mmm2011" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mmm2011" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mmm2011" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="banners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -633,6 +739,36 @@
               <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mavro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -697,6 +833,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="extensions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extensions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatemailer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extensions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatemailer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phpmailer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -817,6 +1017,50 @@
               <option name="myItemId" value="www" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -843,15 +1087,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\WebServers\home\eis\www\themes" />
       <recent name="C:\WebServers\home\eis\www\themes\eis\views\site" />
       <recent name="C:\WebServers\home\eis\www\protected\modules\admin\views\member" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\WebServers\home\eis\www\themes\mmm2011\banners" />
+      <recent name="C:\WebServers\home\eis\www\themes\mmm2011\css" />
       <recent name="C:\WebServers\home\eis\www\protected\modules\mavro\models" />
       <recent name="$PROJECT_DIR$/protected/modules/cms/views" />
       <recent name="C:\WebServers\home\eis\www\protected\modules\admin\views" />
-      <recent name="C:\WebServers\home\eis\www\protected\views" />
-      <recent name="C:\WebServers\home\eis\www\themes\eis\views\admin" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Remote Debug.debug">
@@ -946,7 +1191,11 @@
       <created>1337885108874</created>
       <updated>1337885108874</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Some modifications 24.05.2012-3">
+      <created>1337893489098</created>
+      <updated>1337893489098</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -1030,7 +1279,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 24.05.2012-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 24.05.2012-3" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1050,119 +1299,122 @@
     <MESSAGE value="Some modifications 23.05.2012-3" />
     <MESSAGE value="Some modifications 24.05.2012-1" />
     <MESSAGE value="Some modifications 24.05.2012-2" />
+    <MESSAGE value="Some modifications 24.05.2012-3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/modules/mavro/views/default/index.php">
+    <entry file="file://$PROJECT_DIR$/themes/mmm2011/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="66" selection-end="66" vertical-scroll-proportion="-0.6360902">
+        <state line="9" column="23" selection-start="158" selection-end="158" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/eis/views/site/contact.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/mavro/components/Mavro.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="25" selection-start="190" selection-end="203" vertical-scroll-proportion="0.28992248">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/eis/css/screen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="2" selection-start="2290" selection-end="2292" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/extensions/components/robokassa/Robokassa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="65" selection-start="2926" selection-end="2926" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/mavro/models/MavroTransaction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="4" selection-start="1590" selection-end="1590" vertical-scroll-proportion="0.40955138">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/eis/views/site/fail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="158" selection-end="158" vertical-scroll-proportion="0.07669173">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/eis/views/site/success.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="98" selection-start="276" selection-end="276" vertical-scroll-proportion="0.12781955">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/mavro/views/default/robokassa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="10" selection-start="488" selection-end="490" vertical-scroll-proportion="0.38345864">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="27" selection-start="3773" selection-end="3773" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/mavro/models/MavroSellForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="57" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/migrations/m120523_143628_createTableMavroTransactions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="302" selection-end="329" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/mavro/models/MavroSellRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="32" selection-start="2632" selection-end="2632" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/mavro/views/default/sell.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="34" selection-start="466" selection-end="530" vertical-scroll-proportion="-7.923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="33" selection-start="1583" selection-end="1719" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/migrations/m120524_204619_createTableMavroSellRequests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="12" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/mavro/controllers/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="32" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.99298245">
+        <state line="61" column="50" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/migrations/m120524_204619_createTableMavroSellRequests.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="36" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/Member.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="388" column="50" selection-start="15310" selection-end="15310" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/member/default/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="76" selection-start="255" selection-end="297" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/mavro/models/MavroSellRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="36" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/mavro/models/MavroSellForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="70" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/ContactForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="6" selection-start="170" selection-end="170" vertical-scroll-proportion="0.17734724">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/extensions/components/templatemailer/phpmailer/class.phpmailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="732" column="36" selection-start="22557" selection-end="22565" vertical-scroll-proportion="0.33333334">
+          <folding>
+            <element signature="e#6#1982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/extensions/components/templatemailer/TemplateMailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.2205663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="92" selection-start="1064" selection-end="1064" vertical-scroll-proportion="0.13178295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/mavro/views/default/sell.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="73" selection-start="1603" selection-end="1603" vertical-scroll-proportion="-15.038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="67" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
