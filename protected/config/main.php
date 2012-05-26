@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-	'name' => 'Investment System',
+	'name' => 'МММ-2011',
 	'theme' => 'mmm2011',
 	'language' => 'en',
 

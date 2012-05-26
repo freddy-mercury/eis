@@ -196,7 +196,7 @@ return array (
   'Qatar' => '',
   'Reunion' => '',
   'Romania' => '',
-  'Russian Federation' => 'Ðîññèéñêàÿ Ôåäåðàöèÿ',
+  'Russian Federation' => 'Ð Ð¾ÑÑÐ¸Ð¹ÑÐºÐ°Ñ Ñ„ÐµÐ´ÐµÑ€Ð°Ñ†Ð¸Ñ',
   'Rwanda' => '',
   'Saint Kitts And Nevis' => '',
   'Saint Lucia' => '',

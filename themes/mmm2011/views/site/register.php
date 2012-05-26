@@ -1,7 +1,6 @@
 <?php
 $this->breadcrumbs = array(
-	'Site' => array('/site'),
-	'Register',
+	Yii::t('registration','Registration'),
 );?>
 <h1><?php echo Yii::t('global', 'Registration') ?></h1>
 
