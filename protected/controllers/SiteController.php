@@ -28,7 +28,7 @@ class SiteController extends SController
 	 */
 	public function actionIndex()
 	{
-		$this->render('index');
+		$this->redirect(array(Yii::app()->cms->createUrl('home')));
 	}
 
 	/**

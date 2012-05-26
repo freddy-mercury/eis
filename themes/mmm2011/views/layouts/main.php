@@ -10,7 +10,7 @@
 	
 	<div id="header">
 		<div id="logo">
-			<a href=""><img src="<?= Yii::app()->theme->baseUrl ?>/banners/logo300.jpg"></a>
+			<a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/banners/logo300.jpg"></a>
 		</div>
 		<div  id="language-selector" style="float:right; margin:5px;">
 		<?php $this->widget('application.components.widgets.LanguageSelector');	?>
@@ -20,14 +20,15 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>Yii::t('global', 'Home'), 'url'=>array('/site/index')),
-				//array('label'=>Yii::t('global', 'About'), 'url'=>array(Yii::app()->cms->createUrl('about'))),
+				//array('label'=>Yii::t('global', 'Home'), 'url'=>array('/site/index')),
+				array('label'=>Yii::t('global', 'Home'), 'url'=>array(Yii::app()->cms->createUrl('index'))),
+				array('label'=>Yii::t('global', 'About'), 'url'=>array(Yii::app()->cms->createUrl('about'))),
 				array('label'=>Yii::t('global', 'Register'), 'url'=>array('/site/register'),
 					'visible'=>Yii::app()->user->isGuest),
-				array('label'=>Yii::t('global', 'Member'), 'url'=>array('/member'),
+				array('label'=>Yii::t('global', 'Member area'), 'url'=>array('/member'),
 					'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>Yii::t('global', 'Admin panel'), 'url'=>array('/admin'), 'visible'=>Yii::app()->user->isAdmin),
-				array('label'=>Yii::t('global', 'Contact'), 'url'=>array('/site/contact')),
+				array('label'=>Yii::t('global', 'Feedback'), 'url'=>array('/site/contact')),
 				array('label'=>Yii::t('global', 'Login'), 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>Yii::t('global', 'Logout ({username})',array('{username}'=>Yii::app()->user->name)), 'url'=>array('/site/logout'),
 					'visible'=>!Yii::app()->user->isGuest)

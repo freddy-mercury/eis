@@ -19,10 +19,41 @@
  * @version $Id: $
  */
 return array (
+  '<span class="red">Attention!</span> In this field you must specify the account
+					details (bank account, an account in a payment system, credit card number, etc.), on which the funds
+					will be transferred.' => '',
+  '<span class="red">Attention!</span> To pay for a purchase you will be redirected to
+			    the processing center <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. The amount specified
+			    in the purchase of Russian rubles. For payment you can use any currency, which will be offered to the
+			    processing center and will be automatically converted into Russian rubles.' => '',
+  'Amount' => '',
+  'Amount is too big!' => '',
+  'Amount is too small!' => '',
+  'Buy' => '',
   'Buy MAVRO' => '',
-  'Buy MAVRO at ' => '',
-  'Buy at' => '',
-  'Buy rate' => '',
+  'Buy MAVRO {amount}' => '',
+  'Buy rate (roubles)' => '',
   'Confirm' => '',
+  'ID' => '',
+  'Member' => '',
+  'Must be greater than 0!' => '',
+  'Operation\'s history' => '',
+  'Payment info' => '',
+  'Pending' => '',
+  'Processed' => '',
+  'Quantity of MAVRO' => '',
+  'Sell' => '',
   'Sell MAVRO' => '',
+  'Sell rate (roubles)' => '',
+  'Status' => '',
+  'Time' => '',
+  'Total amount (roubles)' => '',
+  'Type' => '',
+  'You have' => '',
+  'You have {mavro} MAVRO' => '',
+  'You sell' => '',
+  'Your sell request has been accepted. It will be executed in 24 hours.' => '',
+  'Buy MAVRO at ' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
+  'Buy at' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
+  'Buy rate' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
 );

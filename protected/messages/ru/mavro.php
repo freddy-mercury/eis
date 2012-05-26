@@ -19,9 +19,38 @@
  * @version $Id: $
  */
 return array (
+  '<span class="red">Attention!</span> In this field you must specify the account
+					details (bank account, an account in a payment system, credit card number, etc.), on which the funds
+					will be transferred.' => '<span class="red">Внимание! В этома поле Вам необходимо указать реквизиты счета (счет в банке, электронная валюта, номер кредитной карты и др.), на который будут перечислены средства от продажи.</span>',
+  '<span class="red">Attention!</span> To pay for a purchase you will be redirected to
+			    the processing center <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. The amount specified
+			    in the purchase of Russian rubles. For payment you can use any currency, which will be offered to the
+			    processing center and will be automatically converted into Russian rubles.' => '<span class="red">Внимание!</span> Для оплаты покупки Вы будете перенаправлены на сайт процессингово центра <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. Сумма покупки указана в российских рублях. Для оплаты Вы можете использовать любую валюту, которая будет предложена процессинговым центром и будет автоматически сконвертированная в российские рубли.',
+  'Amount' => 'Сумма',
+  'Amount is too big!' => 'Слишком большая сумма!',
+  'Amount is too small!' => 'Слишком маленькая сумма!',
+  'Buy' => 'Купить',
+  'Buy MAVRO {amount}' => '',
+  'Buy rate (roubles)' => 'Курс покупки (руб.)',
+  'ID' => '',
+  'Member' => 'Участник',
+  'Must be greater than 0!' => 'Сумма должна быть болше 0!',
+  'Operation\'s history' => 'История операций',
+  'Payment info' => 'Реквизиты счета',
+  'Pending' => 'Ожидает обработки',
+  'Processed' => 'Обработан',
+  'Quantity of MAVRO' => 'Количество МАВРО',
+  'Sell' => 'Продать',
+  'Sell rate (roubles)' => 'Курс продажи (руб.)',
+  'Status' => 'Статус',
+  'Time' => 'Время',
+  'Total amount (roubles)' => 'Общая сумма (руб.)',
+  'Type' => 'Тип',
+  'You have' => 'У Вас',
+  'You have {mavro} MAVRO' => '',
+  'You sell' => 'Вы продаете',
+  'Your sell request has been accepted. It will be executed in 24 hours.' => '',
   'Buy MAVRO' => 'Купить МАВРО',
-  'Buy at' => 'Купить на сумму',
-  'Buy rate' => 'Курс покупки',
   'Confirm' => 'Подтвердить',
   'Sell MAVRO' => 'Продать МАВРО',
 );

@@ -508,7 +508,7 @@ class CmsNode extends CmsActiveRecord
 		if ($this->content !== null && !empty($this->content->breadcrumb))
 			$text = $this->content->breadcrumb;
 		else
-			$text = ucfirst($this->name);
+			$text = ucfirst($this->getHeading());
 
 		if ($link)
 			$breadcrumbs[$text] = $this->getUrl();

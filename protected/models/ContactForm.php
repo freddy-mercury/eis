@@ -36,7 +36,11 @@ class ContactForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'verifyCode'=>'Verification Code',
+            'name' => Yii::t('feedback','Name'),
+            'email' => Yii::t('feedback','Email'),
+            'subject' => Yii::t('feedback','Subject'),
+            'body' => Yii::t('feedback','Body'),
+			'verifyCode'=> Yii::t('global','Verification Code'),
 		);
 	}
 }

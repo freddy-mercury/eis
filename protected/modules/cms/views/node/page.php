@@ -1,3 +1,4 @@
+<h1><?= $model->getHeading(); ?></h1>
 <div class="cms bp">
 
 	<div class="node-page">

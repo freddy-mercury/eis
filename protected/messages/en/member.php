@@ -19,6 +19,7 @@
  * @version $Id: $
  */
 return array (
+  'Account summary' => '',
   'Address' => '',
   'Alternative question answer' => '',
   'Alternative security question' => '',
@@ -31,8 +32,10 @@ return array (
   'E-currency' => '',
   'E-currency purse' => '',
   'E-mail address' => '',
+  'Edit profile' => '',
   'Firstname' => '',
   'Hash' => '',
+  'History' => '',
   'ID' => '',
   'Invalid date format!' => '',
   'Invalid security question!' => '',
@@ -45,12 +48,16 @@ return array (
   'Make deposit' => '',
   'Master Pin' => '',
   'Master Pin must be of 3 digits.' => '',
+  'Member area' => '',
+  'Messages' => '',
   'Monitor' => '',
   'Must differ to "Security question"!' => '',
   'Password' => '',
   'Password must be at least 6 symbols!' => '',
   'Profile Notify' => '',
+  'Promotion' => '',
   'Repeat password' => '',
+  'Request withdrawal' => '',
   'Security question' => '',
   'Status' => '',
   'Total Limit' => '',
@@ -58,5 +65,5 @@ return array (
   'Withdrawal Notify' => '',
   'Your language' => '',
   'Zip' => '',
-  'Login Pin must be of 3 digits.' => '@@@@@@@@@@@@',
+  'Login Pin must be of 3 digits.' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
 );
