@@ -11,11 +11,11 @@
                 <!-- end WebMoney Transfer : attestation label -->
 
             </td>
-            <td>
+            <!--td>
                 <a href="http://www.robokassa.ru" target="_blank">
                     <img src="<?= Yii::app()->theme->baseUrl ?>/banners/robokassa.jpg">
                 </a>
-            </td>
+            </td-->
         </tr>
     </table>
 </div>
