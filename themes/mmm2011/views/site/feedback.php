@@ -32,6 +32,20 @@ $this->breadcrumbs=array(
         <?= Yii::t('global','Fields with <span class="required">*</span> are required.')?>
     </p>
 
+    <div style="float:right; margin-right: 300px">
+        <table>
+            <tr>
+                <td><img src="<?= Yii::app()->theme->baseUrl ?>/banners/skype.gif"></td>
+                <td class="bold large"><a href="skype:mmm2011-auto.com?call">mmm2011-auto.com</a></td>
+            </tr>
+            <tr>
+                <td><img src="<?= Yii::app()->theme->baseUrl ?>/banners/email.gif"></td>
+                <td class="bold large"><a href="mailto:info@mmm2011-auto.com">info@mmm2011-auto.com</a></td>
+            </tr>
+        </table>
+
+    </div>
+
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
