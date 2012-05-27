@@ -144,12 +144,19 @@ return array(
 			'dump_file' => Yii::getPathOfAlias('runtime') . DIRECTORY_SEPARATOR . 'templatemailer.log',
 		),
 		'robokassa' => array(
+            'enable' => false,
 			'class' => 'ext.components.robokassa.Robokassa',
 			'test' => true,
 			'merchant_login' => 'mmm2011-auto',
 			'password1' => 'aPo01cMRAHAkA',
 			'password2' => '8eUwYhTrtfiy2',
 		),
+        'sprypay' => array(
+            'enable' => true,
+            'class' => 'ext.components.sprypay.Sprypay',
+            'shop_id' => '209141',
+            'secret_key' => '41e045cdbaf82e687a7d33da70212c6f',
+        ),
 		/**
 		 * E-currency component
 		 */

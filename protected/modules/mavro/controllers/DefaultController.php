@@ -22,16 +22,20 @@ class DefaultController extends MemberController
 		            'status' => 0,
 	            ));
 	            $mavro_transaction->save();
+
 	            /* @var $robokassa Robokassa */
 	            $robokassa = Yii::app()->robokassa;
-	            $this->redirect($robokassa->url . '/Index.aspx?'
-		            .'MrchLogin='.$robokassa->merchant_login.'&'
-		            .'OutSum='.$model->sum.'&'
-		            .'InvId='.$mavro_transaction->id.'&'
-		            .'Desc='.urlencode(Yii::t('mavro', 'Buy MAVRO {amount}', array('{amount}' => $model->amount))).'&'
-		            .'SignatureValue='.$robokassa->getSignature1($model->sum, $mavro_transaction->id).'&'
-		            .'IncCurrLabel=&'
-		            .'Culture='.$robokassa->getLanguage());
+                /* @var $sprypay SpryPay */
+                $sprypay = Yii::app()->sprypay;
+                if ($robokassa->enable) {
+                    $this->redirect($robokassa->getPaymentUrl($model->sum, $mavro_transaction->id,
+                        Yii::t('mavro', 'Buy MAVRO {amount}', array('{amount}' => $model->amount))));
+                }
+                elseif ($sprypay->enable) {
+                    $this->redirect($sprypay->getPaymentUrl($model->sum, $mavro_transaction->id,
+                        Yii::t('mavro', 'Buy MAVRO {amount}', array('{amount}' => $model->amount)), array('email' => Yii::app()->user->model->email)));
+                }
+
                 return;
             }
         }

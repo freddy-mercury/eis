@@ -19,20 +19,24 @@
  * @version $Id: $
  */
 return array (
+  'Buy MAVRO {amount}' => '',
+  'ID' => '',
+  'You have {mavro} MAVRO' => '',
+  'Your sell request has been accepted. It will be executed in 24 hours.' => '',
   '<span class="red">Attention!</span> In this field you must specify the account
 					details (bank account, an account in a payment system, credit card number, etc.), on which the funds
 					will be transferred.' => '<span class="red">Внимание!</span> В этома поле Вам необходимо указать реквизиты счета (счет в банке, электронная валюта, номер кредитной карты и др.), на который будут перечислены средства от продажи.',
   '<span class="red">Attention!</span> To pay for a purchase you will be redirected to
-			    the processing center <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. The amount specified
+			    the processing center. The amount specified
 			    in the purchase of Russian rubles. For payment you can use any currency, which will be offered to the
-			    processing center and will be automatically converted into Russian rubles.' => '<span class="red">Внимание!</span> Для оплаты покупки Вы будете перенаправлены на сайт процессингово центра <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. Сумма покупки указана в российских рублях. Для оплаты Вы можете использовать любую валюту, которая будет предложена процессинговым центром и будет автоматически сконвертированная в российские рубли.',
+			    processing center and will be automatically converted into Russian rubles.' => '<span class="red">Внимание!</span> Для оплаты покупки Вы будете перенаправлены на сайт процессингово центра. Сумма покупки указана в российских рублях. Для оплаты Вы можете использовать любую валюту, которая будет предложена процессинговым центром и будет автоматически сконвертированная в российские рубли.',
   'Amount' => 'Сумма',
   'Amount is too big!' => 'Слишком большая сумма!',
   'Amount is too small!' => 'Слишком маленькая сумма!',
   'Buy' => 'Купить',
-  'Buy MAVRO {amount}' => '',
+  'Buy MAVRO' => 'Купить МАВРО',
   'Buy rate (roubles)' => 'Курс покупки (руб.)',
-  'ID' => '',
+  'Confirm' => 'Подтвердить',
   'Member' => 'Участник',
   'Must be greater than 0!' => 'Сумма должна быть болше 0!',
   'Operation\'s history' => 'История операций',
@@ -41,16 +45,12 @@ return array (
   'Processed' => 'Обработан',
   'Quantity of MAVRO' => 'Количество МАВРО',
   'Sell' => 'Продать',
+  'Sell MAVRO' => 'Продать МАВРО',
   'Sell rate (roubles)' => 'Курс продажи (руб.)',
   'Status' => 'Статус',
   'Time' => 'Время',
   'Total amount (roubles)' => 'Общая сумма (руб.)',
   'Type' => 'Тип',
   'You have' => 'У Вас',
-  'You have {mavro} MAVRO' => '',
   'You sell' => 'Вы продаете',
-  'Your sell request has been accepted. It will be executed in 24 hours.' => '',
-  'Buy MAVRO' => 'Купить МАВРО',
-  'Confirm' => 'Подтвердить',
-  'Sell MAVRO' => 'Продать МАВРО',
 );

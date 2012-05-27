@@ -1,12 +1,13 @@
 <?php
-require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Curl.php');
+
+Yii::import('application.components.Curl');
 
 /**
  * @property Curl $curl
  */
 class Robokassa extends CApplicationComponent
 {
-	public $test, $merchant_login, $password1, $password2;
+	public $enable, $test, $merchant_login, $password1, $password2;
 	private $_url = 'https://merchant.roboxchange.com';
 	/**
 	 * @var Curl
@@ -102,4 +103,15 @@ class Robokassa extends CApplicationComponent
 	public function getSignature2($sum, $invoice) {
 		return md5($sum . ':' . $invoice . ':' . $this->password2);
 	}
+
+    public function getPaymentUrl($sum, $transaction_id, $description) {
+        return $this->_url . '/Index.aspx?'
+            .'MrchLogin='.$this->merchant_login.'&'
+            .'OutSum='.$sum.'&'
+            .'InvId='.$transaction_id.'&'
+            .'Desc='.urlencode($description).'&'
+            .'SignatureValue='.$this->getSignature1($sum, $transaction_id).'&'
+            .'IncCurrLabel=&'
+            .'Culture='.$this->getLanguage();
+    }
 }

@@ -23,7 +23,7 @@ return array (
 					details (bank account, an account in a payment system, credit card number, etc.), on which the funds
 					will be transferred.' => '',
   '<span class="red">Attention!</span> To pay for a purchase you will be redirected to
-			    the processing center <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. The amount specified
+			    the processing center. The amount specified
 			    in the purchase of Russian rubles. For payment you can use any currency, which will be offered to the
 			    processing center and will be automatically converted into Russian rubles.' => '',
   'Amount' => '',
@@ -53,7 +53,11 @@ return array (
   'You have {mavro} MAVRO' => '',
   'You sell' => '',
   'Your sell request has been accepted. It will be executed in 24 hours.' => '',
-  'Buy MAVRO at ' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
-  'Buy at' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
-  'Buy rate' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
+  '<span class="red">Attention!</span> To pay for a purchase you will be redirected to
+			    the processing center <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. The amount specified
+			    in the purchase of Russian rubles. For payment you can use any currency, which will be offered to the
+			    processing center and will be automatically converted into Russian rubles.' => '@@@@',
+  'Buy MAVRO at ' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
+  'Buy at' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
+  'Buy rate' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
 );

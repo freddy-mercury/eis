@@ -52,7 +52,7 @@ $this->breadcrumbs+=array(
 	    <tr>
 		    <td colspan="2" class="row">
 			    <div class="hint"><?php echo Yii::t('mavro', '<span class="red">Attention!</span> To pay for a purchase you will be redirected to
-			    the processing center <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. The amount specified
+			    the processing center. The amount specified
 			    in the purchase of Russian rubles. For payment you can use any currency, which will be offered to the
 			    processing center and will be automatically converted into Russian rubles.'); ?></div>
 		    </td>

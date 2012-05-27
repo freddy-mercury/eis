@@ -101,7 +101,7 @@ class SiteController extends SController
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		$this->redirect('/');
 	}
 
 	public function actionRegister()
@@ -137,4 +137,25 @@ class SiteController extends SController
 			$mavro_transaction->save();
 		}
 	}
+
+    public function actionSpryPay() {
+
+        $spQueryFields = array('spPaymentId', 'spShopId', 'spShopPaymentId', 'spBalanceAmount', 'spAmount', 'spCurrency', 'spCustomerEmail', 'spPurpose', 'spPaymentSystemId', 'spPaymentSystemAmount', 'spPaymentSystemPaymentId', 'spEnrollDateTime', 'spHashString', 'spBalanceCurrency');
+        foreach($spQueryFields as $spFieldName)
+            if (!isset($_REQUEST[$spFieldName]))
+                $this->redirect('/site/error');
+
+        $yourSecretKeyString = Yii::app()->sprypay->secret_key;
+        $localHashString = md5($_REQUEST['spPaymentId'].$_REQUEST['spShopId'].$_REQUEST['spShopPaymentId'].$_REQUEST['spBalanceAmount'].$_REQUEST['spAmount'].$_REQUEST['spCurrency'].$_REQUEST['spCustomerEmail'].$_REQUEST['spPurpose'].$_REQUEST['spPaymentSystemId'].$_REQUEST['spPaymentSystemAmount'].$_REQUEST['spPaymentSystemPaymentId'].$_REQUEST['spEnrollDateTime'].$yourSecretKeyString);
+
+        // сравним полученную подпись и ту, что пришла с запросом
+        if ($localHashString == $_REQUEST['spHashString'])
+        {
+            $mavro_transaction = MavroTransaction::model()->findByPk($_REQUEST['spShopPaymentId']);
+            $mavro_transaction->status = 1;
+            $mavro_transaction->save();
+        }
+        else
+            $this->redirect('/site/error');
+    }
 }
