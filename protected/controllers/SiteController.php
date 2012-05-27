@@ -28,8 +28,7 @@ class SiteController extends SController
 	 */
 	public function actionIndex()
 	{
-        echo '<!--/sprypay.tag.check:4fc20e2bc18f6/-->';
-		$this->redirect(array(Yii::app()->cms->createUrl('home')));
+		$this->redirect(array(Yii::app()->cms->createUrl('index')));
 	}
 
 	/**

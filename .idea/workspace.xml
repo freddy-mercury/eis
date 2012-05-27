@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="43696a92-f87b-451d-ae66-369e9a775c7a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mmm2011/views/layouts/footer.php" afterPath="$PROJECT_DIR$/themes/mmm2011/views/layouts/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mmm2011/views/site/index.php" afterPath="$PROJECT_DIR$/themes/mmm2011/views/site/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/SiteController.php" afterPath="$PROJECT_DIR$/protected/controllers/SiteController.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,16 +40,34 @@
       <file leaf-file-name="SiteController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="95" selection-start="4768" selection-end="4768" vertical-scroll-proportion="0.0">
+            <state line="30" column="63" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/layouts/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="40" selection-start="988" selection-end="988" vertical-scroll-proportion="0.7671233">
+            <state line="17" column="18" selection-start="917" selection-end="917" vertical-scroll-proportion="-11.115385">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/layouts/head.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="22" selection-start="350" selection-end="350" vertical-scroll-proportion="0.69863015">
               <folding />
             </state>
           </provider>
@@ -78,24 +95,6 @@
         <entry file="file://$PROJECT_DIR$/protected/modules/mavro/controllers/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="33" column="40" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mavro.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/messages/ru/mavro.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="868" selection-end="868" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/mavro/views/default/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="37" selection-start="2018" selection-end="2018" vertical-scroll-proportion="-8.807693">
               <folding />
             </state>
           </provider>
@@ -134,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/protected/modules/cms/widgets/views/block.php" />
         <option value="$PROJECT_DIR$/themes/mmm2011/views/member/default/index.php" />
         <option value="$PROJECT_DIR$/themes/mmm2011/views/member/default/profile.php" />
         <option value="$PROJECT_DIR$/protected/messages/ru/registration.php" />
@@ -147,9 +145,10 @@
         <option value="$PROJECT_DIR$/protected/extensions/components/sprypay/Sprypay.php" />
         <option value="$PROJECT_DIR$/protected/modules/mavro/controllers/DefaultController.php" />
         <option value="$PROJECT_DIR$/protected/config/main.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/themes/mmm2011/views/site/index.php" />
         <option value="$PROJECT_DIR$/themes/mmm2011/views/layouts/footer.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php" />
       </list>
     </option>
   </component>
@@ -1132,7 +1131,19 @@
       <created>1338120241964</created>
       <updated>1338120241964</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Some modifications 27.05.2012-3">
+      <created>1338120436257</created>
+      <updated>1338120436257</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Some modifications 27.05.2012-4">
+      <created>1338120670060</created>
+      <updated>1338120670060</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Some modifications 27.05.2012-5">
+      <created>1338120822872</created>
+      <updated>1338120822872</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -1161,7 +1172,7 @@
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5209497" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5209497" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32915717" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282123" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2562125" sideWeight="0.38838267" order="1" side_tool="true" content_ui="tabs" />
@@ -1216,7 +1227,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 27.05.2012-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 27.05.2012-5" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1246,25 +1257,14 @@
     <MESSAGE value="Some modifications 26.05.2012-7" />
     <MESSAGE value="Some modifications 27.05.2012-1" />
     <MESSAGE value="Some modifications 27.05.2012-2" />
+    <MESSAGE value="Some modifications 27.05.2012-3" />
+    <MESSAGE value="Some modifications 27.05.2012-4" />
+    <MESSAGE value="Some modifications 27.05.2012-5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/member/default/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="64" selection-start="4768" selection-end="4768" vertical-scroll-proportion="-19.615385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/messages/ru/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/messages/ru/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="32" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.0">
@@ -1342,13 +1342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="95" selection-start="4768" selection-end="4768" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/site/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1358,7 +1351,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/layouts/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="40" selection-start="988" selection-end="988" vertical-scroll-proportion="0.7671233">
+        <state line="17" column="18" selection-start="917" selection-end="917" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/layouts/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="63" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="350" selection-end="350" vertical-scroll-proportion="0.69863015">
           <folding />
         </state>
       </provider>
