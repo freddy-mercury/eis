@@ -56,6 +56,12 @@ class Member extends CActiveRecord
         return 'members';
     }
 
+    public function init()
+    {
+        parent::init();
+        $this->lang = 'ru';
+    }
+
     /**
      * @return array validation rules for model attributes.
      */
@@ -296,6 +302,7 @@ class Member extends CActiveRecord
             'date_registered' => Yii::t('member', 'Date Registered'),
             'hash' => Yii::t('member', 'Hash'),
             'monitor' => Yii::t('member', 'Monitor'),
+            'verifyCode'=> Yii::t('global','Verification Code'),
         );
     }
 

@@ -19,13 +19,10 @@
  * @version $Id: $
  */
 return array (
-  'Body' => '',
-  'Email' => '',
-  'Feedback' => '',
-  'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.' => '',
-  'Name' => '',
-  'Subject' => '',
-  'Thank you for contacting us. We will respond to you as soon as possible.' => '',
-  'Fields with <span class="required">*</span> are required.' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
-  'Verification Code' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
+  'Incorrect username, password or login pin.' => 'Неправильные имя пользователя, пароль или PIN.',
+  'Login pin' => 'Вход PIN',
+  'Password' => 'Пароль',
+  'Please fill out the following form with your login credentials:' => 'Пожалуйста, заполните форму для входа в личный кабинет:',
+  'Remember me next time' => 'Запомнить меня',
+  'Username' => 'Имя пользовтеля',
 );

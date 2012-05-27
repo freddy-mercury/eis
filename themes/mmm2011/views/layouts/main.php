@@ -36,8 +36,10 @@
 		)); ?>
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+		<?php
+        $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
+            'homeLink'=>CHtml::link(Yii::app()->name, array('site/index')),
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
 

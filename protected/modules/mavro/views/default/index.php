@@ -59,7 +59,7 @@ $this->breadcrumbs+=array(
 	    </tr>
     </table>
     <div class="row buttons">
-        <?php echo CHtml::submitButton(Yii::t('mavro','Buy')); ?>
+        <?php echo CHtml::submitButton(Yii::t('global','Submit')); ?>
     </div>
 
     <?php $this->endWidget(); ?>

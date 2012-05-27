@@ -525,7 +525,7 @@ class CmsNode extends CmsActiveRecord
 	 */
 	public function getUrl($params = array())
 	{
-		return Yii::app()->createUrl('cms/node/page',
+		return Yii::app()->createUrl('/cms/node/page',
 				CMap::mergeArray($params, array('id'=>$this->id, 'name'=>$this->getContentUrl())));
 	}
 
@@ -536,7 +536,7 @@ class CmsNode extends CmsActiveRecord
 	 */
 	public function getAbsoluteUrl($params = array())
 	{
-		return Yii::app()->createAbsoluteUrl('cms/node/page',
+		return Yii::app()->createAbsoluteUrl('/cms/node/page',
 				CMap::mergeArray($params, array('id'=>$this->id, 'name'=>$this->getContentUrl())));
 	}
 

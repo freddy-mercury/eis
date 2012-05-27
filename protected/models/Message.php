@@ -66,12 +66,12 @@ class Message extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'member_id' => 'Member ID',
-			'subject' => 'Subject',
-			'text' => 'Text',
-			'stamp' => 'Stamp',
-			'is_read' => 'Is Read',
+			'id' => Yii::t('messages','ID'),
+			'member_id' => Yii::t('messages','Member ID'),
+			'subject' => Yii::t('messages','Subject'),
+			'text' => Yii::t('messages','Text'),
+			'stamp' => Yii::t('messages','Stamp'),
+			'is_read' => Yii::t('messages','Is Read'),
 		);
 	}
 

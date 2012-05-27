@@ -64,11 +64,11 @@ class SiteController extends SController
 					),
 				);
 				Yii::app()->templatemailer->massSend($mailing_list);
-				Yii::app()->user->setFlash('contact', 'Thank you for contacting us. We will respond to you as soon as possible.');
+				Yii::app()->user->setFlash('contact', Yii::t('feedback','Thank you for contacting us. We will respond to you as soon as possible.'));
 				$this->refresh();
 			}
 		}
-		$this->render('contact', array('model' => $model));
+		$this->render('feedback', array('model' => $model));
 	}
 
 	/**
@@ -110,12 +110,12 @@ class SiteController extends SController
 		if (isset($_POST['Member'])) {
 			$model->setAttributes($_POST['Member']);
 			if ($model->save()) {
-				Yii::app()->user->setFlash('register', Yii::t('global', 'You have successfully create an account! '
-					. 'You can use your credentials to log in.'));
+				Yii::app()->user->setFlash('register', Yii::t('registration', 'You have successfully create an account! '
+                    . 'You can use your credentials to log in.'));
 				$this->refresh();
 			}
 		}
-		$this->render('register', array('model' => $model));
+		$this->render('registration', array('model' => $model));
 	}
 
 	public function actionSuccess() {

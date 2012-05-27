@@ -26,7 +26,9 @@ $this->breadcrumbs+=array(
 	/* @var $model Member */
 	?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+    <p class="note">
+        <?= Yii::t('global','Fields with <span class="required">*</span> are required.')?>
+    </p>
 	<table>
 		<tr>
 			<td>
@@ -35,7 +37,7 @@ $this->breadcrumbs+=array(
 					<div class="row">
 						<?php echo $form->labelEx($model, 'password'); ?>
 						<?php echo $form->passwordField($model, 'password', array('autocomplete' => 'off')); ?>
-						<div class="hint">Minimum 6 symbols.</div>
+						<div class="hint"><?= Yii::t('registration','Minimum 6 symbols.')?></div>
 						<?php echo $form->error($model, 'password'); ?>
 					</div>
 					<div class="row">
@@ -52,7 +54,7 @@ $this->breadcrumbs+=array(
 							'mask' => '99999',
 						));
 						?>
-						<div class="hint">5 digits.</div>
+						<div class="hint"><?= Yii::t('registration','5 digits.')?></div>
 						<?php echo $form->error($model, 'login_pin'); ?>
 					</div>
 					<div class="row">
@@ -64,14 +66,14 @@ $this->breadcrumbs+=array(
 							'mask' => '999',
 						));
 						?>
-						<div class="hint">3 digits.</div>
+						<div class="hint"><?= Yii::t('registration','3 digits.')?></div>
 						<?php echo $form->error($model, 'master_pin'); ?>
 					</div>
 				</fieldset>
 			</td>
 			<td>
 				<fieldset>
-					<legend>E-currency and other</legend>
+					<legend><?= Yii::t('registration','E-currency and other')?></legend>
 					<?php
 						$ecurrencies = Yii::app()->ecurrency->getComponentsNames();
 						if ($ecurrencies) {
@@ -104,7 +106,7 @@ $this->breadcrumbs+=array(
 					</div>
 				</fieldset>
 			</td>
-			<td>
+			<!--td>
 				<fieldset>
 					<legend>Notifications</legend>
 					<div class="row checkbox">
@@ -123,7 +125,7 @@ $this->breadcrumbs+=array(
 						<?php echo $form->error($model, 'withdrawal_notify'); ?>
 					</div>
 				</fieldset>
-			</td>
+			</td-->
 		</tr>
 	</table>
 
@@ -135,15 +137,15 @@ $this->breadcrumbs+=array(
 			<?php $this->widget('CCaptcha'); ?>
 			<?php echo $form->textField($model, 'verifyCode'); ?>
 		</div>
-		<div class="hint">Please enter the letters as they are shown in the image above.
-			<br/>Letters are not case-sensitive.
-		</div>
+        <div class="hint">
+            <?= Yii::t('global','Please enter the letters as they are shown in the image above.<br/>Letters are not case-sensitive.') ?>
+        </div>
 		<?php echo $form->error($model, 'verifyCode'); ?>
 	</div>
 	<?php endif; ?>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton(Yii::t('global','Submit')); ?>
 	</div>
 
 	<?php $this->endWidget(); ?>

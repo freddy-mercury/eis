@@ -11,6 +11,7 @@ class LoginForm extends CFormModel
 	public $password;
 	public $login_pin;
 	public $rememberMe;
+    public $verifyCode;
 
 	private $_identity;
 
@@ -30,6 +31,8 @@ class LoginForm extends CFormModel
 			array('rememberMe', 'boolean'),
 			// password needs to be authenticated
 			array('password', 'authenticate'),
+            // verifyCode needs to be entered correctly
+            array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
 		);
 	}
 
@@ -39,10 +42,11 @@ class LoginForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'rememberMe'=>Yii::t('global', 'Remember me next time'),
-			'Username'=>Yii::t('global', 'Username'),
-			'Password'=>Yii::t('global', 'Password'),
-			'login_pin'=>Yii::t('global', 'Login pin'),
+			'rememberMe'=>Yii::t('login', 'Remember me next time'),
+			'username'=>Yii::t('login', 'Username'),
+			'password'=>Yii::t('login', 'Password'),
+			'login_pin'=>Yii::t('login', 'Login pin'),
+            'verifyCode'=> Yii::t('global','Verification Code'),
 		);
 	}
 
@@ -56,7 +60,7 @@ class LoginForm extends CFormModel
 		{
 			$this->_identity=new SUserIdentity($this->username,$this->password,$this->login_pin);
 			if(!$this->_identity->authenticate())
-				$this->addError('login_pin','Incorrect username, password or login pin.');
+				$this->addError('login_pin',Yii::t('login','Incorrect username, password or login pin.'));
 		}
 	}
 

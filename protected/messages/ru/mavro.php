@@ -21,7 +21,7 @@
 return array (
   '<span class="red">Attention!</span> In this field you must specify the account
 					details (bank account, an account in a payment system, credit card number, etc.), on which the funds
-					will be transferred.' => '<span class="red">Внимание! В этома поле Вам необходимо указать реквизиты счета (счет в банке, электронная валюта, номер кредитной карты и др.), на который будут перечислены средства от продажи.</span>',
+					will be transferred.' => '<span class="red">Внимание!</span> В этома поле Вам необходимо указать реквизиты счета (счет в банке, электронная валюта, номер кредитной карты и др.), на который будут перечислены средства от продажи.',
   '<span class="red">Attention!</span> To pay for a purchase you will be redirected to
 			    the processing center <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. The amount specified
 			    in the purchase of Russian rubles. For payment you can use any currency, which will be offered to the

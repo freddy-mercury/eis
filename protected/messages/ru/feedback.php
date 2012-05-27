@@ -19,10 +19,10 @@
  * @version $Id: $
  */
 return array (
+  'Thank you for contacting us. We will respond to you as soon as possible.' => 'Спасибо, что воспользовались обратной связью. Вам ответят в самое близжайшее время.',
   'Body' => 'Сообщение',
   'Email' => 'Адрес электронной почты',
   'Feedback' => 'Обратная связь',
-  'Fields with <span class="required">*</span> are required.' => 'Поля, помеченные <span class="required">*</span> обязательны для заполнения.',
   'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.' => 'Если у Вас есть бизнес предложения или какие-то другие вопросы, пожалуйста заполните форму, чтобы с нами связаться. Спасибо.',
   'Name' => 'Ваше имя',
   'Subject' => 'Тема',

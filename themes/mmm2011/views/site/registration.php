@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs = array(
-	Yii::t('registration','Registration'),
+	Yii::t('global','Registration'),
 );?>
 <h1><?php echo Yii::t('global', 'Registration') ?></h1>
 
@@ -26,7 +26,9 @@ $this->breadcrumbs = array(
 	/* @var $model Member */
 	?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">
+        <?= Yii::t('global','Fields with <span class="required">*</span> are required.')?>
+    </p>
 	<table>
 		<tr>
 			<td>
@@ -35,13 +37,13 @@ $this->breadcrumbs = array(
 					<div class="row">
 						<?php echo $form->labelEx($model, 'login'); ?>
 						<?php echo $form->textField($model, 'login'); ?>
-						<div class="hint">Minimum 3 symbols of digits and letters.</div>
+						<div class="hint"><?= Yii::t('registration','Minimum 3 symbols of digits and letters.') ?></div>
 						<?php echo $form->error($model, 'login'); ?>
 					</div>
 					<div class="row">
 						<?php echo $form->labelEx($model, 'password'); ?>
 						<?php echo $form->passwordField($model, 'password'); ?>
-						<div class="hint">Minimum 6 symbols.</div>
+						<div class="hint"><?= Yii::t('registration','Minimum 6 symbols.')?></div>
 						<?php echo $form->error($model, 'password'); ?>
 					</div>
 					<div class="row">
@@ -52,7 +54,7 @@ $this->breadcrumbs = array(
 					<div class="row">
 						<?php echo $form->labelEx($model, 'email'); ?>
 						<?php echo $form->textField($model, 'email'); ?>
-						<div class="hint">Valid e-mail address.</div>
+						<div class="hint"><?= Yii::t('registration','Valid e-mail address.')?></div>
 						<?php echo $form->error($model, 'email'); ?>
 					</div>
 					<div class="row">
@@ -64,7 +66,7 @@ $this->breadcrumbs = array(
 							'mask' => '99999',
 						));
 						?>
-						<div class="hint">5 digits.</div>
+						<div class="hint"><?= Yii::t('registration','5 digits.') ?></div>
 						<?php echo $form->error($model, 'login_pin'); ?>
 					</div>
 					<div class="row">
@@ -76,7 +78,7 @@ $this->breadcrumbs = array(
 							'mask' => '999',
 						));
 						?>
-						<div class="hint">3 digits.</div>
+						<div class="hint"><?= Yii::t('registration','3 digits.')?></div>
 						<?php echo $form->error($model, 'master_pin'); ?>
 					</div>
 					<div class="row">
@@ -95,7 +97,7 @@ $this->breadcrumbs = array(
 					<div class="row">
 						<?php echo $form->labelEx($model, 'security_question2'); ?>
 						<?php echo $form->dropDownList($model, 'security_question2', $security_questions); ?>
-						<div class="hint">Must differ to "Security question".</div>
+						<div class="hint"><?= Yii::t('registration','Must differ to "Security question".')?></div>
 						<?php echo $form->error($model, 'security_question2'); ?>
 					</div>
 					<div class="row">
@@ -128,7 +130,7 @@ $this->breadcrumbs = array(
 							'mask' => '9999-99-99',
 						));
 						?>
-						<div class="hint">Format: YYYY-MM-DD (Ex: <?php echo date('Y-m-d'); ?>)</div>
+						<div class="hint"><?= Yii::t('registration','Format: YYYY-MM-DD (Ex: {example})', array('{example}' => date('Y-m-d')))?></div>
 						<?php echo $form->error($model, 'birthdate'); ?>
 					</div>
 					<div class="row">
@@ -199,15 +201,15 @@ $this->breadcrumbs = array(
 			<?php $this->widget('CCaptcha'); ?>
 			<?php echo $form->textField($model, 'verifyCode'); ?>
 		</div>
-		<div class="hint">Please enter the letters as they are shown in the image above.
-			<br/>Letters are not case-sensitive.
+		<div class="hint">
+            <?= Yii::t('global','Please enter the letters as they are shown in the image above.<br/>Letters are not case-sensitive.') ?>
 		</div>
 		<?php echo $form->error($model, 'verifyCode'); ?>
 	</div>
 	<?php endif; ?>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton(Yii::t('global','Submit')); ?>
 	</div>
 
 	<?php $this->endWidget(); ?>

@@ -19,13 +19,10 @@
  * @version $Id: $
  */
 return array (
-  'Body' => '',
-  'Email' => '',
-  'Feedback' => '',
-  'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.' => '',
-  'Name' => '',
-  'Subject' => '',
-  'Thank you for contacting us. We will respond to you as soon as possible.' => '',
-  'Fields with <span class="required">*</span> are required.' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
-  'Verification Code' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
+  'ID' => '№',
+  'Is Read' => 'Прочтен',
+  'Member ID' => '№ участника',
+  'Stamp' => 'Время',
+  'Subject' => 'Тема',
+  'Text' => 'Текст',
 );

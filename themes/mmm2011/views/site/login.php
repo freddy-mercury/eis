@@ -1,13 +1,13 @@
 <?php
 $this->pageTitle=Yii::app()->name . ' - Login';
 $this->breadcrumbs=array(
-	'Login',
+	Yii::t('global','Login'),
 );
 ?>
 
-<h1>Login</h1>
+<h1><?= Yii::t('global','Login') ?></h1>
 
-<p>Please fill out the following form with your login credentials:</p>
+<p><?= Yii::t('login','Please fill out the following form with your login credentials:')?></p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -18,7 +18,9 @@ $this->breadcrumbs=array(
 	),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+    <p class="note">
+        <?= Yii::t('global','Fields with <span class="required">*</span> are required.')?>
+    </p>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
@@ -50,8 +52,22 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'rememberMe'); ?>
 	</div>
 
+    <?php if (CCaptcha::checkRequirements()): ?>
+    <div class="row">
+        <?php echo $form->labelEx($model, 'verifyCode'); ?>
+        <div>
+            <?php $this->widget('CCaptcha'); ?>
+            <?php echo $form->textField($model, 'verifyCode'); ?>
+        </div>
+        <div class="hint">
+            <?= Yii::t('global','Please enter the letters as they are shown in the image above.<br/>Letters are not case-sensitive.') ?>
+        </div>
+        <?php echo $form->error($model, 'verifyCode'); ?>
+    </div>
+    <?php endif; ?>
+
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
+		<?php echo CHtml::submitButton(Yii::t('global','Submit')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

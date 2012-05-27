@@ -19,13 +19,14 @@
  * @version $Id: $
  */
 return array (
-  'Body' => '',
-  'Email' => '',
-  'Feedback' => '',
-  'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.' => '',
-  'Name' => '',
-  'Subject' => '',
-  'Thank you for contacting us. We will respond to you as soon as possible.' => '',
-  'Fields with <span class="required">*</span> are required.' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
-  'Verification Code' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
+  '3 digits.' => '',
+  '5 digits.' => '',
+  'E-currency and other' => '',
+  'Format: YYYY-MM-DD (Ex: {example})' => '',
+  'Minimum 3 symbols of digits and letters.' => '',
+  'Minimum 6 symbols.' => '',
+  'Must differ to "Security question".' => '',
+  'Valid e-mail address.' => '',
+  'You have successfully create an account! You can use your credentials to log in.' => '',
+  'Registration' => '@@@@@@@@@@@@@@@@@@@@@@@@',
 );
