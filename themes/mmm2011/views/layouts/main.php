@@ -10,7 +10,7 @@
 	
 	<div id="header">
 		<div id="logo">
-			<a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/banners/logo_full.jpg" width="1150"></a>
+			<a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/banners/logo_full.jpg" width="1150" height="299"></a>
 		</div>
 
 		<div id="language-selector" style="float:right; margin:5px;">

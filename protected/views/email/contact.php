@@ -1,4 +1,6 @@
-Contact form sended:
+From: <?= $from ?><br>
+Subject: <?= CHtml::encode($subject) ?><br>
+Body:
 <p><?echo CHtml::encode($body);?></p><br/><br/>
 <hr/>
 <p>User service information:

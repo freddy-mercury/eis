@@ -59,6 +59,8 @@ class SiteController extends SController
 						'template' => 'contact', // шаблон из папки protected/views/email/contact.php
 						'subject' => $model->subject,
 						'template_vars' => array(
+                            'from' => $model->email,
+                            'subject' => $model->subject,
 							'body' => $model->body,
 						),
 					),
