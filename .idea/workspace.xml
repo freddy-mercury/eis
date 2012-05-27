@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43696a92-f87b-451d-ae66-369e9a775c7a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/mmm2011/banners/logo_full.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mmm2011/banners/logo_full.jpg" afterPath="$PROJECT_DIR$/themes/mmm2011/banners/logo_full.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/config/main.php" afterPath="$PROJECT_DIR$/protected/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,19 +29,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="80" selection-start="550" selection-end="550" vertical-scroll-proportion="-8.5">
+            <state line="12" column="102" selection-start="430" selection-end="430" vertical-scroll-proportion="0.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/config/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="25" selection-start="3752" selection-end="3752" vertical-scroll-proportion="1.2248322">
+            <state line="146" column="25" selection-start="3752" selection-end="3752" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,8 +148,8 @@
         <option value="$PROJECT_DIR$/protected/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/protected/models/LoginForm.php" />
         <option value="$PROJECT_DIR$/protected/messages/ru/mavro.php" />
-        <option value="$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/protected/config/main.php" />
+        <option value="$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php" />
       </list>
     </option>
   </component>
@@ -618,7 +618,11 @@
       <created>1338143764718</created>
       <updated>1338143764718</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Some modifications 27.05.2012-8">
+      <created>1338145125325</created>
+      <updated>1338145125325</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -702,7 +706,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 27.05.2012-7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 27.05.2012-8" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -737,6 +741,7 @@
     <MESSAGE value="Some modifications 27.05.2012-5" />
     <MESSAGE value="Some modifications 27.05.2012-6" />
     <MESSAGE value="Some modifications 27.05.2012-7" />
+    <MESSAGE value="Some modifications 27.05.2012-8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -826,13 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="80" selection-start="550" selection-end="550" vertical-scroll-proportion="-8.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/extensions/components/templatemailer/phpmailer/README">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -849,7 +847,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="25" selection-start="3752" selection-end="3752" vertical-scroll-proportion="1.2248322">
+        <state line="146" column="25" selection-start="3752" selection-end="3752" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="102" selection-start="430" selection-end="430" vertical-scroll-proportion="0.75">
           <folding />
         </state>
       </provider>

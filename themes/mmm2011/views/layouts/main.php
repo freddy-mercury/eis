@@ -9,9 +9,8 @@
 <div class="container" id="page">
 	
 	<div id="header">
-		<div id="logo" class="clearfix">
-			<div style="float: left"><a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/banners/logo300.jpg"></a></div>
-            <div style="font-size: 1.5em;padding-top: 110px; text-align: center;"><?= Yii::t('mavro','We change the world!')?></div>
+		<div id="logo">
+			<a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/banners/logo_full.jpg" width="1150"></a>
 		</div>
 
 		<div id="language-selector" style="float:right; margin:5px;">
