@@ -117,18 +117,18 @@ return array(
 			'class' => 'ext.components.templatemailer.TemplateMailer',
 
 			'charset' => 'UTF-8',
-			'from' => 'some@yandex.ru',
-			'reply_to' => 'some@yandex.ru',
-			'from_name' => 'Администрация сайта',
+			'from' => 'info@mmm2011-auto.com',
+			'reply_to' => 'info@mmm2011-auto.com',
+			'from_name' => Yii::t('global','MMM2011-AUTO.COM'),
 			'smtp_host' => '127.0.0.1',
 
 
-			'service_sending' => false,
-			'service_host' => 'ssl://smtp.yandex.ru',
-			'service_port' => 465,
+			'service_sending' => true,
+			'service_host' => '127.0.0.1',
+			'service_port' => 25,
 			'service_smtp_auth' => true,
-			'service_username' => 'some@yandex.ru',
-			'service_pass' => '123123',
+			'service_username' => 'info@mmm2011-auto.com',
+			'service_pass' => '7EL2M9OSccIR6',
 
 
 			// Email subjects 'view file'=>'subject'
@@ -182,7 +182,7 @@ return array(
 		),
 	),
 	'params' => array(
-		'adminEmail' => 'webmaster@example.com',
+		'adminEmail' => 'merchant@mmm2011-auto.com',
 		'member_password_salt' => 'SDIuhfw985h13*^%6123lknasdf78Ksdf0=',
 		'languages' => array(
 			'ru' => 'Русский',
