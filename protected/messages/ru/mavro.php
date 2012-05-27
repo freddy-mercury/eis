@@ -21,6 +21,7 @@
 return array (
   'Buy MAVRO {amount}' => '',
   'ID' => '',
+  'We change the world!' => 'Мы Меняем Мир!',
   'You have {mavro} MAVRO' => '',
   'Your sell request has been accepted. It will be executed in 24 hours.' => '',
   '<span class="red">Attention!</span> In this field you must specify the account

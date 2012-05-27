@@ -25,5 +25,5 @@ return array (
   'Please fill out the following form with your login credentials:' => '',
   'Remember me next time' => '',
   'Username' => '',
-  'Login' => '@@@@@@@@@@@@@@@@@@@@',
+  'Login' => '@@@@@@@@@@@@@@@@@@@@@@@@',
 );

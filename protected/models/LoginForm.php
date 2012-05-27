@@ -50,7 +50,19 @@ class LoginForm extends CFormModel
 		);
 	}
 
-	/**
+    public function validate($attributes = null, $clearErrors = true)
+    {
+        $captcha_validator = new CCaptchaValidator();
+        $captcha_validator->attributes = array('verifyCode');
+        $captcha_validator->validate($this);
+        if ($this->hasErrors()) {
+            return false;
+        }
+        return parent::validate($attributes, $clearErrors);
+    }
+
+
+    /**
 	 * Authenticates the password.
 	 * This is the 'authenticate' validator as declared in rules().
 	 */

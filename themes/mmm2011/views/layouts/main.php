@@ -9,12 +9,14 @@
 <div class="container" id="page">
 	
 	<div id="header">
-		<div id="logo">
-			<a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/banners/logo300.jpg"></a>
+		<div id="logo" class="clearfix">
+			<div style="float: left"><a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/banners/logo300.jpg"></a></div>
+            <div style="font-size: 1.5em;padding-top: 110px; text-align: center;"><?= Yii::t('mavro','We change the world!')?></div>
 		</div>
-		<div  id="language-selector" style="float:right; margin:5px;">
-		<?php $this->widget('application.components.widgets.LanguageSelector');	?>
-	</div>
+
+		<div id="language-selector" style="float:right; margin:5px;">
+		    <?php $this->widget('application.components.widgets.LanguageSelector');	?>
+	    </div>
 	</div><!-- header -->
 
 	<div id="mainmenu">
