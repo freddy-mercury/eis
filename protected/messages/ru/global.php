@@ -19,6 +19,7 @@
  * @version $Id: $
  */
 return array (
+  'MMM2011-AUTO.COM' => '',
   'Periodicity value' => '',
   'Public' => '',
   'Term value' => '',

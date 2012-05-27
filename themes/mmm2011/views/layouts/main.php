@@ -9,10 +9,16 @@
 <div class="container" id="page">
 	
 	<div id="header">
+        <? if (Yii::app()->language == 'en') { ?>
+        <div id="logo" class="clearfix">
+            <div style="float: left"><a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/banners/logo300.jpg"></a></div>
+            <div style="font-size: 1.5em;padding-top: 110px; text-align: center;"><?= Yii::t('mavro','We change the world!')?></div>
+        </div>
+        <? } else { ?>
 		<div id="logo">
 			<a href="/"><img src="<?= Yii::app()->theme->baseUrl ?>/banners/logo_full.jpg" width="1150" height="299"></a>
 		</div>
-
+        <? } ?>
 		<div id="language-selector" style="float:right; margin:5px;">
 		    <?php $this->widget('application.components.widgets.LanguageSelector');	?>
 	    </div>
@@ -26,7 +32,7 @@
 				array('label'=>Yii::t('global', 'About'), 'url'=>array(Yii::app()->cms->createUrl('about'))),
 				array('label'=>Yii::t('global', 'Register'), 'url'=>array('/site/register'),
 					'visible'=>Yii::app()->user->isGuest),
-				array('label'=>Yii::t('global', 'Member area'), 'url'=>array('/member'),
+				array('label'=>Yii::t('member', 'Member area'), 'url'=>array('/member'),
 					'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>Yii::t('global', 'Admin panel'), 'url'=>array('/admin'), 'visible'=>Yii::app()->user->isAdmin),
 				array('label'=>Yii::t('global', 'Feedback'), 'url'=>array('/site/contact')),
