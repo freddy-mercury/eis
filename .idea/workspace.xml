@@ -7,7 +7,6 @@
     <list default="true" id="43696a92-f87b-451d-ae66-369e9a775c7a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mmm2011/banners/logo_full.jpg" afterPath="$PROJECT_DIR$/themes/mmm2011/banners/logo_full.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php" afterPath="$PROJECT_DIR$/themes/mmm2011/views/layouts/main.php" />
     </list>
     <ignored path="www.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -622,7 +621,11 @@
       <created>1338145125325</created>
       <updated>1338145125325</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Some modifications 27.05.2012-9">
+      <created>1338145641370</created>
+      <updated>1338145641370</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -706,7 +709,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 27.05.2012-8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some modifications 27.05.2012-9" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -742,6 +745,7 @@
     <MESSAGE value="Some modifications 27.05.2012-6" />
     <MESSAGE value="Some modifications 27.05.2012-7" />
     <MESSAGE value="Some modifications 27.05.2012-8" />
+    <MESSAGE value="Some modifications 27.05.2012-9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
