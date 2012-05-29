@@ -111,7 +111,7 @@ $('.search-form form').submit(function(){
 					</tr>
 					<tr>
 						<th>Mavro:</th>
-						<td>'.CHtml::link($data->mavro - $data->mavro_frozen, array('member/mavro_stats/id/' . $data->id)).'</td>
+						<td>'.CHtml::link(round($data->mavro - $data->mavro_frozen,2), array('member/mavro_stats/id/' . $data->id)).'</td>
 					</tr>
 				</table>';
 				return $value;
