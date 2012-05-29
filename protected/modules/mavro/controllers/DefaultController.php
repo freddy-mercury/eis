@@ -14,11 +14,12 @@ class DefaultController extends MemberController
             if($model->validate())
             {
 	            $mavro_transaction = new MavroTransaction();
+	            $sum = round($model->sum,2);
 	            $mavro_transaction->setAttributes(array(
 		            'member_id' => Yii::app()->user->id,
 					'type' => 'buy',
 		            'amount' => $model->amount,
-		            'sum' => $model->sum,
+		            'sum' => $sum,
 		            'time' => time(),
 		            'status' => 0,
 	            ));
@@ -29,11 +30,11 @@ class DefaultController extends MemberController
                 /* @var $sprypay SpryPay */
                 $sprypay = Yii::app()->sprypay;
                 if ($robokassa->enable) {
-                    $this->redirect($robokassa->getPaymentUrl($model->sum, $mavro_transaction->id,
+                    $this->redirect($robokassa->getPaymentUrl($sum, $mavro_transaction->id,
                         Yii::t('mavro', 'Buying MAVRO {amount}', array('{amount}' => $model->amount))));
                 }
                 elseif ($sprypay->enable) {
-                    $this->redirect($sprypay->getPaymentUrl($model->sum, $mavro_transaction->id,
+                    $this->redirect($sprypay->getPaymentUrl($sum, $mavro_transaction->id,
                         Yii::t('mavro', 'Buying MAVRO {amount}', array('{amount}' => $model->amount)), array('email' => Yii::app()->user->model->email)));
                 }
 
