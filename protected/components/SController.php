@@ -29,7 +29,7 @@ class SController extends CController
 			array(
 				'member_id' => Yii::app()->user->id,
 				'url' => $_SERVER['REQUEST_URI'],
-				'agent' => $_SERVER['HTTP_USER_AGENT'],
+				'agent' => isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : 'unknown',
 				'ip' => ip2long($_SERVER['REMOTE_ADDR']),
 				'stamp' => time(),
 			)
