@@ -18,6 +18,7 @@ class DefaultController extends MemberController
 		            'member_id' => Yii::app()->user->id,
 					'type' => 'buy',
 		            'amount' => $model->amount,
+		            'sum' => $model->sum,
 		            'time' => time(),
 		            'status' => 0,
 	            ));
@@ -52,11 +53,13 @@ class DefaultController extends MemberController
 		    $model->attributes=$_POST['MavroSellForm'];
 		    if($model->validate())
 		    {
+			    $rates = Yii::app()->mavro->getTodayRates();
 			    $mavro_transaction = new MavroTransaction();
 			    $mavro_transaction->setAttributes(array(
 				    'member_id' => Yii::app()->user->id,
 				    'type' => 'sell',
 				    'amount' => $model->amount,
+				    'sum' => round($rates[1] * $model->amount, 2),
 				    'time' => time(),
 				    'status' => 0,
 			    ));
