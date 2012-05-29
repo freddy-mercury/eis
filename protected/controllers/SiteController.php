@@ -140,7 +140,7 @@ class SiteController extends SController
 		}
 	}
 
-    public function actionSpryPay() {
+    public function actionSprypay() {
 
         $spQueryFields = array('spPaymentId', 'spShopId', 'spShopPaymentId', 'spBalanceAmount', 'spAmount', 'spCurrency', 'spCustomerEmail', 'spPurpose', 'spPaymentSystemId', 'spPaymentSystemAmount', 'spPaymentSystemPaymentId', 'spEnrollDateTime', 'spHashString', 'spBalanceCurrency');
         foreach($spQueryFields as $spFieldName)
@@ -153,11 +153,14 @@ class SiteController extends SController
         // сравним полученную подпись и ту, что пришла с запросом
         if ($localHashString == $_REQUEST['spHashString'])
         {
+	        /* @var $mavro_transaction MavroTransaction */
             $mavro_transaction = MavroTransaction::model()->findByPk($_REQUEST['spShopPaymentId']);
             $mavro_transaction->status = 1;
             $mavro_transaction->save();
+	        mail('kirill.komarov@gmail.com', 'sprypay', $mavro_transaction->amount);
         }
         else
             $this->redirect('/site/error');
     }
+
 }

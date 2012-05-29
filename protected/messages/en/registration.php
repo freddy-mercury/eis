@@ -28,5 +28,4 @@ return array (
   'Must differ to "Security question".' => '',
   'Valid e-mail address.' => '',
   'You have successfully create an account! You can use your credentials to log in.' => '',
-  'Registration' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
 );

@@ -26,6 +26,4 @@ return array (
   'Name' => '',
   'Subject' => '',
   'Thank you for contacting us. We will respond to you as soon as possible.' => '',
-  'Fields with <span class="required">*</span> are required.' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
-  'Verification Code' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
 );

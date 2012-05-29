@@ -19,6 +19,5 @@
  * @version $Id: $
  */
 return array (
-  'Check certificate' => '',
-  'This is our certificate of WM' => '',
+  'We accept' => '',
 );
