@@ -141,7 +141,8 @@ class SiteController extends SController
 	}
 
     public function actionSprypay() {
-
+	    if (isset($_REQUEST['test']))
+	        mail('kirill.komarov@gmail.com', 'sprypay', $_SERVER['REQUEST_URI']);
         $spQueryFields = array('spPaymentId', 'spShopId', 'spShopPaymentId', 'spBalanceAmount', 'spAmount', 'spCurrency', 'spCustomerEmail', 'spPurpose', 'spPaymentSystemId', 'spPaymentSystemAmount', 'spPaymentSystemPaymentId', 'spEnrollDateTime', 'spHashString', 'spBalanceCurrency');
         foreach($spQueryFields as $spFieldName)
             if (!isset($_REQUEST[$spFieldName]))
@@ -157,7 +158,8 @@ class SiteController extends SController
             $mavro_transaction = MavroTransaction::model()->findByPk($_REQUEST['spShopPaymentId']);
             $mavro_transaction->status = 1;
             $mavro_transaction->save();
-	        mail('kirill.komarov@gmail.com', 'sprypay', $mavro_transaction->amount);
+	        if (isset($_REQUEST['test']))
+	            mail('kirill.komarov@gmail.com', 'sprypay', $mavro_transaction->amount);
         }
         else
             $this->redirect('/site/error');
