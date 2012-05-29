@@ -24,7 +24,7 @@ return array (
   'Your sell request has been accepted. It will be executed in 24 hours.' => '',
   '<span class="red">Attention!</span> In this field you must specify the account
 					details (bank account, an account in a payment system, credit card number, etc.), on which the funds
-					will be transferred.' => '<span class="red">Внимание!</span> В этома поле Вам необходимо указать реквизиты счета (счет в банке, электронная валюта, номер кредитной карты и др.), на который будут перечислены средства от продажи.',
+					will be transferred.' => '<span class="red">Внимание!</span> В этом поле Вам необходимо указать реквизиты счета (счет в банке, электронная валюта, номер кредитной карты и др.), на который будут перечислены средства от продажи.',
   '<span class="red">Attention!</span> To pay for a purchase you will be redirected to
 			    the processing center. The amount specified
 			    in the purchase of Russian rubles. For payment you can use any currency, which will be offered to the

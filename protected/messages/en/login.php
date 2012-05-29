@@ -19,6 +19,7 @@
  * @version $Id: $
  */
 return array (
+  'Forgot password?' => '',
   'Incorrect username, password or login pin.' => '',
   'Login pin' => '',
   'Password' => '',

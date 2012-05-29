@@ -30,7 +30,8 @@ $this->breadcrumbs=array(
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
+		<?php echo $form->passwordField($model,'password'); ?><br>
+        <span class="small"><a href="/site/contact"><?= Yii::t('login','Forgot password?')?></a></span>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 	
