@@ -41,7 +41,7 @@ class Sprypay extends CApplicationComponent
             'spShopPaymentId' => $transaction_id,
             'spAmount' => $sum,
             'spCurrency' => 'rur',
-            'spPurpose' => urlencode($description),
+            'spPurpose' => CHtml::encode($description),
             'spUserEmail' => $extra_data['email'],
             'lang' => $this->getLanguage(),
         ));

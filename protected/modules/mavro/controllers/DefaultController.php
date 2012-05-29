@@ -29,11 +29,11 @@ class DefaultController extends MemberController
                 $sprypay = Yii::app()->sprypay;
                 if ($robokassa->enable) {
                     $this->redirect($robokassa->getPaymentUrl($model->sum, $mavro_transaction->id,
-                        Yii::t('mavro', 'Buy MAVRO {amount}', array('{amount}' => $model->amount))));
+                        Yii::t('mavro', 'Buying MAVRO {amount}', array('{amount}' => $model->amount))));
                 }
                 elseif ($sprypay->enable) {
                     $this->redirect($sprypay->getPaymentUrl($model->sum, $mavro_transaction->id,
-                        Yii::t('mavro', 'Buy MAVRO {amount}', array('{amount}' => $model->amount)), array('email' => Yii::app()->user->model->email)));
+                        Yii::t('mavro', 'Buying MAVRO {amount}', array('{amount}' => $model->amount)), array('email' => Yii::app()->user->model->email)));
                 }
 
                 return;
