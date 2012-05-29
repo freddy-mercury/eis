@@ -31,8 +31,8 @@ return array (
   'Amount is too small!' => '',
   'Buy' => '',
   'Buy MAVRO' => '',
-  'Buy MAVRO {amount}' => '',
   'Buy rate (roubles)' => '',
+  'Buying MAVRO {amount}' => '',
   'Confirm' => '',
   'ID' => '',
   'Member' => '',
@@ -54,11 +54,4 @@ return array (
   'You have {mavro} MAVRO' => '',
   'You sell' => '',
   'Your sell request has been accepted. It will be executed in 24 hours.' => '',
-  '<span class="red">Attention!</span> To pay for a purchase you will be redirected to
-			    the processing center <a href="http://www.robokassa.ru" target="_blank">Robokassa</a>. The amount specified
-			    in the purchase of Russian rubles. For payment you can use any currency, which will be offered to the
-			    processing center and will be automatically converted into Russian rubles.' => '@@@@@@@@@@@@',
-  'Buy MAVRO at ' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
-  'Buy at' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
-  'Buy rate' => '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@',
 );

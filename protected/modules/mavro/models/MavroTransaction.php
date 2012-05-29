@@ -8,6 +8,7 @@
  * @property integer $member_id
  * @property string $type
  * @property double $amount
+ * @property double $sum
  * @property integer $time
  * @property integer $status
  */
@@ -46,13 +47,13 @@ class MavroTransaction extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('member_id, type, amount, time, status', 'required'),
+			array('member_id, type, amount, sum, time, status', 'required'),
 			array('member_id, time, status', 'numerical', 'integerOnly'=>true),
-			array('amount', 'numerical'),
+			array('amount, sum', 'numerical'),
 			array('type', 'length', 'max'=>4),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, member_id, type, amount, time, status', 'safe', 'on'=>'search'),
+			array('id, member_id, type, amount, sum, time, status', 'safe', 'on'=>'search'),
 		);
 	}
 

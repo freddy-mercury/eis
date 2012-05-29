@@ -156,6 +156,9 @@ return array(
             'class' => 'ext.components.sprypay.Sprypay',
             'shop_id' => '209141',
             'secret_key' => '41e045cdbaf82e687a7d33da70212c6f',
+	        //'shop_id' => '287270',
+            //'secret_key' => 'qwerty',
+
         ),
 		/**
 		 * E-currency component

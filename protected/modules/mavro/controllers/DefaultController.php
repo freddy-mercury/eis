@@ -14,10 +14,12 @@ class DefaultController extends MemberController
             if($model->validate())
             {
 	            $mavro_transaction = new MavroTransaction();
+	            $sum = round($model->sum,2);
 	            $mavro_transaction->setAttributes(array(
 		            'member_id' => Yii::app()->user->id,
 					'type' => 'buy',
 		            'amount' => $model->amount,
+		            'sum' => $sum,
 		            'time' => time(),
 		            'status' => 0,
 	            ));
@@ -28,12 +30,12 @@ class DefaultController extends MemberController
                 /* @var $sprypay SpryPay */
                 $sprypay = Yii::app()->sprypay;
                 if ($robokassa->enable) {
-                    $this->redirect($robokassa->getPaymentUrl($model->sum, $mavro_transaction->id,
-                        Yii::t('mavro', 'Buy MAVRO {amount}', array('{amount}' => $model->amount))));
+                    $this->redirect($robokassa->getPaymentUrl($sum, $mavro_transaction->id,
+                        Yii::t('mavro', 'Buying MAVRO {amount}', array('{amount}' => $model->amount))));
                 }
                 elseif ($sprypay->enable) {
-                    $this->redirect($sprypay->getPaymentUrl($model->sum, $mavro_transaction->id,
-                        Yii::t('mavro', 'Buy MAVRO {amount}', array('{amount}' => $model->amount)), array('email' => Yii::app()->user->model->email)));
+                    $this->redirect($sprypay->getPaymentUrl($sum, $mavro_transaction->id,
+                        Yii::t('mavro', 'Buying MAVRO {amount}', array('{amount}' => $model->amount)), array('email' => Yii::app()->user->model->email)));
                 }
 
                 return;
@@ -52,11 +54,13 @@ class DefaultController extends MemberController
 		    $model->attributes=$_POST['MavroSellForm'];
 		    if($model->validate())
 		    {
+			    $rates = Yii::app()->mavro->getTodayRates();
 			    $mavro_transaction = new MavroTransaction();
 			    $mavro_transaction->setAttributes(array(
 				    'member_id' => Yii::app()->user->id,
 				    'type' => 'sell',
 				    'amount' => $model->amount,
+				    'sum' => round($rates[1] * $model->amount, 2),
 				    'time' => time(),
 				    'status' => 0,
 			    ));

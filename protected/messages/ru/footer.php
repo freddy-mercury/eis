@@ -19,6 +19,5 @@
  * @version $Id: $
  */
 return array (
-  'Check certificate' => 'Проверить аттестат',
-  'This is our certificate of WM' => 'Здесь находится аттестат нашего WM идентификатора',
+  'We accept' => 'Мы принимаем',
 );

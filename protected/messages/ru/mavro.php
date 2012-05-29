@@ -19,10 +19,8 @@
  * @version $Id: $
  */
 return array (
-  'Buy MAVRO {amount}' => '',
+  'Buying MAVRO {amount}' => 'Покупка {amount} МАВРО',
   'ID' => '',
-  'We change the world!' => 'Мы Меняем Мир!',
-  'You have {mavro} MAVRO' => '',
   'Your sell request has been accepted. It will be executed in 24 hours.' => '',
   '<span class="red">Attention!</span> In this field you must specify the account
 					details (bank account, an account in a payment system, credit card number, etc.), on which the funds
@@ -52,6 +50,8 @@ return array (
   'Time' => 'Время',
   'Total amount (roubles)' => 'Общая сумма (руб.)',
   'Type' => 'Тип',
+  'We change the world!' => 'Мы Меняем Мир!',
   'You have' => 'У Вас',
+  'You have {mavro} MAVRO' => 'У вас {amount} МАВРО',
   'You sell' => 'Вы продаете',
 );

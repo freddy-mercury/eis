@@ -49,7 +49,6 @@ return array (
   'Logout ({username})' => 'Выход ({username})',
   'Max' => 'Максимум',
   'Member' => 'Участник',
-  'Member area' => 'Личный кабинет',
   'Messages' => 'Сообщения',
   'Min' => 'Минимум',
   'Monfri' => 'Рабочие дни',

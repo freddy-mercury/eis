@@ -1,4 +1,5 @@
 <?php
+Yii::import('application.modules.mavro.models.*');
 
 class SiteController extends SController
 {
@@ -140,24 +141,32 @@ class SiteController extends SController
 		}
 	}
 
-    public function actionSpryPay() {
-
-        $spQueryFields = array('spPaymentId', 'spShopId', 'spShopPaymentId', 'spBalanceAmount', 'spAmount', 'spCurrency', 'spCustomerEmail', 'spPurpose', 'spPaymentSystemId', 'spPaymentSystemAmount', 'spPaymentSystemPaymentId', 'spEnrollDateTime', 'spHashString', 'spBalanceCurrency');
+    public function actionSprypay() {
+        $spQueryFields = array('spPaymentId', 'spShopId', 'spShopPaymentId', 'spBalanceAmount',
+	        'spAmount', 'spCurrency', 'spCustomerEmail', 'spPurpose', 'spPaymentSystemId',
+	        'spPaymentSystemAmount', 'spPaymentSystemPaymentId', 'spEnrollDateTime', 'spHashString',
+	        'spBalanceCurrency');
         foreach($spQueryFields as $spFieldName)
             if (!isset($_REQUEST[$spFieldName]))
-                $this->redirect('/site/error');
-
+                die('1');
         $yourSecretKeyString = Yii::app()->sprypay->secret_key;
-        $localHashString = md5($_REQUEST['spPaymentId'].$_REQUEST['spShopId'].$_REQUEST['spShopPaymentId'].$_REQUEST['spBalanceAmount'].$_REQUEST['spAmount'].$_REQUEST['spCurrency'].$_REQUEST['spCustomerEmail'].$_REQUEST['spPurpose'].$_REQUEST['spPaymentSystemId'].$_REQUEST['spPaymentSystemAmount'].$_REQUEST['spPaymentSystemPaymentId'].$_REQUEST['spEnrollDateTime'].$yourSecretKeyString);
-
+	    $localHashString_source = $_REQUEST['spPaymentId'].$_REQUEST['spShopId'].$_REQUEST['spShopPaymentId']
+		    .$_REQUEST['spBalanceAmount'].$_REQUEST['spAmount'].$_REQUEST['spCurrency']
+		    .$_REQUEST['spCustomerEmail'].$_REQUEST['spPurpose'].$_REQUEST['spPaymentSystemId']
+		    .$_REQUEST['spPaymentSystemAmount'].$_REQUEST['spPaymentSystemPaymentId']
+		    .$_REQUEST['spEnrollDateTime'].$yourSecretKeyString;
+        $localHashString = md5($localHashString_source);
         // сравним полученную подпись и ту, что пришла с запросом
         if ($localHashString == $_REQUEST['spHashString'])
         {
+	        /* @var $mavro_transaction MavroTransaction */
             $mavro_transaction = MavroTransaction::model()->findByPk($_REQUEST['spShopPaymentId']);
-            $mavro_transaction->status = 1;
-            $mavro_transaction->save();
+			if ($mavro_transaction->sum == $_REQUEST['spAmount']) {
+				$mavro_transaction->status = 1;
+				die($mavro_transaction->save());
+			}
         }
-        else
-            $this->redirect('/site/error');
+        die('3');
     }
+
 }
