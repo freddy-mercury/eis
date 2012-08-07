@@ -7,8 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-	'name' => 'МММ-2011',
-	'theme' => 'mmm2011',
+	'name' => 'Eis',
+	'theme' => 'eis',
 	'language' => 'en',
 
 	// preloading 'log' component
@@ -30,7 +30,6 @@ return array(
 		'cms',
 		'admin',
 		'member',
-		'mavro',
 		// uncomment the following to enable the Gii tool
 		//*
 		'gii' => array(
@@ -44,9 +43,6 @@ return array(
 
 	// application components
 	'components' => array(
-		'mavro' => array(
-			'class' => 'mavro.components.Mavro',
-		),
 		'cms' => array(
 			'class' => 'cms.components.Cms',
 			'users' => array('admin'),

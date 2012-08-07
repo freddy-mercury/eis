@@ -109,10 +109,6 @@ $('.search-form form').submit(function(){
 						<th>Invest:</th>
 						<td>'.CHtml::link($data->balance, array('member/stats/id/' . $data->id)).'</td>
 					</tr>
-					<tr>
-						<th>Mavro:</th>
-						<td>'.CHtml::link(round($data->mavro - $data->mavro_frozen,2), array('member/mavro_stats/id/' . $data->id)).'</td>
-					</tr>
 				</table>';
 				return $value;
 			}

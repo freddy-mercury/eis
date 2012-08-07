@@ -256,12 +256,6 @@ class Member extends CActiveRecord
                 'select' => 'ABS(SUM(amount))',
                 'condition' => 't.type = "p" AND t.status > 0'
             ),
-	        'mavro' => array(self::STAT, 'MavroTransaction', 'member_id',
-		        'select' => 'ABS(SUM(amount))',
-	            'condition' => 'status > 0'),
-	        'mavro_frozen' => array(self::STAT, 'MavroSellRequest', 'member_id',
-			    'select' => 'ABS(SUM(amount))',
-			    'condition' => 'status = 0'),
         );
     }
 
@@ -383,16 +377,4 @@ class Member extends CActiveRecord
         return new CActiveDataProvider('Transaction', array('criteria' => $criteria));
     }
 
-	public function mavro_stats()
-	{
-		$criteria = new CDbCriteria();
-		$criteria->compare('member_id', $this->id);
-		$criteria->addCondition('((type = "buy" AND status > 0) OR (type = "sell"))');
-		$criteria->order = 'time DESC';
-		return new CActiveDataProvider('MavroTransaction', array('criteria' => $criteria));
-	}
-
-	public function getMavroBalance() {
-		return $this->mavro - $this->mavro_frozen;
-	}
 }

@@ -1,5 +1,4 @@
 <?php
-Yii::import('application.modules.mavro.models.*');
 
 class SiteController extends SController
 {
@@ -128,45 +127,5 @@ class SiteController extends SController
 	public function actionFail() {
 		$this->render('fail');
 	}
-
-	public function actionRobokassa() {
-		$out_summ = $_REQUEST['OutSum'];
-		$inv_id = $_REQUEST['InvId'];
-		$crc = $_REQUEST['SignatureValue'];
-		$my_crc = Yii::app()->robokassa->getSignature2($out_summ, $inv_id);
-		if (strtoupper($crc) == strtoupper($my_crc)) {
-			$mavro_transaction = MavroTransaction::model()->findByPk($inv_id);
-			$mavro_transaction->status = 1;
-			$mavro_transaction->save();
-		}
-	}
-
-    public function actionSprypay() {
-        $spQueryFields = array('spPaymentId', 'spShopId', 'spShopPaymentId', 'spBalanceAmount',
-	        'spAmount', 'spCurrency', 'spCustomerEmail', 'spPurpose', 'spPaymentSystemId',
-	        'spPaymentSystemAmount', 'spPaymentSystemPaymentId', 'spEnrollDateTime', 'spHashString',
-	        'spBalanceCurrency');
-        foreach($spQueryFields as $spFieldName)
-            if (!isset($_REQUEST[$spFieldName]))
-                die('1');
-        $yourSecretKeyString = Yii::app()->sprypay->secret_key;
-	    $localHashString_source = $_REQUEST['spPaymentId'].$_REQUEST['spShopId'].$_REQUEST['spShopPaymentId']
-		    .$_REQUEST['spBalanceAmount'].$_REQUEST['spAmount'].$_REQUEST['spCurrency']
-		    .$_REQUEST['spCustomerEmail'].$_REQUEST['spPurpose'].$_REQUEST['spPaymentSystemId']
-		    .$_REQUEST['spPaymentSystemAmount'].$_REQUEST['spPaymentSystemPaymentId']
-		    .$_REQUEST['spEnrollDateTime'].$yourSecretKeyString;
-        $localHashString = md5($localHashString_source);
-        // сравним полученную подпись и ту, что пришла с запросом
-        if ($localHashString == $_REQUEST['spHashString'])
-        {
-	        /* @var $mavro_transaction MavroTransaction */
-            $mavro_transaction = MavroTransaction::model()->findByPk($_REQUEST['spShopPaymentId']);
-			if ($mavro_transaction->sum == $_REQUEST['spAmount']) {
-				$mavro_transaction->status = 1;
-				die($mavro_transaction->save());
-			}
-        }
-        die('3');
-    }
 
 }

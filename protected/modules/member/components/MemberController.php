@@ -14,15 +14,7 @@ class MemberController extends SController
 
 		$this->menu[] = array('label' => Yii::t('member', 'Account summary'), 'url' => array('/member/default/index'));
 
-        /* If MAVRO module enabled, add link */
-        if (Yii::app()->mavro->enabled) {
-	        Yii::import('mavro.models.*');
-            $this->menu[] = array('label' => Yii::t('mavro', 'Buy MAVRO'), 'url' => array('/mavro/default/index'));
-            $this->menu[] = array('label' => Yii::t('mavro', 'Sell MAVRO'), 'url' => array('/mavro/default/sell'));
-	        $this->menu[] = array('label' => Yii::t('mavro', 'Operation\'s history'), 'url' => array('/mavro/default/history'));
-        }
-
-        if (Plan::model()->count()) {
+       if (Plan::model()->count()) {
             $this->menu[] = array('label' => Yii::t('member', 'Make deposit'), 'url' => array('/member/default/deposit'));
             $this->menu[] = array('label' => Yii::t('member', 'Request withdrawal'), 'url' => array('/member/default/withdraw'));
 	        $this->menu[] = array('label' => Yii::t('member', 'History'), 'url' => array('/member/default/history'));
