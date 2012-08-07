@@ -4,7 +4,7 @@ class m120524_204619_createTableMavroSellRequests extends CDbMigration
 {
 	public function up()
 	{
-		$this->execute("CREATE TABLE  `eis`.`mavro_sell_requests` (
+		$this->execute("CREATE TABLE  `mavro_sell_requests` (
 `id` INT( 11 ) NOT NULL AUTO_INCREMENT ,
 `member_id` INT( 11 ) NOT NULL ,
 `transaction_id` INT( 11 ) NOT NULL ,

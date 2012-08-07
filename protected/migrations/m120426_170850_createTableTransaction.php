@@ -4,7 +4,7 @@ class m120426_170850_createTableTransaction extends CDbMigration
 {
 	public function up()
 	{
-		$this->execute("CREATE TABLE  `eis`.`transactions` (
+		$this->execute("CREATE TABLE  `transactions` (
 `id` INT( 11 ) NOT NULL AUTO_INCREMENT ,
 `member_id` INT( 11 ) NOT NULL ,
 `parent_id` INT( 11 ) NOT NULL ,
