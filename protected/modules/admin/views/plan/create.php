@@ -1,7 +1,7 @@
 <?php
-$this->breadcrumbs+=array(
-	'Plans'=>array('index'),
-	'Create',
+$this->breadcrumbs += array(
+    Yii::t('admin', 'Plans') => array('index'),
+    Yii::t('admin', 'Create'),
 );
 
 
@@ -9,4 +9,4 @@ $this->breadcrumbs+=array(
 
 <h1>Create Plan</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model' => $model)); ?>

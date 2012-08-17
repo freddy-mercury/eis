@@ -13,7 +13,10 @@ class LoginForm extends CFormModel
 	public $rememberMe;
     public $verifyCode;
 
-	private $_identity;
+    /**
+     * @var SUserIdentity
+     */
+    private $_identity;
 
 	/**
 	 * Declares the validation rules.
@@ -52,9 +55,11 @@ class LoginForm extends CFormModel
 
     public function validate($attributes = null, $clearErrors = true)
     {
-        $captcha_validator = new CCaptchaValidator();
-        $captcha_validator->attributes = array('verifyCode');
-        $captcha_validator->validate($this);
+        if (CCaptcha::checkRequirements()) {
+            $captcha_validator = new CCaptchaValidator();
+            $captcha_validator->attributes = array('verifyCode');
+            $captcha_validator->validate($this);
+        }
         if ($this->hasErrors()) {
             return false;
         }

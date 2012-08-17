@@ -13,7 +13,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
 		array(
 			'header' => Yii::t('admin', 'Type'),
 			'value' => function($data) {
-				$types = Transaction::getTypes();
+				$types = TransactionBak::getTypes();
 				return $types[$data->type];
 			}
 		),

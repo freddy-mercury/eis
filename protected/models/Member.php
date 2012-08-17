@@ -33,6 +33,8 @@
  * @property integer $status
  * @property integer $date_registered
  * @property integer $monitor
+ *
+ * @property float rates_balance
  */
 class Member extends CActiveRecord
 {
@@ -227,7 +229,7 @@ class Member extends CActiveRecord
             'messages' => array(self::HAS_MANY, 'Message', 'member_id'),
             'visits' => array(self::HAS_MANY, 'Visit', 'member_id'),
             'transactions' => array(self::HAS_MANY, 'Transaction', 'member_id', 'condition' => 'status > 0'),
-
+            'rates_transactions' => array(self::HAS_MANY, 'RatesTransaction', 'member_id', 'condition' => 'status > 0'),
             'balance' => array(self::STAT, 'Transaction', 'member_id',
                 'select' => 'SUM(amount)',
                 'condition' => 't.status > 0'
@@ -256,6 +258,10 @@ class Member extends CActiveRecord
                 'select' => 'ABS(SUM(amount))',
                 'condition' => 't.type = "p" AND t.status > 0'
             ),
+	        'rates_balance' => array(self::STAT, 'RatesTransaction', 'member_id',
+		        'select' => 'SUM(quantity)',
+		        'condition' => 't.status > 0'
+	        ),
         );
     }
 
@@ -377,4 +383,12 @@ class Member extends CActiveRecord
         return new CActiveDataProvider('Transaction', array('criteria' => $criteria));
     }
 
+    public function rates_stats()
+    {
+        $criteria = new CDbCriteria();
+        $criteria->compare('member_id', $this->id);
+        $criteria->addCondition('status > 0');
+        $criteria->order = 'time DESC';
+        return new CActiveDataProvider('RatesTransaction', array('criteria' => $criteria));
+    }
 }

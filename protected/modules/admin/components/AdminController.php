@@ -19,6 +19,7 @@ class AdminController extends SController
             array('label'=>Yii::t('admin', 'Members'), 'url'=>array('member/index')),
             array('label'=>Yii::t('admin', 'Plans'), 'url'=>array('plan/index')),
             array('label'=>Yii::t('admin', 'Messages'), 'url'=>array('message/index')),
+            //array('label'=>Yii::t('admin', 'Config'), 'url'=>array('config/index')),
         );
     }
 

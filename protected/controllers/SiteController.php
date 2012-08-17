@@ -47,11 +47,11 @@ class SiteController extends SController
 	/**
 	 * Displays the contact page
 	 */
-	public function actionContact()
+	public function actionFeedback()
 	{
-		$model = new ContactForm;
-		if (isset($_POST['ContactForm'])) {
-			$model->attributes = $_POST['ContactForm'];
+		$model = new FeedbackForm;
+		if (isset($_POST['FeedbackForm'])) {
+			$model->attributes = $_POST['FeedbackForm'];
 			if ($model->validate()) {
 				$mailing_list = array(
 					array(
@@ -128,4 +128,7 @@ class SiteController extends SController
 		$this->render('fail');
 	}
 
+    public function actionRates() {
+        $this->render('rates');
+    }
 }

@@ -82,7 +82,7 @@ return array(
 			'charset' => 'utf8',
 			'enableParamLogging' => true,
 			'queryCacheID' => 'cache',
-			'enableProfiling' => true,
+			//'enableProfiling' => true,
 		),
 //		'db2'=>array(
 //			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
@@ -94,7 +94,7 @@ return array(
 			// use 'site/error' action to display errors
 			'errorAction' => 'site/error',
 		),
-		'log' => array(
+		/*'log' => array(
 			'class' => 'CLogRouter',
 			'routes' => array(
 				array(
@@ -105,7 +105,7 @@ return array(
 					'class' => 'CWebLogRoute',
 				),
 			),
-		),
+		),  */
 		/**
 		 * Mail sending component
 		 */
@@ -139,23 +139,6 @@ return array(
 			'dump_mode' => false,
 			'dump_file' => Yii::getPathOfAlias('runtime') . DIRECTORY_SEPARATOR . 'templatemailer.log',
 		),
-		'robokassa' => array(
-            'enable' => false,
-			'class' => 'ext.components.robokassa.Robokassa',
-			'test' => true,
-			'merchant_login' => 'mmm2011-auto',
-			'password1' => 'aPo01cMRAHAkA',
-			'password2' => '8eUwYhTrtfiy2',
-		),
-        'sprypay' => array(
-            'enable' => true,
-            'class' => 'ext.components.sprypay.Sprypay',
-            'shop_id' => '209141',
-            'secret_key' => '41e045cdbaf82e687a7d33da70212c6f',
-	        //'shop_id' => '287270',
-            //'secret_key' => 'qwerty',
-
-        ),
 		/**
 		 * E-currency component
 		 */
@@ -179,13 +162,25 @@ return array(
 				),
 			),
 		),
+        'interkassa' => array(
+            'class' => 'ext.components.interkassa.Interkassa',
+            'shop_id' => '',
+            'secret_key' => '',
+        ),
 	),
 	'params' => array(
-		'adminEmail' => 'merchant@mmm2011-auto.com',
+		'adminEmail' => 'admin@eis',
 		'member_password_salt' => 'SDIuhfw985h13*^%6123lknasdf78Ksdf0=',
-		'languages' => array(
-			'ru' => 'Русский',
-			'en' => 'English',
-		)
+        'rates' => array(
+	        'name' => 'CI',
+            'date_start' => mktime(0, 0, 0, 1, 1, 2012),
+            'buy' => 1,
+	        'buy_min' => 1,
+	        'sell' => 1,
+			'sell_min' => 1,
+            'percent' => 1, // 10%
+            'period' => 86400 * 1,  // 1 day
+
+        ),
 	),
 );

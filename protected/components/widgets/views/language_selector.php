@@ -3,12 +3,12 @@
         <?php 
         if(sizeof($languages) < 4) {
             $lastElement = end($languages);
-            foreach($languages as $key=>$lang) {
-                if($key != $currentLang) {
+            foreach($languages as $lang) {
+                if($lang != $currentLang) {
                     echo CHtml::ajaxLink($lang,'',
                         array(
                             'type'=>'post',
-                            'data'=>'_lang='.$key.'&YII_CSRF_TOKEN='.Yii::app()->request->csrfToken,
+                            'data'=>'_lang='.$lang.'&YII_CSRF_TOKEN='.Yii::app()->request->csrfToken,
                             'success' => 'function(data) {window.location.reload();}'
                         ),
                         array()

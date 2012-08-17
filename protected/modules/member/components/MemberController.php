@@ -14,7 +14,13 @@ class MemberController extends SController
 
 		$this->menu[] = array('label' => Yii::t('member', 'Account summary'), 'url' => array('/member/default/index'));
 
-       if (Plan::model()->count()) {
+       if (isset(Yii::app()->params['rates'])) {
+           $this->menu[] = array('label' => Yii::t('member', 'Buy currency'), 'url' => array('/member/default/buy'));
+           $this->menu[] = array('label' => Yii::t('member', 'Sell currency'), 'url' => array('/member/default/sell'));
+           $this->menu[] = array('label' => Yii::t('member', 'Buy/Sell history'), 'url' => array('/member/default/history2'));
+
+       }
+       elseif (Plan::model()->count()) {
             $this->menu[] = array('label' => Yii::t('member', 'Make deposit'), 'url' => array('/member/default/deposit'));
             $this->menu[] = array('label' => Yii::t('member', 'Request withdrawal'), 'url' => array('/member/default/withdraw'));
 	        $this->menu[] = array('label' => Yii::t('member', 'History'), 'url' => array('/member/default/history'));
