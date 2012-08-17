@@ -31,6 +31,7 @@
 				//array('label'=>Yii::t('global', 'Home'), 'url'=>array('/site/index')),
 				array('label'=>Yii::t('global', 'Home'), 'url'=>array(Yii::app()->cms->createUrl('index'))),
 				array('label'=>Yii::t('global', 'About'), 'url'=>array(Yii::app()->cms->createUrl('about'))),
+				array('label'=>Yii::t('global', 'Rates'), 'url'=>array('/site/rates')),
 				array('label'=>Yii::t('global', 'Register'), 'url'=>array('/site/register'),
 					'visible'=>Yii::app()->user->isGuest),
 				array('label'=>Yii::t('member', 'Member area'), 'url'=>array('/member'),
