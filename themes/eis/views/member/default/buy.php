@@ -43,13 +43,13 @@ $this->breadcrumbs+=array(
 	<script type="text/javascript" language="JavaScript">
 		$('#BuyForm_quantity').keyup(
 			function() {
-				var amount = parseFloat(parseFloat($(this).val()) * <?= $rates['sell']; ?>).toFixed(3);
+				var amount = parseFloat(parseFloat($(this).val()) * <?= $rates['sell']; ?>).toFixed(2);
 				$('#BuyForm_amount').val(amount);
 			}
 		);
 		$('#BuyForm_amount').keyup(
 			function() {
-				var quantity = parseFloat(parseFloat($(this).val()) / <?= $rates['sell']; ?>).toFixed(3);
+				var quantity = parseFloat(parseFloat($(this).val()) / <?= $rates['sell']; ?>).toFixed(2);
 				$('#BuyForm_quantity').val(quantity);
 			}
 		);

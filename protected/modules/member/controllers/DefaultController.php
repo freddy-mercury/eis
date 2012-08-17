@@ -74,8 +74,8 @@ class DefaultController extends MemberController
 			if($model->validate())
 			{
 				$rates = Rates::getCurrentRates();
-				$quantity = round($model->quantity, 3);
-				$amount = round($quantity * $rates['sell'], 3);
+				$quantity = round($model->quantity, 2);
+				$amount = round($quantity * $rates['sell'], 2);
 
 				$rates_transaction = new RatesTransaction();
 				$rates_transaction->member_id = Yii::app()->user->id;
@@ -112,7 +112,7 @@ class DefaultController extends MemberController
 			if($model->validate())
 			{
 				$rates = Rates::getCurrentRates();
-				$quantity = round($model->quantity, 3);
+				$quantity = round($model->quantity, 2);
 				//@todo Ставим статус pending
 				$rates_transaction = new RatesTransaction();
 				$rates_transaction->member_id = Yii::app()->user->id;

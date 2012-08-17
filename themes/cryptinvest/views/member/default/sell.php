@@ -29,7 +29,7 @@ $this->breadcrumbs+=array(
 	<div class="row">
 		<label><?php echo Yii::t('member', 'You have'); ?></label>
 		<?php
-		echo number_format(Yii::app()->user->model->rates_balance, 3) . ' ' . Yii::app()->params['rates']['name'];
+		echo number_format(Yii::app()->user->model->rates_balance, 2) . ' ' . Yii::app()->params['rates']['name'];
 		?>
 	</div>
 
@@ -55,7 +55,7 @@ $this->breadcrumbs+=array(
 	<script type="text/javascript" language="JavaScript">
 		$('#SellForm_quantity').keyup(
 			function() {
-				var amount = parseFloat(parseFloat($(this).val()) *  <?= $rates['buy'] ?>).toFixed(3);
+				var amount = parseFloat(parseFloat($(this).val()) *  <?= $rates['buy'] ?>).toFixed(2);
 				$('#SellForm_amount').html(amount);
 			}
 		);

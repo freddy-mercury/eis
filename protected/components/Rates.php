@@ -13,19 +13,19 @@ class Rates
 		self::$rates = array();
 		self::$rates[$date_start]['buy'] = $buy;
 		self::$rates[$date_start]['sell'] = $buy*(1 + $percent / 100);
-		while ($date_start <= mktime(0, 0, 0, 12, 31)) {
+		while ($date_start != mktime(0, 0, 0, 12, 31)) {
 			$prev_date_start = $date_start;
 			$date_start+= $period;
-			self::$rates[$date_start]['buy'] = self::$rates[$prev_date_start]['sell'];
-			self::$rates[$date_start]['sell'] = self::$rates[$date_start]['buy']*(1 + $percent / 100);
+			self::$rates[$date_start]['buy'] = round(self::$rates[$prev_date_start]['sell'], 2);
+			self::$rates[$date_start]['sell'] = round(self::$rates[$date_start]['buy']*(1 + $percent / 100), 2);
 		}
 	}
 
     public static function getCurrentRates()
     {
 	    self::calcRates();
-        $current_rates = self::$rates[mktime(0,0,0)];
-        return array('buy' => round($current_rates['buy'], 3), 'sell' => round($current_rates['sell'], 3));
+        $current_rates = self::$rates[mktime(0, 0, 0)];
+        return array('buy' => round($current_rates['buy'], 2), 'sell' => round($current_rates['sell'], 2));
     }
 
     public static function renderTable()
@@ -70,8 +70,8 @@ class Rates
 		    $html .= '
             <tr>
                 <th>'.date('Y-m-d', $date_start).'</th>
-                <td>'.number_format($rates['buy'], 3).'</td>
-                <td>'.number_format($rates['sell'], 3).'</td>
+                <td>'.number_format($rates['buy'], 2).'</td>
+                <td>'.number_format($rates['sell'], 2).'</td>
             </tr>';
 	    }
         $html.= '</table>';
