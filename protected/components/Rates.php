@@ -13,11 +13,12 @@ class Rates
 
 		self::$rates = array();
 		self::$rates[$date_start]['buy'] = $buy;
-		self::$rates[$date_start]['sell'] = $sell;
+		self::$rates[$date_start]['sell'] = $buy*(1 + $percent / 100);
 		while ($date_start <= mktime(0, 0, 0, 12, 31)) {
+			$prev_date_start = $date_start;
 			$date_start+= $period;
-			self::$rates[$date_start]['buy'] = self::$rates[$date_start]['sell'];
-			self::$rates[$date_start]['sell'] = 1 + $percent / 100;
+			self::$rates[$date_start]['buy'] = self::$rates[$prev_date_start]['sell'];
+			self::$rates[$date_start]['sell'] = self::$rates[$date_start]['buy']*(1 + $percent / 100);
 		}
 	}
 
