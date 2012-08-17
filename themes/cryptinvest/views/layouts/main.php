@@ -37,7 +37,7 @@
 				array('label'=>Yii::t('member', 'Member area'), 'url'=>array('/member'),
 					'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>Yii::t('global', 'Admin panel'), 'url'=>array('/admin'), 'visible'=>Yii::app()->user->isAdmin),
-				array('label'=>Yii::t('global', 'Feedback'), 'url'=>array('/site/contact')),
+				array('label'=>Yii::t('global', 'Feedback'), 'url'=>array('/site/feedback')),
 				array('label'=>Yii::t('global', 'Login'), 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>Yii::t('global', 'Logout ({username})',array('{username}'=>Yii::app()->user->name)), 'url'=>array('/site/logout'),
 					'visible'=>!Yii::app()->user->isGuest)
