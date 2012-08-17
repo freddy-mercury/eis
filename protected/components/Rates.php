@@ -7,7 +7,6 @@ class Rates
 		$rates_config = Yii::app()->params['rates'];
 		$date_start = $rates_config['date_start'];
 		$buy = $rates_config['buy'];
-		$sell = $rates_config['sell'];
 		$percent = $rates_config['percent'];
 		$period = $rates_config['period'];
 
@@ -24,14 +23,14 @@ class Rates
 
     public static function getCurrentRates()
     {
-	    if (empty(self::$rates)) self::calcRates();
+	    self::calcRates();
         $current_rates = self::$rates[mktime(0,0,0)];
         return array('buy' => round($current_rates['buy'], 3), 'sell' => round($current_rates['sell'], 3));
     }
 
     public static function renderTable()
     {
-	    if (empty(self::$rates)) self::calcRates();
+	    self::calcRates();
         $html = '
         <style type="text/css">
         table.rates {
